@@ -8,25 +8,22 @@
 @import "./settings_extensions";
 
 // vendors
-@import "src/assets/scss/_/vendors/vendors";
+@import "src/assets/scss/vendors/vendors";
 
 // helper / utils
-@import "src/assets/scss/_/helpers/helpers";
-@import "src/assets/scss/_/utils/utils";
-@import "src/assets/scss/_/mixins/mixins";
-@import "src/assets/scss/_/utils/flex-utils";
+@import "src/assets/scss/helpers/helpers";
+@import "src/assets/scss/utils/utils";
+@import "src/assets/scss/mixins/mixins";
 
 // sprites
-@import "src/assets/scss/_/sprites/sprites";
+@import "src/assets/scss/sprites/sprites";
 
 // reformatting base
-@import "src/assets/scss/_/reformattings/reformattings";
+@import "src/assets/scss/reformattings/reformattings";
 
 // project definitions
-@import "src/assets/scss/_/elements/elements";  // TODO IST DIESE DATEIEN NOCH NOTWENDIG? Inhalt checken
-@import "src/assets/scss/_/components/components";
-@import "src/assets/scss/_/fonts/fonts";
-@import "src/assets/scss/_/forms/_formelements";
-@import "src/assets/scss/_/doctypes/doctypes";
-@import "src/assets/scss/_/modules/modules";
-@import "./libs/libs";
+@import "src/assets/scss/elements/elements";  // TODO IST DIESE DATEIEN NOCH NOTWENDIG? Inhalt checken
+@import "src/assets/scss/components/components";
+@import "src/assets/scss/fonts/fonts";
+@import "src/assets/scss/forms/formelements";
+@import "src/assets/scss/modules/modules";

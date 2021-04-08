@@ -1,4 +1,4 @@
-var typechecks = require('../../gulp/functions/type-checks');
+import typechecks from "typechecks/app";
 
 /**
  * concat

@@ -1,6 +1,6 @@
 // TODO: Das Plugin JSONPath funktioniert nicht ohne npm install aufgerufen zu haben....
 // var JSONPath = require('jsonpath-plus');
-var typechecks = require('../../gulp/functions/type-checks');
+import typechecks from "typechecks/app";
 
 /**
  * jsonValue

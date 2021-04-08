@@ -1,4 +1,4 @@
-let typechecks = require('../../gulp/functions/type-checks');
+import typechecks from "typechecks/app";
 
 /**
  * i18n dummy (!)

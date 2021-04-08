@@ -14,7 +14,7 @@ import browser  from 'browser-sync';
 import rimraf   from 'rimraf';
 import panini   from 'panini';
 import sherpa   from 'style-sherpa';
-import typechecks from './gulp/functions/type-checks';
+import typechecks from 'typechecks/app';
 import glob     from 'glob';
 // import svgSpritesheet from '@mariusgundersen/gulp-svg-spritesheet';
 

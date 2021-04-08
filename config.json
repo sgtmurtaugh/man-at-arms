@@ -25,67 +25,8 @@
         "sprites": "src/assets/img/sprites"
       },
       "javascript": [
-        "node_modules/jquery/dist/jquery.js",
         "node_modules/modernizr-dist/sticky.js",
-        "node_modules/jquery-ui-dist/jquery-ui.min.js",
-
-        "node_modules/foundation-sites/dist/js/plugins/foundation.core.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.motion.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.keyboard.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.triggers.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.touch.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.box.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.imageLoader.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.nest.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.util.timer.js",
-
-        "node_modules/foundation-sites/dist/js/plugins/foundation.tabs.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.abide.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.accordion.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.accordionMenu.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.drilldown.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.dropdown.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.dropdownMenu.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.equalizer.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.interchange.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.magellan.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.offcanvas.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.orbit.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveAccordionTabs.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveMenu.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveToggle.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.reveal.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.slider.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.smoothScroll.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.sticky.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.toggler.js",
-        "node_modules/foundation-sites/dist/js/plugins/foundation.tooltip.js",
-
-        "node_modules/slick-carousel/slick/slick.js",
-
-        "node_modules/caman/dist/caman.min.js",
-        "node_modules/cropperjs/dist/cropper.min.js",
-
-        "src/assets/js/app.js",
-        "src/assets/js/forms/multirange.js",
-        "src/assets/js/forms/datepicker.js",
-        "src/assets/js/general/setupJSMarker.js",
-        "src/assets/js/geo/aktueller_standort.js",
-        "src/assets/js/modules/module_carousel.js",
-        "src/assets/js/components/comp_popupWindow.js",
-        "src/assets/js/components/comp_recommendation.js",
-        "src/assets/js/components/comp_header_menucontrol.js",
-        "src/assets/js/modules/module_navigation.js",
-        "src/assets/js/modules/module_job-search.js",
-        "src/assets/js/modules/module_zeitauswahl.js",
-
-        "src/assets/js/components/comp_imageCrop.js",
-
-        "src/assets/js/libs/lib_layout-util.js",
-        "src/assets/js/libs/lib_bubble-progress.js",
-        "src/assets/js/libs/lib_form-bindings.js"
-
+        "src/assets/js/app.js"
       ],
       "sass": [
         "src/assets/scss/app.scss"
