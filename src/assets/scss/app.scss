@@ -1,0 +1,32 @@
+// essential definitions for foundation base settings
+@import "./essentials";
+
+// foundation base reformattings
+@import "./settings";
+
+// project specific extensions
+@import "./settings_extensions";
+
+// vendors
+@import "src/assets/scss/_/vendors/vendors";
+
+// helper / utils
+@import "src/assets/scss/_/helpers/helpers";
+@import "src/assets/scss/_/utils/utils";
+@import "src/assets/scss/_/mixins/mixins";
+@import "src/assets/scss/_/utils/flex-utils";
+
+// sprites
+@import "src/assets/scss/_/sprites/sprites";
+
+// reformatting base
+@import "src/assets/scss/_/reformattings/reformattings";
+
+// project definitions
+@import "src/assets/scss/_/elements/elements";  // TODO IST DIESE DATEIEN NOCH NOTWENDIG? Inhalt checken
+@import "src/assets/scss/_/components/components";
+@import "src/assets/scss/_/fonts/fonts";
+@import "src/assets/scss/_/forms/_formelements";
+@import "src/assets/scss/_/doctypes/doctypes";
+@import "src/assets/scss/_/modules/modules";
+@import "./libs/libs";

@@ -1,0 +1,92 @@
+    <input{{!--
+    --}} class="form-field{{!--
+
+                            Attribut class
+                            --}}{{#if class}}{{!--
+        --}} {{class}}{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Error flag
+                            --}}{{#ifEquals isError "true"}}{{!--
+        --}} is-invalid-input{{!--
+                            --}}{{/ifEquals}}{{!--
+
+    --}}"{{!--
+
+                            Attribut type
+                            --}}{{#if type}}{{!--
+    --}} type="{{type}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut id
+                            --}}{{#if id}}{{!--
+    --}} id="{{id}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut name
+                            --}}{{#if name}}{{!--
+    --}} name="{{name}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut value
+                            --}}{{#if value}}{{!--
+    --}} value="{{value}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut placeholder
+                            --}}{{#if placeholder}}{{!--
+    --}} placeholder="{{placeholder}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut onblur
+                            --}}{{#if onblur}}{{!--
+    --}} onblur="{{onblur}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut onfocus
+                            --}}{{#if onfocus}}{{!--
+    --}} onfocus="{{onfocus}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut min
+                            --}}{{#if min}}{{!--
+    --}} min="{{min}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut max
+                            --}}{{#if max}}{{!--
+    --}} max="{{max}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut list
+                            --}}{{#if list}}{{!--
+    --}} list="{{list}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut step
+                            --}}{{#if step}}{{!--
+    --}} step="{{step}}"{{!--
+                            --}}{{/if}}{{!--
+
+
+                            Attribut isRequired
+                            --}}{{#ifEquals isRequired "true"}}{{!--
+    --}} required{{!--
+                            --}}{{/ifEquals}}{{!--
+
+--}}>{{!--
+                            Error flag
+                            --}}{{#ifEquals isError "true"}}{{!--
+--}}{{> elem_error_icon }}{{!--
+                            --}}{{/ifEquals}}

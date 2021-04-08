@@ -1,0 +1,49 @@
+<div class="module module_JobCategories" id="modDocId_ModulJobCategories">
+    {{#> elem_headline class="module-headline large" vsize=1 }}
+        {{title}}
+    {{/elem_headline}}
+
+    <div class="module-container">
+        <div class="module-container-wrapper">
+
+            <div class="text_teaser">{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+                --}}{{> @partial-block offset=(addition offset 1) }}{{!--
+                                --}}{{else}}{{!--
+                --}}{{> loremipsum-large offset=(addition offset 1) }}{{!--
+                                --}}{{/if}}{{!--
+
+            --}}</div>
+
+            <div class="row">
+                <div class="small-6 medium-4 large-2 large-offset-1 columns text-center">
+                    {{> modSnip_ItemTeaserShort offset=(addition offset 1) linkText="Hundeflüsterer"
+                            link="site/beispiele/examplePopup" image="jobcategories_hundefluesterer.svg" }}
+                </div>
+
+                <div class="small-6 medium-4 large-2 columns text-center">
+                    {{> modSnip_ItemTeaserShort offset=(addition offset 1) linkText="Flusenballerina"
+                            link="site/beispiele/examplePopup" image="jobcategories_flusenballerina.svg" }}
+                </div>
+
+                <div class="small-6 medium-4 large-2 columns text-center">
+                    {{> modSnip_ItemTeaserShort offset=(addition offset 1) linkText="Heckenfriseur"
+                            link="site/beispiele/examplePopup" image="jobcategories_heckenfriseur.svg" }}
+                </div>
+
+                <div class="small-6 medium-4 large-2 columns text-center">
+                    {{> modSnip_ItemTeaserShort offset=(addition offset 1) linkText="Babybesänftiger"
+                            link="site/beispiele/examplePopup" image="jobcategories_babybesaenftiger.svg" }}
+                </div>
+
+                <div class="small-6 medium-4 large-2 columns end text-center">
+                    {{> modSnip_ItemTeaserShort offset=(addition offset 1) linkText="Seniorenathlet"
+                            link="site/beispiele/examplePopup" image="jobcategories_seniorentaenzer.svg" }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

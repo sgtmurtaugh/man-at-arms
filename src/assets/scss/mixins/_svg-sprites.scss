@@ -1,0 +1,125 @@
+
+@mixin -kbs-adjust-sprite-image($key: '', $container-rem-width: null, $container-rem-height: null, $scale: null, $doCenterX: true, $doCenterY: true) {
+
+  $image-rem-width: rem_calc(map_get(map_get($icons, $key), width));
+  $image-rem-height: rem_calc(map_get(map_get($icons, $key), height));
+
+  position: absolute;
+  width: $image-rem-width;
+  height: $image-rem-height;
+
+  top: 50%;
+  left: 50%;
+
+  $transform: translate(-50%, -50%);
+
+  @if ($doCenterX) == false and ($doCenterY) == false {
+    $transform: translate(0, 0);
+    top: 0;
+    left: 0;
+  } @else {
+    @if ($doCenterX) == false {
+      $transform: translateY(-50%);
+      left: 0;
+    }
+    @if ($doCenterY) == false {
+      $transform: translateX(-50%);
+      top: 0;
+    }
+  }
+
+  @if $scale != null {
+    $transform: $transform + ' scale(' + $scale + ')';
+  }
+
+  $background-posX: map_get(map_get($icons, $key), backgroundX);
+  $background-posY: map_get(map_get($icons, $key), backgroundY);
+  background-repeat: no-repeat;
+  background-image: url(map_get(map_get($icons, sprite), svgPath));
+  background-position-x: $background-posX;
+  background-position-y: $background-posY;
+
+  @if ($container-rem-width) != null and ($container-rem-height) != null {
+    @if unit($container-rem-width) == 'rem' and unit($container-rem-height) == 'rem' {
+      @if strip-unit($image-rem-width) > 0 and strip-unit($image-rem-height) > 0 {
+        $scale-factorX: strip-unit($container-rem-width) / strip-unit($image-rem-width);
+        $scale-factorY: strip-unit($container-rem-height) / strip-unit($image-rem-height);
+
+        @if $scale != null {
+          $scale-factorX: $scale-factorX * $scale;
+          $scale-factorY: $scale-factorY * $scale;
+        }
+
+        $transform: translate(-50%, -50%) scale($scale-factorX, $scale-factorY);
+      }
+    }
+  }
+
+  transform: $transform;
+
+}
+
+@mixin -kbs-svg-sprite-image($key: '', $container-rem-width: null, $container-rem-height: null, $scale: null, $keepWidth: false, $keepHeight: false, $doCenterX: true, $doCenterY: true) {
+  position: relative;
+
+  @if $keepWidth == false {
+    $width: map_get(map_get($icons, $key), width);
+
+    @if $container-rem-width != null {
+      $width: $container-rem-width;
+    }
+
+    width: $width;
+  }
+
+  @if $keepHeight == false {
+    $height: map_get(map_get($icons, $key), height);
+
+    @if $container-rem-height != null {
+      $height: $container-rem-height;
+    }
+
+    height: $height;
+  }
+
+  &::before {
+    transition: all 0.25s ease;
+    @include -kbs-adjust-sprite-image($key, $container-rem-width, $container-rem-height, $scale, $doCenterX, $doCenterY);
+    content: ''
+
+  }
+}
+
+
+//Methode funktioniert nicht ??
+//@mixin -kbs-image-direct($key, $rem-width, $rem-height) {
+//
+//  @if ($rem-width) != null and ($rem-height) != null {
+//    @if unit($rem-width) == 'rem' and unit($rem-height) == 'rem' {
+//
+//
+//      &::before {
+//        background-color: black;
+//        position: absolute;
+//        top: 50%;
+//        left: 10px;
+//        content: '';
+//
+//        transform: translate(-50%, -50%);
+//
+//        background-repeat: no-repeat;
+//        background-image: url(map_get(map_get($icons, sprite), svgPath));
+//
+//        $backgroundX: map_get(map_get($icons, $key), backgroundX);
+//        $backgroundY: map_get(map_get($icons, $key), backgroundY);
+//        background-position: $backgroundX $backgroundY;
+//
+//        width: $rem-width;
+//        height: $rem-height;
+//      }
+//
+//
+//    }
+//  }
+//
+//}

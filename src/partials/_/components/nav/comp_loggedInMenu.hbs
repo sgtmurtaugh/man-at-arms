@@ -1,0 +1,34 @@
+                                {{#if isLoggedIn}}
+<div class="component component_loggedInMenu">
+    <div class="component-container">
+        <div class="component-container-wrapper">
+
+            <input id="header-loggedInMenu-toggle" aria-hidden="true" type="checkbox"/>
+            <label for="header-loggedInMenu-toggle" aria-hidden="true"></label>
+
+            <div class="header-loggedInMenu-list-container">
+                                    {{#if loginmenu}}
+                    <ul class="header-loggedInMenu-list row collapse">
+                                        {{#each loginmenu.links as |link|}}
+
+                                            {{#if @last}}
+                        <li class="header-loggedInMenu-list-item small-12 end columns">
+                            <hr>
+                            <a href="{{renderPageLink link.url this}}">{{ link.displayText }}</a>
+                        </li>
+                                            {{else}}
+                        <li class="header-loggedInMenu-list-item small-12 columns">
+                            <a href="{{renderPageLink link.url this}}">{{ link.displayText }}</a>
+                        </li>
+                                            {{/if}}
+
+                                        {{/each}}
+                    </ul>
+                                    {{/if}}
+            </div>
+
+
+        </div>
+    </div>
+</div>
+                                {{/if}}

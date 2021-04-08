@@ -1,0 +1,46 @@
+<li class="carousel_item">
+    <div class="carousel_item_wrapper">
+        <div class="carousel_item_contentContainer">
+
+            <div class="previewBox{{!--
+
+                                --}}{{#if hasImage}}{{!--
+                    --}} no-padding no-background-color{{!--
+                                --}}{{/if}}{{!--
+
+                --}}"{{!--
+            --}}>{{!--
+
+                                --}}{{#if hasImage}}{{!--
+
+                --}}
+                <div class="carousel_item_image">
+                    <img src="{{root}}/assets/img/example/Panda.jpg"/>
+                </div>{{!--
+
+                                --}}{{/if}}{{!--
+
+                --}}
+                <div class="carousel_item_texts">
+                    {{#> elem_headline class="carousel_item_text_title" }}
+                        {{title}}
+                    {{/elem_headline}}
+
+                    <div class="carousel_item_text_teaser">{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+                        --}}{{> @partial-block offset=(addition offset 1)}}{{!--
+                                --}}{{else}}{{!--
+                        --}}{{> loremipsum-large offset=(addition offset 1)}}{{!--
+                                --}}{{/if}}{{!--
+
+                    --}}</div>
+
+                </div>
+            </div>
+
+            <a href="{{renderPageLink link this }}" class="carousel_item_link hasPopup"></a>
+        </div>
+    </div>
+</li>
+

@@ -1,0 +1,35 @@
+<div class="module module_formbox">
+    <div class="module-container">
+        <div class="module-container-wrapper">
+            {{!--
+                                Dies ist nur eine spezielle Pruefung fuer den Clickddummy!
+
+            --}}{{#> elem_headline class="module-headline" vsize=1 }}
+                {{title}}
+            {{/elem_headline}}{{!--
+
+            --}}
+            <div class="row">
+                <div class="small-12 medium-10 small-centered columns">
+                                {{#if @partial-block}}
+                    {{> @partial-block offset=(addition offset 1) }}
+                                {{else}}
+                    {{> beispiel_mod_formbox}}
+                                {{/if}}
+                </div>
+            </div>{{!--
+
+                                ggf. RelatedEnts rendern
+
+                                --}}{{#if isRelatedEnts}}
+
+            <div class="row">
+                <div class="small-12 medium-10 small-centered columns">
+                    {{> modPart_FormBox_RelatedEnts}}
+                </div>
+            </div>
+                                {{/if}}
+
+        </div>
+    </div>
+</div>

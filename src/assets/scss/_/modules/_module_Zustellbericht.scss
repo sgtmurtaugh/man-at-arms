@@ -1,0 +1,48 @@
+/*
+  Das Modul Zustellbericht basiert auf Fliesstext, somit muessen hier nur alle Unterschiede umgesetzt werden!
+*/
+.module_zustellbericht{
+
+  > .module-container{
+
+    > .module-container-wrapper{
+      > .contentContainer{
+
+        @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--zustellbericht, rem-calc(50px), rem-calc(50px), null, true, true, false, false);
+        padding-left: rem-calc(50px);
+
+        @include breakpoint(medium up){
+          padding-left: rem-calc(130px);
+        }
+
+        @include breakpoint(small up){
+          @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--zustellbericht, rem-calc(50px), rem-calc(50px), null, true, true, false, false);
+          padding-left: rem-calc(100px);
+        }
+
+        @include breakpoint(large up){
+          @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--zustellbericht, rem-calc(62px), rem-calc(62px), null, true, true, false, false);
+          padding-left: rem-calc(180px);
+        }
+        @include breakpoint(xlarge up){
+          padding-left: rem-calc(180px);
+        }
+
+        &:before {
+          top: 55px;
+          left: 50px;
+
+          @include breakpoint(medium up){
+            left: 80px;
+          }
+          @include breakpoint(large up){
+            top: 60px;
+            left: 110px;
+          }
+        }
+      }
+
+    }
+
+  }
+}

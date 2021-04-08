@@ -1,0 +1,182 @@
+/* ------------------------------
+  # PRINT
+ ------------------------------ */
+@media print {
+
+  /* ------------------------------
+    # Hide: Modules
+   ------------------------------ */
+  //.module_accordion,
+  .module_arbeitnehmerUndGeber,
+  //.module_artikel,
+  .module_blitzanmeldung,
+  .module_callToAction,
+  .module_carousel,
+  //.module_fliesstext,
+  .module_formbox,
+  .module_FormProgressBar,
+  .module_infobox,
+  .module_JobCategories,
+  .mod_JobSearchFacets,
+  .mod_JobSearchQuery,
+  .mod_JobSearchResults,
+  .module_navigation,
+  //.module_zustellbericht,
+
+  /* ------------------------------
+    # Hide: Components
+   ------------------------------ */
+  .component_burgerMenu,
+  .component_clickdummyTopBar,
+  .component_footer,
+  .component_header,
+  //.component_loggedInMenu,
+  .component_navmeta,
+  //.component_popupWindow,
+  .component_recommendation,
+
+  /* ------------------------------
+    # Hide: Site-Components
+   ------------------------------ */
+  //.back-to-top,
+  //.searchresult,
+  //.cookie-banner,
+  //.nav-meta,
+  //.searchTopSlider,
+  //.search-expert,
+  //.top-bar,
+  // header,
+
+  /* ------------------------------
+    # Hide: Sonstiges
+   ------------------------------ */
+  //.module_action,
+  //.slick-dots,
+  *:not(a)::after,
+  *:not(a)::before
+  {
+    display: none!important;
+  }
+
+  /* ------------------------------
+    # General print styles
+   ------------------------------ */
+
+  html, body {
+    font-size: 12pt!important;
+    font-family: $-kbs-font-family-kohinoor-regular!important;
+    line-height: 1.25rem!important;
+    width: 100%!important;
+    max-width: 100%!important;
+
+    * {
+      font-size: 100%!important;
+      font-family: $-kbs-font-family-kohinoor-regular!important;
+      font-color: $black!important;
+      line-height: 1.25rem!important;
+      text-align: left!important;
+      position: static!important;
+    }
+
+    &#body > h1 {
+      position: static!important;
+      width: auto!important;
+      height: auto!important;
+      font-size: 150%!important;
+      padding: 15px!important;
+      margin: 10px 10px 0!important;
+      border-bottom: 3px solid black!important;
+      border-top: 3px solid black!important;
+    }
+
+    //Show all Link-URLs on print
+    a[href]:after {
+      content: none !important;
+    }
+
+    a[href='#']:after {
+      content:''!important;
+    }
+
+    table, th, td  {
+      border: 1px solid $black!important;
+    }
+
+    .row {
+      margin: 0!important;
+      padding: 0!important;
+      max-width: none!important;
+    }
+
+    .fliesstext {
+      max-width: none!important;
+    }
+
+    .module {
+      clear: both;
+      display: block;
+      padding-top: 0!important;
+      padding-bottom: 0!important;
+      margin-top: 20px!important;
+      margin-bottom: 20px!important;
+
+      ~ h1, ~ h2, ~ h3, ~ h4, ~ h5, ~ h6 {
+        margin: 10px!important;
+        padding: 15px!important;
+        border-top: 1px solid black!important;
+        border-bottom: 1px solid black!important;
+        font-size: 130%!important;
+        clear: both;
+      }
+    }
+
+    .module-headline {
+      font-size: 130% !important;
+      border-top: 1px double $black !important;
+      border-bottom: 1px double $black !important;
+      padding-top: 10px !important;
+      margin-bottom: 15px !important;
+
+      > span {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+    }
+
+    footer {
+      .footer_impressum_copyright {
+          padding: 0;
+          border-top: 3px solid black;
+      }
+    }
+  }
+
+  div, ul, ol {
+    width: 100%!important;
+  }
+
+  img,
+  picture,
+  button,
+  .image-wrapper,
+  .image-container,
+  .picture,
+  .button{
+    display: none!important;
+  }
+
+  .infoButton {
+    vertical-align: baseline!important;
+    color: inherit!important;
+    height: auto!important;
+    width: auto!important;
+    margin: 0!important;
+    overflow: visible!important;
+    padding-right: 0!important;
+  }
+
+  /* ------------------------------
+    # include separate print module files
+   ------------------------------ */
+  //@import "print__modul_part__toggle";
+}

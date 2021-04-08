@@ -1,0 +1,45 @@
+<div class="module module_fliesstext {{!--
+                                --}}{{#if additionalClasses}}{{!--
+        --}} {{additionalClasses}}{{!--
+                                --}}{{/if}}{{!--
+
+    --}}"{{!--
+
+    --}} id="{{!--
+
+                                Clickdummy spezielle Pruefung
+                                --}}{{#if moduleDocId}}{{!--
+        --}}{{moduleDocId}}{{!--
+                                --}}{{else}}{{!--
+        --}}docId_ModulFliesstext{{!--
+                                --}}{{/if}}{{!--
+    --}}"{{!--
+
+--}}>
+    <div class="module-container">
+        <div class="module-container-wrapper">{{!--
+
+                                --}}{{#ifEquals isCloseLink "true"}}{{!--
+            --}}<div class="icon_close">
+                <a href="{{renderPageLink 'site/startseite' this}}" title="zur Startseite">{{i18n "popupSchließen"}}</a>
+            </div>{{!--
+                                --}}{{/ifEquals}}{{!--
+
+            --}}{{#> elem_headline class="module-headline" vsize=1 }}
+                {{title}}
+            {{/elem_headline}}
+
+            <div class="contentContainer">{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+                --}}{{> @partial-block offset=(addition offset 1)}}{{!--
+                                --}}{{else}}{{!--
+                --}}{{> loremipsum-large offset=(addition offset 1)}}{{!--
+                                --}}{{/if}}{{!--
+
+            --}}</div>
+
+        </div>
+    </div>
+
+</div>

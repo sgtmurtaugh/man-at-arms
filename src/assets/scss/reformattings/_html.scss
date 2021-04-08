@@ -1,0 +1,24 @@
+/* === globals ============ */
+
+:root {
+  --color-primary: orange;
+  --color-secondary: blue;
+  --color-black: #000;
+  --color-white: #fff;
+}
+
+* {
+  border-sizing: box-border;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+

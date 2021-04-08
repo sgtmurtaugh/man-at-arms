@@ -1,0 +1,31 @@
+/**
+ * -kbs-headline-size
+ * TODO
+ * param {string} headline [$-kbs-default-headline]
+ */
+@mixin -kbs-headline-size($headline: $-kbs-default-headline) {
+  @if not $headline {
+    $headline: $-kbs-default-headline;
+  }
+
+  @each $size, $headers in $header-sizes {
+    @include breakpoint($size) {
+      $font-size: map-get($headers, $headline);
+      font-size: rem-calc($font-size);
+    }
+  }
+}
+
+/**
+ * -kbs-headline-style
+ * TODO
+ * param {string} headline [$-kbs-default-headline]
+ */
+@mixin -kbs-headline-style($headline: $-kbs-default-headline) {
+  @if not $headline {
+    $headline: $-kbs-default-headline;
+  }
+
+  @extend #{$headline};
+  color: inherit;
+}

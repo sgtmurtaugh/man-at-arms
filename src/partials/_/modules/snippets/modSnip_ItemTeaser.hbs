@@ -1,0 +1,27 @@
+<div class="itemTeaser">
+
+    <div class="img-wrapper">{{!--
+
+                                --}}{{#if image}}{{!--
+        --}}<img src="{{root}}assets/img/example/{{image}}"/>{{!--
+                            --}}{{/if}}{{!--
+    --}}</div>
+
+    <div class="text-wrapper">
+        {{#> elem_headline vsize=2 }}
+            {{title}}
+        {{/elem_headline}}{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+        --}}{{> @partial-block offset=(addition offset 1) }}{{!--
+                                --}}{{else}}{{!--
+        --}}{{> loremipsum-large offset=(addition offset 1) }}{{!--
+                                --}}{{/if}}{{!--
+
+    --}}</div>
+
+    <div class="action">
+        {{> elem_link_cta link=link linkText=linkText cssClass="cta" }}
+    </div>
+
+</div>

@@ -1,0 +1,35 @@
+<div class="module module_accordion" id="modDocId_ModulAccordion">
+    <div class="module-container">
+        <div class="module-container-wrapper">
+            {{#> elem_headline vsize=1 }}
+                {{title}}
+            {{/elem_headline}}{{!--
+
+            --}}
+            <ul class="accordion" data-accordion>{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+
+                --}}{{> @partial-block offset=(addition offset 1) }}{{!--
+
+                                --}}{{else}}{{!--
+
+                --}}{{#> modSnip_AccordionItem title="Item 1" isActive=true }}{{!--
+                    --}}{{> loremipsum-large offset=(addition offset 1) }}{{!--
+                --}}{{/modSnip_AccordionItem}}{{!--
+
+                --}}{{#> modSnip_AccordionItem title="Item 2" }}{{!--
+                    --}}{{> loremipsum-large offset=(addition offset 1) }}{{!--
+                --}}{{/modSnip_AccordionItem}}{{!--
+
+                --}}{{#> modSnip_AccordionItem title="Item 3" }}{{!--
+                    --}}{{> loremipsum-large offset=(addition offset 1) }}{{!--
+                --}}{{/modSnip_AccordionItem}}{{!--
+
+                                --}}{{/if}}{{!--
+
+            --}}</ul>
+
+        </div>
+    </div>
+</div>

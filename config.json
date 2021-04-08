@@ -1,0 +1,284 @@
+{
+  "project": {
+    "name": "HJB-clickdummy",
+    "version": "0.1.0"
+  },
+
+  "development": {
+    "server": {
+      "port": 8000
+    }
+  },
+
+  "paths": {
+    "src": {
+      "path": "src",
+      "assets": [
+        "src/assets/**",
+        "!src/assets/img{,/**}",
+        "!src/assets/js{,/**}",
+        "!src/assets/scss{,/**}"
+      ],
+      "images": {
+        "path": "src/assets/img",
+        "scaled": "src/assets/img/scaled",
+        "sprites": "src/assets/img/sprites"
+      },
+      "javascript": [
+        "node_modules/jquery/dist/jquery.js",
+        "node_modules/modernizr-dist/sticky.js",
+        "node_modules/jquery-ui-dist/jquery-ui.min.js",
+
+        "node_modules/foundation-sites/dist/js/plugins/foundation.core.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.mediaQuery.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.motion.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.keyboard.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.triggers.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.touch.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.box.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.imageLoader.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.nest.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.util.timer.js",
+
+        "node_modules/foundation-sites/dist/js/plugins/foundation.tabs.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.abide.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.accordion.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.accordionMenu.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.drilldown.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.dropdown.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.dropdownMenu.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.equalizer.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.interchange.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.magellan.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.offcanvas.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.orbit.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveAccordionTabs.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveMenu.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.responsiveToggle.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.reveal.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.slider.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.smoothScroll.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.sticky.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.toggler.js",
+        "node_modules/foundation-sites/dist/js/plugins/foundation.tooltip.js",
+
+        "node_modules/slick-carousel/slick/slick.js",
+
+        "node_modules/caman/dist/caman.min.js",
+        "node_modules/cropperjs/dist/cropper.min.js",
+
+        "src/assets/js/app.js",
+        "src/assets/js/forms/multirange.js",
+        "src/assets/js/forms/datepicker.js",
+        "src/assets/js/general/setupJSMarker.js",
+        "src/assets/js/geo/aktueller_standort.js",
+        "src/assets/js/modules/module_carousel.js",
+        "src/assets/js/components/comp_popupWindow.js",
+        "src/assets/js/components/comp_recommendation.js",
+        "src/assets/js/components/comp_header_menucontrol.js",
+        "src/assets/js/modules/module_navigation.js",
+        "src/assets/js/modules/module_job-search.js",
+        "src/assets/js/modules/module_zeitauswahl.js",
+
+        "src/assets/js/components/comp_imageCrop.js",
+
+        "src/assets/js/libs/lib_layout-util.js",
+        "src/assets/js/libs/lib_bubble-progress.js",
+        "src/assets/js/libs/lib_form-bindings.js"
+
+      ],
+      "sass": [
+        "src/assets/scss/app.scss"
+      ]
+    },
+    "dist": {
+      "path": "dist",
+      "assets": "assets",
+      "css": "dist/assets/css",
+      "images": "dist/assets/img",
+      "scaled": "dist/assets/img/scaled",
+      "sprites": "dist/assets/img/sprites",
+      "javascript": "dist/assets/js"
+    },
+    "build": {
+      "path": "build"
+    },
+    "frameworks": {
+      "foundation_sites": {
+        "sass": "bower_components/foundation-sites/scss",
+        "javascript": {
+          "dependencies": [
+            "bower_components/jquery/dist/jquery.js",
+            "bower_components/what-input/what-input.js"
+          ],
+          "all": [
+            "bower_components/foundation-sites/dist/foundation.min.js",
+            "bower_components/foundation-sites/dist/plugins/foundation.util.*.js"
+          ],
+          "core": [
+            "bower_components/foundation-sites/dist/plugins/foundation.core.js",
+            "bower_components/foundation-sites/dist/plugins/foundation.util.*.js"
+          ],
+          "components": {
+            "abide": "bower_components/foundation-sites/dist/plugins/foundation.abide.js",
+            "accordion": "bower_components/foundation-sites/dist/plugins/foundation.accordion.js",
+            "accordion-menu": "bower_components/foundation-sites/dist/plugins/foundation.accordionMenu.js",
+            "drilldown": "bower_components/foundation-sites/dist/plugins/foundation.drilldown.js",
+            "dropdown": "bower_components/foundation-sites/dist/plugins/foundation.dropdown.js",
+            "dropdown-menu": "bower_components/foundation-sites/dist/plugins/foundation.dropdownMenu.js",
+            "equalizer": "bower_components/foundation-sites/dist/plugins/foundation.equalizer.js",
+            "interchange": "bower_components/foundation-sites/dist/plugins/foundation.interchange.js",
+            "magellan": "bower_components/foundation-sites/dist/plugins/foundation.magellan.js",
+            "offcanvas": "bower_components/foundation-sites/dist/plugins/foundation.offcanvas.js",
+            "orbit": "bower_components/foundation-sites/dist/plugins/foundation.orbit.js",
+            "responsive-menu": "bower_components/foundation-sites/dist/plugins/foundation.responsiveMenu.js",
+            "responsive-toggle": "bower_components/foundation-sites/dist/plugins/foundation.responsiveToggle.js",
+            "reveal": "bower_components/foundation-sites/dist/plugins/foundation.reveal.js",
+            "slider": "bower_components/foundation-sites/dist/plugins/foundation.slider.js",
+            "sticky": "bower_components/foundation-sites/dist/plugins/foundation.sticky.js",
+            "tabs": "bower_components/foundation-sites/dist/plugins/foundation.tabs.js",
+            "toggler": "bower_components/foundation-sites/dist/plugins/foundation.toggler.js",
+            "tooltip": "bower_components/foundation-sites/dist/plugins/foundation.tooltip.js"
+          }
+        }
+      },
+      "motion_ui": {
+        "sass": "bower_components/motion-ui/src"
+      }
+    }
+  },
+
+  "nsg": {
+    "sprite_src": "src/assets/img-src/sprites",
+    "sprite_target": "src/assets/img/sprites",
+    "sprite_prefix": "nsg-",
+    "sprite_suffix": "",
+    "sprite_extension": ".png",
+    "stylesheet_target": "src/assets/scss/sprites/nsg",
+    "stylesheet_prefix": "_nsg-",
+    "stylesheet_suffix": "",
+    "stylesheet_extension": ".scss"
+  },
+
+  "svgsprite": {
+    "src": [
+      "src/assets/img-src/svg-sprites/**/*.svg",
+      "!src/assets/img-src/svg-sprites/hjb/**/*.svg",
+      "!src/assets/img-src/svg-sprites/*.ignore/**"
+    ],
+    "target": "build",
+
+    "config": {
+      "log": "debug",
+
+      "shape": {
+        "id": {
+          "separator": "--",
+          "generator": "%s",
+          "pseudo": "~",
+          "whitespace": "_"
+        },
+        "dimension": {
+          "maxWidth": 2000,
+          "maxHeight": 2000,
+          "precision": 2,
+          "attributes": false
+        },
+        "spacing": {
+          "padding": 1,
+          "box": "content"
+        },
+        "transform": ["svgo"],
+        "meta": null,
+        "align": null
+      },
+
+      "svg": {
+        "xmlDeclaration": true,
+        "doctypeDeclaration": true,
+        "namespaceIDs": true,
+        "namespaceClassnames": true,
+        "dimensionAttributes": true,
+        "rootAttributes": "",
+        "precision": -1,
+        "transform": []
+      },
+
+      "mode": {
+        "view": {
+          "dest": "./assets/scss",
+          "sprite": "../../assets/img/svg-sprites/svg-sprite.view.svg",
+          "dimensions": "-dims",
+          "layout": "diagonal",
+          "common": "",
+          "mixin": "sprite",
+          "bust": false,
+          "render": {
+            "scss": {
+              "dest": "svg-sprites/_svg-sprite.view.scss"
+            }
+          },
+          "example": false
+        }
+      },
+
+      "variables": {
+        "mapname": "icons"
+      }
+    }
+  },
+
+  "resizer": {
+    "path": "src/assets/img-src/scaled/",
+    "src": "src/assets/img-src/scaled/**/{*.bmp,*.jpg,*.jpeg,*.png}",
+    "target": "src/assets/img/scaled",
+    "prefix": "scaled-",
+    "suffix": "",
+    "options": {
+      "createFolders": true
+    },
+    "sizes": {
+      "XS": {
+        "width": 150,
+        "height": 150
+      },
+      "S": {
+        "width": 250,
+        "height": 250
+      },
+      "M": {
+        "width": 350,
+        "height": 350
+      },
+      "L": {
+        "width": 450,
+        "height": 450
+      },
+      "XL": {
+        "width": 550,
+        "height": 550
+      },
+      "XXL": {
+        "width": 650,
+        "height": 650
+      },
+      "teaser": {
+        "_height": -1,
+        "width": 500
+      },
+      "standard": {
+        "_height": -1,
+        "width": 500
+      },
+      "poster": {
+        "height": 900,
+        "_width": -1
+      },
+      "banner": {
+        "height": 1000,
+        "_width": -1
+      }
+    }
+  }
+
+}

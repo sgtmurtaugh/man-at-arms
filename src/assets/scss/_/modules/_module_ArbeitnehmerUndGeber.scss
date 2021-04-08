@@ -1,0 +1,49 @@
+.module_arbeitnehmerUndGeber{
+  @include -kbs-add-module-padding();
+
+  /* Default der Font Groesse und Family aendern! */
+  font-size: rem-calc($global-larger-font-size);
+  font-family: $-kbs-font-family-kohinoor-regular;
+
+  > .module-container {
+
+    > .module-container-wrapper {
+
+      .itemTeaser {
+        margin-bottom: rem-calc(16px);
+
+        > .img-wrapper {
+          display: inline-block;
+          margin: 0 auto $global-margin;
+          width: rem-calc(146px);
+          height: rem-calc(146px);
+          border-radius: 50%;
+          overflow: hidden;
+
+          @include breakpoint(medium up){
+            width: rem-calc(194px);
+            height: rem-calc(194px);
+          }
+
+          > img {
+            width: 100%;
+            height: auto;
+          }
+
+        }
+
+        > .text-wrapper {
+          text-align: left;
+        }
+
+        > .action {
+          > a {
+            &.button {
+              max-width: rem-calc(484px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

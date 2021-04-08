@@ -1,0 +1,164 @@
+.module_zeitauswahl {
+  padding-left: 0;
+  padding-right: 0;
+
+  > .module-container {
+
+    > .module-container-wrapper {
+      padding: 0;
+      margin-left: 0;
+      margin-right: 0;
+
+      > .contentContainer {
+        width: 100%;
+        background-color: $white;
+
+        @include breakpoint(large up){
+          display: table;
+          table-layout: fixed;
+        }
+
+        > .timebox {
+          display: block;
+          text-align: left;
+          border-top: 2px solid $medium-gray;
+          padding: rem-calc(10px);
+          line-height: 0;
+
+          @include breakpoint(large up){
+            display: table-cell;
+            text-align: center;
+            padding: 0 rem-calc(5px);
+            border-top: 0;
+          }
+
+          > .timebox-list {
+            display: none;
+            margin-top: rem-calc(15px);
+
+            > .row {
+              margin: 0;
+
+              .form-element {
+                margin-bottom: rem-calc(47px);
+
+                &.has-error {
+                  margin-bottom: 0;
+                }
+
+                > .text-invalid {
+                  margin-bottom: rem-calc(10px);
+                  white-space: nowrap;
+                }
+              }
+
+              > .timebox-list-elements {
+
+                > .time-element {
+                  position: relative;
+                  font-size: rem-calc(18px);
+                  font-family: $-kbs-font-family-kohinoor-light;
+                  padding: rem-calc(10px);
+                  border-radius: rem-calc(10px);
+                  background-color: $-kbs-color-light-gray;
+                  margin-bottom: rem-calc(30px);
+                  text-align: left;
+                  white-space: nowrap;
+
+                  @include breakpoint(large up){
+                    padding: rem-calc(10px 0 10px 10px);
+                  }
+
+                  > .time-element-delete {
+                    position: absolute;
+                    color: $black;
+                    cursor: pointer;
+                    top: 50%;
+                    right: rem-calc(10px);
+                    transform: translateY(-50%);
+                    line-height: 0;
+
+                    &:hover {
+                      text-decoration: none;
+                    }
+                  }
+                }
+
+              }
+
+              > .timebox-list-values {
+                display: none;
+              }
+
+            }
+
+            a {
+              &.button {
+                max-width: none;
+                padding: rem-calc(11px) rem-calc(5px);
+              }
+            }
+          }
+
+          > .timebox-toggle {
+            display: none;
+
+            + label {
+              position: relative;
+              background-color: transparent;
+              font-size: rem-calc(22px);
+              font-family: $-kbs-font-family-kohinoor-semibold;
+              margin: 0;
+              padding-left: rem-calc(20px);
+              user-select: none;
+
+              &::before {
+                width: auto;
+                height: auto;
+                position: absolute;
+                left: 0;
+                content: '>';
+                transition: 0.25s;
+                border: none;
+              }
+            }
+
+            &:checked {
+
+              + label {
+                &::before {
+                  transform: rotate(90deg);
+                  background-color: transparent;
+                }
+              }
+
+              ~ .timebox-list {
+                display: block;
+              }
+
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.noJS {
+  .module_zeitauswahl {
+
+    .timebox-list-time-control, .timebox-list-apply-control {
+      display: none;
+    }
+
+    .timebox-list-values {
+      display: block!important;
+    }
+
+  }
+}

@@ -1,0 +1,60 @@
+.component_navmeta{
+  padding: 0;
+
+  > .component-container{
+    background-color: $white;
+
+    > .component-container-wrapper{
+
+      > .navMeta{
+        padding: 0 $topbar-padding;
+
+        > ul{
+          list-style: none;
+          margin: 0;
+
+          > li{
+            display: inline-block;
+            margin: rem-calc(0 11px 0 0);
+            text-indent: 0;
+
+            &::before {
+              display: none;
+            }
+
+            &.navServiceGS {
+              > a, strong, em {
+                @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--navmeta_gebaerdensprache, rem-calc(22px), rem-calc(22px), null, true, true, false, true);
+              }
+            }
+
+            &.navServiceLS {
+              > a, strong, em {
+                @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--navmeta_leichtesprache, rem-calc(22px), rem-calc(22px), null, true, true, false, true);
+              }
+            }
+
+            > a, strong, em {
+              display: inline-block;
+              position: relative;
+              color: $black;
+              font-family: $-kbs-font-family-kohinoor-medium;
+              font-size: rem-calc(16px);
+              padding-left: rem-calc(27px);
+
+              &::before {
+                left: 12.5px!important;
+              }
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

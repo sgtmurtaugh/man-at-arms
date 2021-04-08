@@ -1,0 +1,23 @@
+                                {{#if recommendations }}
+<div class="component component_recommendation">
+    <div class="component-container">
+        <div class="component-container-wrapper">
+            <div class="recommendation-header show-for-sr">
+                {{#> elem_headline offset=(addition offset 1) vsize=3 }}
+                    Weiterempfehlen
+                {{/elem_headline}}
+            </div>
+
+            <div class="recommendation-content">
+                <span class="recommendation-title">{{i18n "recommendationCompany" }}</span>
+
+                <ul class="recommendation-list">
+                                {{#each recommendations as |recommendation|}}{{!--
+                    --}}{{> modSnip_comp_recommendationItem recommendation }}{{!--
+                                --}}{{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                {{/if}}

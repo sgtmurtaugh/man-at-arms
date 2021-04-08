@@ -1,0 +1,31 @@
+<div class="module module_infobox" id="modDocId_ModulInfoBox">
+    <div class="module-container">
+        <div class="module-container-wrapper">
+
+            <div class="image_wrapper">
+                <div class="hint"></div>
+            </div>
+
+            {{#> elem_headline class="module-headline large" vsize=1 }}
+                {{title}}
+            {{/elem_headline}}
+
+            <div class="contentContainer">
+                {{#if @partial-block}}
+                    {{> @partial-block offset=(addition offset 1) }}
+                {{else}}
+                    {{> loremipsum-large offset=(addition offset 1) }}
+                    <ul>
+                        <li>{{> loremipsum-medium}}</li>
+                        <li>{{> loremipsum-medium}}</li>
+                        <li>{{> loremipsum-medium}}</li>
+                        <li>{{> loremipsum-medium}}</li>
+                    </ul>
+                    <p><b>{{> loremipsum-short}}</b>
+                {{/if}}
+            </div>
+
+
+        </div>
+    </div>
+</div>

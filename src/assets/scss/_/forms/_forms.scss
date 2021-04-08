@@ -1,0 +1,10 @@
+@import "src/assets/scss/settings";
+
+.formwrapper{
+  padding: 20px;
+
+  @include breakpoint(medium){
+    padding: 20px 25%;
+  }
+}
+

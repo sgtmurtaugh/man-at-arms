@@ -1,0 +1,43 @@
+b,
+strong {
+  font-family: $-kbs-font-family-kohinoor-medium;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: $global-font-size;
+  font-family: $body-font-family;
+  background-color: $color-light-grey;
+}
+
+ul {
+    list-style: none;
+    margin-left: 1.1rem;
+
+    > li {
+      margin: rem-calc(15px 0px);
+
+      &:before {
+        display: inline-block;
+        width: rem-calc(9px);
+        height: rem-calc(9px);
+        border-radius: 50%;
+        background-color: $secondary-color;
+        margin-right: rem-calc(8px);
+        transform: translateY(-25%);
+        content: '';
+      }
+
+      li {
+        &:before {
+          margin-left: -(#{$list-nested-side-margin});
+        }
+      }
+
+      > a {
+        display: unset;
+      }
+
+    }
+
+}

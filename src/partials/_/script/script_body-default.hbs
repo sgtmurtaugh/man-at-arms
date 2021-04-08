@@ -1,0 +1,28 @@
+{{!-- ACHTUNG:
+    Hier wird NUR fuer den Clickdummy die 'noscript' Variable geprueft, um das Inkludieren der Scripte zu steuern. Dies
+    dient dazu, dass auch noscript pages generiert werden koennen, wenn der Parameter in dem PageLayout angegeben wird.
+
+    Im GSB muss das Skript natuerlich immer inkludiert werden!
+--}}
+                                {{#unless noscript }}
+<script src="{{root}}assets/js/app.js"></script>
+
+<script src="{{root}}assets/js/gsb/gsb_autosuggest.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_banner.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_calendar.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_clearfields.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_lightbox.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_multimedia.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_navigation.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_navigation_mobile.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_print.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_responsivetables.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_serviceborder.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_slideshow.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_toggle.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_togglebar.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_tooltip.js"></script>
+<script src="{{root}}assets/js/gsb/gsb_twoclickshare.js"></script>
+
+<script src="{{root}}assets/js/init.js"></script>
+                                {{/unless}}

@@ -1,0 +1,44 @@
+{{#> mod_Formbox title="Login" }}
+    <form name="loginForm" action="{{renderPageLink 'site/meinPortal/dashboard' this}}" method="get" enctype="application/x-www-form-urlencoded" role="form">
+
+        <div class="small-10 small-centered">
+            <fieldset>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{> elem_input_email id="email" name="email" placeholder="E-Mail-Adresse"}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{> elem_input_password id="password" name="password" placeholder="Passwort"}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <p><a href="{{renderPageLink 'site/login/passwortVergessen' this }}">Passwort vergessen?</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{> elem_checkbox id="logsave" name="logsave" value="logsave" placeholder="Eingeloggt bleiben" }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="component form-handle">
+                            <!-- nur fuer den Clickdummy auskommentiert. statt dessen wird ein dummy link auf das dashboard verlinkt
+                                    {{> elem_button type="submit" id="submit1" name="submit1" text="Einloggen" isExpanded="true" }}
+                                    -->
+                            <a class="button expanded" href="{{renderPageLink 'site/meinPortal/dashboard' this}}">Einloggen</a>
+
+                            <p class="text-center">
+                                <span>Neu bei der Haushaltsjobbörse?</span>
+                                <span><a href="{{renderPageLink 'site/login/registrieren' this}}">Jetzt kostenlos registrieren!</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+{{/mod_Formbox}}

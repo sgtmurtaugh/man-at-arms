@@ -1,0 +1,211 @@
+.module_carousel {
+  margin: 0;
+
+  /* Default der Font Groesse und Family aendern! */
+  font-size: rem-calc($global-larger-font-size);
+  font-family: $-kbs-font-family-kohinoor-regular;
+
+  > .module_container {
+
+    > .module_container_wrapper {
+      max-width: none;
+      padding-top: rem-calc(20px 0 0 0 );
+
+      @include breakpoint(medium only) {
+        padding: rem-calc(40px 0 0 0 );
+      }
+
+      @include breakpoint(large up) {
+        padding: rem-calc(60px 0 0 0);
+      }
+
+      > .carousel_itemContainer {
+        list-style: none;
+
+        .carousel_item {
+
+          > .carousel_item_wrapper {
+            text-align: center;
+            border-top-left-radius: 28px;
+            border-top-right-radius: 28px;
+
+            > .carousel_item_contentContainer {
+              width: 100%;
+              border-radius: rem-calc(28px);
+
+              > .previewBox {
+                display: inline-block;
+                position: relative;
+                background-color: $light-gray;
+                margin-top: 0;
+                overflow-y: hidden;
+                width: inherit;
+
+                &.no-background-color {
+                  background-color: transparent;
+                  overflow-y: unset;
+                }
+
+                @include breakpoint(medium up) {
+                  width: rem-calc(506px);
+                  margin-top: rem-calc(7.5px);
+
+                  &.no-padding{
+                    margin-top: 0;
+                  }
+                }
+
+                height: 0;
+                padding-bottom: 72.33%; //Aspect Ratio -> 506 = 100%, 366 = x, x = 72.33%
+                box-shadow: rem-calc(0 0 30px) $-kbs-color-medium-gray;
+                border-radius: rem-calc(28px);
+
+                > .carousel_item_texts {
+                  text-align: left;
+                  margin: rem-calc(15px);
+
+                  > .carousel_item_text_title {
+                    display: block;
+                    font-family: $-kbs-font-family-kohinoor-semibold;
+                    font-size: 22px;
+                    text-align: center;
+
+                    @include breakpoint(large) {
+                      font-size: 24px;
+                    }
+
+                    @include breakpoint(xlarge) {
+                      font-size: 28px;
+                    }
+                  }
+
+                  > .carousel_item_text_teaser {
+                    display: inline-block;
+                    font-family: $-kbs-font-family-kohinoor-regular;
+                    font-size: rem-calc(16px);
+                    margin-top: rem-calc(15px);
+
+                    @include breakpoint(medium up){
+                      font-size: rem-calc(18px);
+                    }
+
+                    @include breakpoint(xlarge up){
+                      font-size: rem-calc(20px);
+                    }
+
+                  }
+
+                }
+
+                > .carousel_item_image {
+
+                  > img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: rem-calc(28px);
+                    max-width: none;
+                    max-height: none;
+
+                    @include breakpoint(medium up){
+                      max-width: rem-calc(506px);
+                      max-height: rem-calc(366px);
+                    }
+                  }
+
+                }
+
+              }
+
+            }
+
+            a {
+              &.carousel_item_link {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+              }
+            }
+
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+        }
+
+
+
+        &::before {
+          display: none;
+        }
+
+      }
+
+      .slick-current {
+        .carousel_item {
+          > .carousel_item_wrapper {
+            > .carousel_item_contentContainer {
+              a {
+                &.carousel_item_link {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+}
+
+.noJS {
+  .module_carousel {
+
+    > .module_container {
+
+      > .module_container_wrapper {
+        max-width: $-kbs-module-container-wrapper-maxWidth;
+        margin: 0 auto;
+
+        > .carousel_itemContainer {
+          text-align: center;
+          margin: 0 1.25rem;
+
+          .carousel_item {
+            margin: rem-calc(50px 0 0 0);
+            text-indent: 0;
+
+            > .carousel_item_wrapper {
+              max-width: rem-calc(506px);
+              margin: 0 auto;
+
+              > .carousel_item_contentContainer {
+                position: relative;
+
+                a {
+                  &.carousel_item_link {
+                    display: block;
+
+                  }
+                }
+              }
+
+            }
+
+            &::before {
+              display: none;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}

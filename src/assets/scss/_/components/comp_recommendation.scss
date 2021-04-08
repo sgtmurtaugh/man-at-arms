@@ -1,0 +1,140 @@
+.component_recommendation {
+  padding-top: rem-calc(5px);
+
+  > .component-container {
+
+    > .component-container-wrapper {
+      border-top : 1px solid $dark-gray;
+      padding-top : rem-calc(10px);
+
+      > .recommendation-header {
+        font-family: $-kbs-font-family-kohinoor-semibold;
+      }
+
+      > .recommendation-content {
+        font-family: $-kbs-font-family-kohinoor-medium;
+        font-size: rem-calc(16px);
+
+        > .recommendation-title {
+          display: block;
+          font-family: $-kbs-font-family-kohinoor-semibold;
+          text-align: center;
+        }
+
+        > .recommendation-list {
+          margin-left: 0;
+          text-align: center;
+
+          > li {
+            display: inline-block;
+            text-indent: 0;
+            vertical-align: middle;
+
+            &:before {
+              content: none;
+            }
+
+            & + li {
+              margin-left: rem-calc(15px);
+            }
+
+            > a {
+              display: inline-block;
+              height: rem-calc(40px);
+              min-width: rem-calc(40px);
+              font-size: rem-calc(16px) !important;
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .iconedLinkStyle {
+    //display: inline-block;
+    width: rem-calc(40px);
+    //height: rem-calc(40px);
+    //margin: rem-calc(22px 7.5px 0 7.5px);
+    overflow: hidden;
+    color: transparent;
+    //transition: 0.25s;
+  }
+
+  .linkStyleBufferApp {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleDelicious {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleDigg {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleEvernote {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleFacebook {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleLinkedIn {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleMail {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStylePinterest {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStylePrint {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStylePocket {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleReddit {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleStumbleUpon {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleTumblr {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleTwitter {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-twitter, rem-calc(38px), rem-calc(38px));
+  }
+
+  .linkStyleWordPress {
+    @extend .iconedLinkStyle;
+    @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--footer_socialmedia-facebook, rem-calc(38px), rem-calc(38px));
+  }
+
+}

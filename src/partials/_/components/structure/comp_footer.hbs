@@ -1,0 +1,82 @@
+
+
+<div class="component component_footer">
+    <div class="component-container">
+        <div class="component-container-wrapper">
+
+
+
+                                {{#if footer_links}}
+
+            <div class="row">
+
+                <div class="medium-3 large-4 columns hide-for-small-only">
+                    <div class="footerlogo"></div>
+                    <!-- <img class="footerlogo" src="../../assets/img/sprites/minijob.png" /> -->
+                </div>
+
+                <div class="no-padding small-6 medium-6 large-5 columns">
+
+                    <div class="small-12 medium-6 columns">
+                        <span class="col-title hide-for-small-only">Service</span>
+                                    {{#each footer_links.service as |service|}}
+                        <p>
+                            <a href="{{renderPageLink service.link ../this }}" class="footerlink {{service.cssClass}}">{{service.displayText}}</a>
+                        </p>
+                                    {{/each}}
+                    </div>
+
+                    <div class="small-12 medium-6 columns">
+                        <span class="col-title hide-for-small-only">Information</span>
+                                    {{#each footer_links.information as |information|}}
+                        <p>
+                            <a href="{{renderPageLink information.link ../this }}" class="footerlink {{information.cssClass}}">{{information.displayText}}</a>
+                        </p>
+                                    {{/each}}
+                    </div>
+                </div>
+
+                <div class="small-6 medium-3 large-3 text-right medium-text-left columns">
+                    <div class="linklist-wrapper">
+                        <span class="col-title">Externe Links</span>
+                        {{#each footer_links.externalLinks as |externalLink|}}
+                        <p>
+                            <a href="{{externalLink.link}}" class="footerlink {{externalLink.cssClass}}">{{externalLink.displayText}}</a>
+                        </p>
+                        {{/each}}
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="internalLinks small-12 large-4 text-center large-text-left columns">
+                                    {{#each footer_links.internalLinks as |internalLink|}}
+                    <a href="{{renderPageLink internalLink.link ../this }}" class="footerlink {{internalLink.cssClass}}">{{internalLink.displayText}}</a>
+                                    {{/each}}
+                </div>
+
+                <div class="socialMedia small-12 large-5 text-center large-text-left columns">
+                    <div class="socialMedia-container">
+                        <span class="col-title">Social Media der Minijob-Zentrale</span>
+                        <div class="socialMedia-icon-container">
+                            <div class="socialMedia-icon-container-wrapper">
+                                                {{#each footer_links.socialMedia as |socialMedia|}}
+                                <a href="{{socialMedia.link}}" class="footerlink {{socialMedia.cssClass}}" aria-label="{{socialMedia.altText}}">{{socialMedia.displayText}}</a>
+                                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="copyright small-12 large-3 text-center medium-text-right large-text-left columns">
+                    <p class="copyright-text">&copy; Copyright Minijob-Zentrale</p>
+                </div>
+
+            </div>
+
+                                {{/if}}
+        </div>
+    </div>
+</div>

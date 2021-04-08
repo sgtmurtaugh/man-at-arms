@@ -1,0 +1,46 @@
+.component {
+  //margin: 0 auto;
+  //width: 100%;
+
+  padding: rem-calc(map-get($-kbs-module-offset-desktop, 'top')) 0 rem-calc(map-get($-kbs-module-offset-desktop, 'bottom'));
+  @include breakpoint(large down) {
+    padding: rem-calc(map-get($-kbs-module-offset-mobile, 'top')) 0 rem-calc(map-get($-kbs-module-offset-mobile, 'bottom'));
+  }
+
+  /* ------------------------------
+      # Component Container
+      Eigentlicher Container der Komponente
+     ------------------------------ */
+  > .component-container {
+
+    /* ------------------------------
+        # Component Container Wrapper
+        Zusaetzlicher Container fuer die farblich hinterlegten Componenten
+       ------------------------------ */
+    > .component-container-wrapper {
+      margin: 0 auto;
+//      max-width: -zf-get-bp-val($breakpoints, xlarge);
+
+      @include breakpoint(xxlarge up) {
+
+
+
+        max-width: rem-calc(map-get($breakpoints, xxlarge)) - (2 * map-get(map_get($-kbs-module-paddings, xxlarge), horizontal));
+      }
+    }
+  }
+}
+
+
+/* ------------------------------
+    # include separate components files
+   ------------------------------ */
+
+@import "src/assets/scss/_/components/clickdummy/comp_clickdummyTopBar";
+@import "comp_header";
+@import "comp_footer";
+@import "comp_navmeta";
+@import "comp_popupWindow";
+@import "comp_burgerMenu";
+@import "comp_loggedInMenu";
+@import "comp_recommendation";

@@ -1,0 +1,119 @@
+{{#> mod_Formbox title="Registrierung" }}
+    <form name="registrierenForm" action="{{renderPageLink 'site/zustellberichte/zustellbericht_doubleOptIn' this}}" method="get" enctype="application/x-www-form-urlencoded" role="form">
+        <div class="small-10 small-centered">
+            <fieldset>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{> elem_input_text id="vorname" name="vorname" placeholder="Vorname" }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{> elem_input_text id="nachname" name="nachname" placeholder="Nachname" }}
+                    </div>
+                </div>
+                <div class="row box">
+                    <div class="small-12 columns">
+                        <p><a href="{{renderPageLink 'site/login/info_verifizierung' this }}" class="hasPopup">Adresse für die Verifizierung</a> als geprüfter Benutzer</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 large-8 columns distance-inside">
+                        {{> elem_input_text id="strasse" name="strasse" placeholder="Strasse" }}
+                    </div>
+                    <div class="small-12 large-4 columns">
+                        {{> elem_input_text id="hnr" name="haus-nr." placeholder="Haus-Nr." }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 large-4 columns distance-inside">
+                        {{> elem_input_text id="plz" name="plz" placeholder="PLZ" }}
+                    </div>
+                    <div class="small-12 large-8 columns">
+                        {{> elem_input_text id="wohnort" name="wohnort" placeholder="Wohnort" }}
+                    </div>
+                </div>
+                <div class="row box">
+                    <div class="small-12 medium-6 large-6 columns">
+                        {{> elem_input_date id="birthdate" name="birthdate" placeholder="Geb.-Datum" }}
+                    </div>
+                    <div class="small-12 medium-6 large-6 columns container-gender">
+                        <fieldset class="component form-element">
+                            <legend class="special-label">Geschlecht</legend>
+                            <div class="radiobutton-container radiobutton-container-gender">
+                                {{> elem_radiobtn_gender id="male" name="gender" placeholder="male" value="m" gender="gender-male" }}
+                            </div>
+                            <div class="radiobutton-container radiobutton-container-gender">
+                                {{> elem_radiobtn_gender id="female" name="gender" placeholder="female" value="f" gender="gender-female" }}
+                            </div>
+                            <div class="radiobutton-container radiobutton-container-gender">
+                                {{> elem_radiobtn_gender id="diverse" name="gender" placeholder="diverse" value="d" gender="gender-diverse" }}
+                            </div>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row box">
+                    <div class="small-12 columns">
+                        {{> elem_input_email id="email" name="email" placeholder="E-Mail-Adresse" }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{> elem_input_password id="password" name="password" placeholder="Passwort" }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        {{> elem_input_password  id="password" name="password" placeholder="Passwort wiederholen" }}
+                    </div>
+                </div>
+                <div class="row distance-outside">
+                    <div class="small-1 medium-1 large-1 columns" >
+                        <div class="component form-element">
+                            {{> elem_checkbox id="check1" name="check1" value="valueCheck1" }}
+                        </div>
+                    </div>
+                    <div class="small-11 medium-11 large-11 columns">
+                        <div class="component form-element">
+                                    <span class="text-checkbox">
+                                        Ich bin <a href="{{renderPageLink 'site/login/info_gewerblicher_dienstleister_anbieter' this }}" class="hasPopup">
+                                        kein gewerblicher</a> Dienstleistungs-Anbieter/Suchender.
+                                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row distance-outside">
+                    <div class="small-1 medium-1 large-1 columns">
+                        <div class="component form-element">
+                            {{> elem_checkbox id="check2" name="check2" value="valueCheck2" }}
+                        </div>
+                    </div>
+
+                    <div class="small-11 medium-11 large-11 columns">
+                        <div class="component form-element">
+                                    <span class="text-checkbox">
+                                        Ja, ich stimme den <a href="{{renderPageLink 'site/rechtliches/agb' this }}">
+                                        AGB</a> und den <a href="{{renderPageLink 'site/rechtliches/datenschutz' this }}">Datenschutzbestimmungen</a> zu.
+                                    </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="small-12 columns">
+                        <div class="component form-handle">
+                            <!-- nur fuer den Clickdummy auskommentiert. statt dessen wird ein dummy link auf das dashboard verlinkt
+                                    {{> elem_button type="submit" id="submit1" name="submit1" text="Registrieren" isExpanded="true" }}
+                                    -->
+                            <a class="button expanded" href="{{renderPageLink 'site/zustellberichte/zustellbericht_doubleOptIn' this}}">Registrieren</a>
+
+                            <p class="text-center">
+                                <span>Sie sind bereits registriert?</span>
+                                <span><a href="{{renderPageLink 'site/login/login' this }}">Jetzt einloggen</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+{{/mod_Formbox}}

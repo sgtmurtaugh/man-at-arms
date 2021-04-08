@@ -1,0 +1,13 @@
+<div class="component form-element">{{!--
+
+                                Field
+    --}}<textarea class="form-field" cols="{{cols}}" rows="{{rows}}" id="{{id}}" name="{{name}}" placeholder="{{placeholder}}"></textarea>{{!--
+
+                                Label
+    --}}{{> elem_label id=id isError=isError placeholder=placeholder }}{{!--
+
+                                Errortext, wenn Error flag 'true'
+                                --}}{{#ifEquals isError "true"}}{{!--
+    --}}{{> elem_error_text value=errorMsg }}{{!--
+                                --}}{{/ifEquals}}
+</div>

@@ -1,0 +1,32 @@
+a {
+  &.button {
+    &.withIcon{
+      padding: rem-calc(17px 5px);
+
+      > .contents {
+        display: flex;
+        justify-content: center;
+
+        > .iconbox {
+          display: inline-block;
+          width: 28px;
+          height: 28px;
+          transform: translate(-10px, -1px);
+
+          &.lightning {
+            @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--blitzanmeldung_button_blitz, rem-calc(17px), rem-calc(28px));
+          }
+
+        }
+
+        > span {
+          margin-top: 2px;
+        }
+
+
+      }
+
+    }
+
+  }
+}

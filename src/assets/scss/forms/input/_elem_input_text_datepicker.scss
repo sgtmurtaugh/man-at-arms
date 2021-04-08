@@ -1,0 +1,118 @@
+/* ------------------------------
+    ## Datepicker
+   ------------------------------ */
+
+.form-element-datepicker {
+
+      input.form-field {
+        background: transparent!important;
+        z-index: 99;
+        position: relative;
+        cursor: pointer;
+
+        &.is-invalid-input {
+          background-color: transparent!important;
+        }
+      }
+
+      .icon-box {
+        position: absolute;
+        right: rem-calc(22px);
+        top: rem-calc(22px);
+
+        .icon{
+          @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--icon_calendar, rem-calc(32px), rem-calc(32px));
+
+          &-error{
+            @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--icon_calendar_red, rem-calc(32px), rem-calc(32px));
+          }
+        }
+      }
+
+      .form-label-animated {
+        z-index: 99;
+      }
+}
+
+/* ------------------------------
+  ## jQueryUI Datepicker Anpassungen
+ ------------------------------ */
+
+#ui-datepicker-div {
+  border: 2px solid $dark-gray;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  display: none;
+
+  .ui-datepicker-header {
+    background-color: $white;
+    border-bottom: 1px solid $medium-gray;
+    height: 50px;
+
+    .ui-datepicker-title {
+      text-align: center;
+      padding: 11px;
+    }
+
+    > a {
+      display: block;
+      position: absolute!important;
+      padding: 0!important;
+      top: 16px;
+      font-size: 0;
+      line-height: 0;
+      height: 16px;
+      width: 16px;
+
+      &.ui-datepicker-prev {
+        left: 10px;
+
+        @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--icon_arrow_left, rem-calc(10px), rem-calc(16px));
+      }
+
+      &.ui-datepicker-next {
+        right: 10px;
+
+        @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--icon_arrow_right, rem-calc(10px), rem-calc(16px));
+      }
+    }
+
+    .ui-datepicker-month,
+    .ui-datepicker-year {
+      border: none;
+      margin: 0;
+      height: 1.4em;
+      padding: 0;
+      width: 33%;
+    }
+
+    .ui-datepicker-month{
+      margin: 0 0.7em 0 0;
+      padding: 0 1.8em 0 0;
+    }
+
+    .ui-datepicker-year{
+      padding: 0 2em 0 0;
+    }
+  }
+
+  .ui-datepicker-calendar {
+    padding: 10px;
+    margin: 0;
+    display: block;
+    background-color: $input-background;
+
+    thead, tbody {
+
+      background-color: $white;
+
+      tr {
+        background-color: transparent;
+
+        .ui-datepicker-unselectable {
+          color: $medium-gray;
+        }
+      }
+    }
+  }
+}

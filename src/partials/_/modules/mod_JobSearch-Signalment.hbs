@@ -1,0 +1,37 @@
+<div class="module">
+    {{#> elem_headline offset="1" vsize="1" }}
+        {{title}}
+    {{/elem_headline}}
+
+    <div class="module_container">
+        <div class="module_container_wrapper">
+            <div class="mod_JobSearch">
+                <div class="mod_JobSearch-Query">
+                    {{> form_SearchSignalment}}
+                </div>
+                <div class="mod_JobSearch-Results">
+                    <span class="mod_JobSearch-ResultsInfo"><strong>45 Angebote</strong> in ihrer Nähe</span>
+
+                    <div class="mod_JobSearch-ResultsContainer row">
+                        {{> modSnip_JobSearch-Result bookmark=false}}
+                        {{> modSnip_JobSearch-Result bookmark=false}}
+                        {{> modSnip_JobSearch-Result bookmark=true}}
+                        {{> modSnip_JobSearch-Result bookmark=false}}
+                        {{> modSnip_JobSearch-Result bookmark=true}}
+                        {{> modSnip_JobSearch-Result bookmark=false}}
+                        {{> modSnip_JobSearch-Result bookmark=false}}
+                        {{> modSnip_JobSearch-Result bookmark=true}}
+                    </div>
+
+                    <div class="mod_JobSearch-ResultsControls">
+                        <div class="mod_JobSearch-ResultsPagination">
+                            <a href="{{{renderPageLink 'site/suche/suchergebnisse-angebote' this }}}" class="mod_JobSearch-ResultsLink mod_JobSearch-ResultLink--Previous">zurück</a>
+                            <span class="mod_JobSearch-ResultsPages">Seite 1 von 5</span>
+                            <a href="{{{renderPageLink 'site/suche/suchergebnisse-angebote' this }}}" class="mod_JobSearch-ResultsLink mod_JobSearch-ResultsLink--Next">weiter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

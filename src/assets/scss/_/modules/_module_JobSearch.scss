@@ -1,0 +1,309 @@
+.mod_JobSearch {
+  $el: &;
+  $timing: 500ms;
+
+  & li::before {
+    display: none;
+  }
+
+  &-Query {
+    padding: 1rem 1rem;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 30px #00000029;
+    border-radius: 20px;
+    opacity: 0.9;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  &-QueryButtonList {
+    margin: 0;
+    list-style: none;
+  }
+
+  &-QuerySelectButton {
+    text-align: center;
+    margin: 0.125rem 0;
+
+    &::before {
+      display: none;
+    }
+
+    & > button {
+
+      &:focus,
+      &:hover {
+        font-weight: bolder;
+      }
+    }
+  }
+
+  &-FilterBarWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  &-FilterBar {
+    $fb: &;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    //& > * {
+    //  margin: 1em 0;
+    //}
+
+    &--Left {
+      @extend #{$fb}
+
+    }
+
+    &--Right {
+      @extend #{$fb}
+
+    }
+  }
+
+  &-Filter {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  &-FilterContainer {
+    position: absolute;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    margin: 66px 5px 0 5px;
+    padding: 10px;
+
+    .slider {
+      min-width: 400px;
+    }
+  }
+
+  &-FilterPanelToggle {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  &-FilterToggle {
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    margin: 5px 5px 0 5px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &-MorePanel {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  &-Results {
+    width: 1100px;
+    margin: 0 auto;
+  }
+
+
+  &-ResultsInfo {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+  }
+
+  &-ResultsControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  &-ResultsPagination {
+  }
+
+  &-ResultsMore {
+    transition: all #{$timing} ease;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000058;
+    border: 0.5px solid #707070;
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 0 10px;
+    color: black;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &-ResultsContainer {
+    list-style: none;
+    margin: 20px 0;
+
+    a {
+      font-weight: unset;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+
+  &-ResultsLink {
+    transition: all #{$timing} ease;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000058;
+    border: 0.5px solid #707070;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin: 0 10px;
+    color: black;
+
+    &:link {
+      text-decoration: none;
+    }
+
+
+    &:focus,
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+
+    &--Next {
+
+      &::after {
+        content: '>';
+        margin-left: 10px;
+      }
+    }
+
+    &--Previous {
+
+      &::before {
+        content: '<';
+        margin-right: 10px;
+      }
+    }
+  }
+
+
+
+  // Result
+
+  &-Result {
+    $el: &;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 3px 3px 3px #00000058;
+    border: 0.5px solid #707070;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+  }
+
+  &-ResultLabel {
+    display: inline-block;
+    margin-top: 15px;
+  }
+
+  &-ResultImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+  }
+
+  &-ResultAge {
+    display: inline-block;
+  }
+
+  &-ResultLanguages {
+    list-style: none;
+    margin: 0;
+
+    & > .language {
+
+    }
+
+  }
+
+  &-ResultDistance {
+    display: block;
+    & > .value {
+      font-weight: bold;
+    }
+  }
+
+  &-ResultJobbing {
+    list-style: none;
+    margin: 0;
+
+    .price {
+      font-weight: bold;
+    }
+
+    .marked {
+      font-weight: bold;
+    }
+
+  }
+
+  &-ResultTime {
+
+  }
+
+  &-ResultAvailability {
+  }
+
+  &-ResultWeek {
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 0;
+
+    > .day {
+      //margin-right: 1rem;
+      &.available {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-ResultMark {
+    position: relative;
+
+    a {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &-FilterLabelLine {
+    justify-content: space-between;
+    display: flex;
+  }
+
+
+
+  ul {
+    > li {
+      &:before {
+
+        display: none;
+      }
+    }
+  }
+}

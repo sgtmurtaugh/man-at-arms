@@ -1,0 +1,10 @@
+<form name="search-signalment" class="mod_JobSearchQuery-form" action="{{renderPageLink 'site/suche/suchergebnisse-angebote' this }}">
+    {{> fieldset_Query preset=true}}
+    {{> fieldset_Sort}}
+    {{> fieldset_RangeFilter-Distances}}
+    {{> fieldset_RangeFilter-Wages}}
+    {{> fieldset_SelectFilter-Languages}}
+    {{> fieldset_RangeFilter-Ages}}
+    {{> fieldset_SelectFilter-Gender}}
+    <button type="submit">Suchen</button>
+</form>

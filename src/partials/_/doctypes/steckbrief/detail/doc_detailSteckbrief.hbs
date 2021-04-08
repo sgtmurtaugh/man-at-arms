@@ -1,0 +1,225 @@
+<div class="doc_DetailProfile">
+
+    <div class="row">
+        <div class="columns small-12 large-12">
+            {{#> elem_headline hsize="1" isFirstInSlot=isFirstInSlot }}Mein Steckbrief{{/elem_headline}}
+        </div>
+    </div>
+
+    <div class="doc-container">
+        <div class="doc-container-wrapper">
+            <div class="row">
+                <div class="flex-container align-stretch doc_DetailProfile-Personal">
+
+                    <div class="columns small-3 large-2 large-offset-1 flex-container flex-dir-column">
+                        <div class="doc_DetailProfile-ImageContainer text-center">
+                            <img class="doc_DetailProfile-Image" src="../../assets/img/example/SuperModel.png">
+                            <span class="doc_DetailProfile-Name">Gustav Gans</span>
+                            <span class="doc_DetailProfile-Age">(33, w)</span>
+                            <span class="doc_DetailProfile-City hide-for-small-only">Bochum</span>
+                        </div>
+                    </div>
+
+                    <div class="columns small-9 large-10 flex-container flex-dir-column">
+                        {{#> elem_headline offset=(addition offset 1) vsize=2 }}
+                            Wer bin ich
+                        {{/elem_headline}}
+
+                        <div class="doc_DetailProfile-Working">
+                            <div class="row medium-collapse">
+                                <div class="columns small-6 medium-10 medium-offset-2">
+                                    <span>Sprache(n):</span>
+                                </div>
+                                <div class="columns small-6 medium-9 flex-container flex-dir-column align-justify">
+                                    <span>deutsch</span>
+                                    <span>niederl&auml;ndisch</span>
+                                </div>
+                            </div>
+
+                            <div class="row medium-collapse">
+                                <div class="columns small-6 medium-10 medium-offset-2">
+                                    <span>T&auml;tigkeitsort:</span>
+                                </div>
+                                <div class="columns small-6 medium-9 flex-container flex-dir-column align-justify">
+                                    <span>Bochum + 3km</span>
+                                </div>
+                            </div>
+
+                            <div class="row medium-collapse">
+                                <div class="columns small-6 medium-10 medium-offset-2">
+                                    <span>Jobart:</span>
+                                </div>
+                                <div class="columns small-6 medium-9 flex-container flex-dir-column align-justify">
+                                    <span>Minijob</span>
+                                </div>
+                            </div>
+
+                            <div class="row medium-collapse">
+                                <div class="columns small-6 medium-10 medium-offset-2">
+                                    <span>Arbeitszeit:</span>
+                                </div>
+                                <div class="columns small-6 medium-9 flex-container flex-dir-column align-justify">
+                                    <span>5 Stunden / Woche</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="columns">
+                    {{#> elem_headline classes="text-center" offset=(addition offset 1) vsize=2 }}
+                        Was kann ich
+                    {{/elem_headline}}
+                </div>
+
+                <div class="large-10 large-offset-1 end columns doc_DetailProfile-Skills">
+                    <div class="row flex-container doc_DetailProfile-Skill">
+                        <div class="small-4 medium-3 columns flex-container flex-dir-column align-justify">
+                            <span class="doc_DetailProfile-Label">Haushalt <span class="price">15&euro;</span></span>
+                        </div>
+                        <div class="small-8 medium-offset-1 columns flex-container flex-dir-column align-justify">
+                            <ul class="doc_DetailProfile-Jobbing">
+                                <li>Reinigungshilfe <span class="level">(erfahren)</span></li>
+                                <li>Fenster putzen <span class="level">(erfahren)</span></li>
+                                <li>Pflanzen gie&szlig;en <span class="level">(erfahren)</span></li>
+                                <li>B&uuml;geln <span class="level">(erfahren)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row flex-container doc_DetailProfile-Skill">
+
+                        <div class="small-4 columns flex-container flex-dir-column align-justify">
+                            <span class="doc_DetailProfile-Label">Garten <span class="price">18&euro;</span></span>
+                        </div>
+                        <div class="small-8 columns flex-container flex-dir-column align-justify">
+                            <ul class="doc_DetailProfile-Jobbing">
+                                <li>Rasen m&auml;hen <span class="level">(erfahren)</span></li>
+                                <li>Gartenarbeit <span class="level">(erfahren)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row flex-container doc_DetailProfile-Skill">
+
+                        <div class="small-4 columns flex-container flex-dir-column align-justify">
+                            <span class="doc_DetailProfile-Label">Tiere <span class="price">10&euro;</span></span>
+                        </div>
+                        <div class="small-8 columns flex-container flex-dir-column align-justify">
+                            <ul class="doc_DetailProfile-Jobbing">
+                                <li>Gassi gehen (Hund) <span class="level">(erfahren)</span></li>
+                                <li>F&uuml;ttern (Hund) <span class="level">(erfahren)</span></li>
+                                <li>F&uuml;ttern (Katze) <span class="level">(erfahren)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row flex-container doc_DetailProfile-Skill">
+                        <div class="small-4 columns flex-container flex-dir-column align-justify">
+                            <span class="doc_DetailProfile-Label">Kinder <span class="price">10&euro;</span></span>
+                        </div>
+                        <div class="small-8 columns flex-container flex-dir-column align-justify">
+                            <ul class="doc_DetailProfile-Jobbing">
+                                <li>Baby-/Hausaufgabenbetreuung <span class="level">(erfahren)</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="columns">
+                    {{#> elem_headline classes="text-center" offset=(addition offset 1) vsize=2 }}
+                        Wann kann ich
+                    {{/elem_headline}}
+                </div>
+
+                <div class="large-10 large-offset-1 end columns doc_DetailProfile-Availability">
+                    <div class="row">
+                        <div class="columns text-center">
+                            <span class="doc_DetailProfile-Label">T&auml;tigkeitsbeginn:</span>
+                            <span class="doc_DetailProfile-Label date">ab sofort</span>
+                        </div>
+                    </div>
+
+                    <div class="row small-up-3 medium-up-4 large-up-5 xlarge-up-7">
+                        <div class="column column-block text-center">
+                            <span class="doc_DetailProfile-Label doc_DetailProfile-Day">Mo</span>
+                            <ul class="doc_DetailProfile-Timerange">
+                                <li>12:00 - 16:00</li>
+                                <li>12:00 - 16:00</li>
+                            </ul>
+                        </div>
+                        <div class="column column-block text-center">
+                            <span class="doc_DetailProfile-Label doc_DetailProfile-Day">Di</span>
+                            <ul class="doc_DetailProfile-Timerange">
+                                <li>12:00 - 16:00</li>
+                                <li>12:00 - 16:00</li>
+                            </ul>
+                        </div>
+                        <div class="column column-block text-center">
+                            <span class="doc_DetailProfile-Label doc_DetailProfile-Day">Mi</span>
+                            <ul class="doc_DetailProfile-Timerange">
+                                <li>12:00 - 16:00</li>
+                                <li>12:00 - 16:00</li>
+                            </ul>
+                        </div>
+                        <div class="column column-block text-center">
+                            <span class="doc_DetailProfile-Label doc_DetailProfile-Day">Do</span>
+                            <ul class="doc_DetailProfile-Timerange">
+                                <li>12:00 - 16:00</li>
+                                <li>12:00 - 16:00</li>
+                            </ul>
+                        </div>
+                        <div class="column column-block text-center">
+                            <span class="doc_DetailProfile-Label doc_DetailProfile-Day">Fr</span>
+                            <ul class="doc_DetailProfile-Timerange">
+                                <li>12:00 - 16:00</li>
+                                <li>12:00 - 16:00</li>
+                            </ul>
+                        </div>
+                        <div class="column column-block text-center">
+                            <span class="doc_DetailProfile-Label doc_DetailProfile-Day">Sa</span>
+                            <ul class="doc_DetailProfile-Timerange">
+                                <li>12:00 - 16:00</li>
+                                <li>12:00 - 16:00</li>
+                            </ul>
+                        </div>
+                        <div class="column column-block text-center">
+                            <span class="doc_DetailProfile-Label doc_DetailProfile-Day">So</span>
+                            <ul class="doc_DetailProfile-Timerange">
+                                <li>12:00 - 16:00</li>
+                                <li>12:00 - 16:00</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+                <div class="columns">
+                    {{#> elem_headline classes="text-center" offset=(addition offset 1) vsize=2 }}
+                        Wie bin ich
+                    {{/elem_headline}}
+                </div>
+                <div class="small-10 small-offset-1 end columns doc_DetailProfile-AboutMe">
+                    <p>
+                        Hallo,<br>
+                        ich bin Mario Mustermann und w&uuml;rde mich sehr freuen einen Minijob im privaten Haushalt
+                        zu finden. Ich bin sehr tierlieb, flei&szlig;ig und zuverl&auml;ssig usw.
+                        Bis bald
+                    </p>
+                </div>
+
+                <div class="small-10 small-offset-1 end columns doc_DetailProfile-Contact">
+                    <a href="{{{renderPageLink 'site/kontakt/kontaktHaushilfesuchender' this}}}" class="button">Kontakt</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

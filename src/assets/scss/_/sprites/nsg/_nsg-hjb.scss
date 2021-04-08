@@ -1,0 +1,24 @@
+$-nsg-hjb-minijob-x: -15px;
+$-nsg-hjb-minijob-y: -15px;
+$-nsg-hjb-minijob-width: 310px;
+$-nsg-hjb-minijob-height: 310px;
+$-nsg-hjb-minijob: $-nsg-hjb-minijob-x $-nsg-hjb-minijob-y $-nsg-hjb-minijob-width $-nsg-hjb-minijob-height;
+
+@mixin -nsg-hjb-sprite-image {
+  background-image: url("src/assets/img/sprites/nsg-hjb.png");
+}
+@mixin -nsg-hjb-sprite-position($sprite) {
+  background-position: nth($sprite, 1) nth($sprite, 2);
+}
+@mixin -nsg-hjb-sprite-width($sprite) {
+  width: nth($sprite, 3);
+}
+@mixin -nsg-hjb-sprite-height($sprite) {
+  height: nth($sprite, 4);
+}
+@mixin -nsg-hjb-sprite($sprite) {
+  @include -nsg-hjb-sprite-image;
+  @include -nsg-hjb-sprite-position($sprite);
+  @include -nsg-hjb-sprite-width($sprite);
+  @include -nsg-hjb-sprite-height($sprite);
+}

@@ -1,0 +1,20 @@
+<li class="accordion-item{{!--
+
+                                --}}{{#ifEquals isActive 'true' }}{{!--
+        --}} is-active{{!--
+                                --}}{{/ifEquals}}{{!--
+
+    --}}" data-accordion-item{{!--
+--}}>
+    <a href="#" class="accordion-title">{{title}}</a>
+
+    <div class="accordion-content" data-tab-content>{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+        --}}{{> @partial-block }}{{!--
+                                --}}{{else}}{{!--
+        --}}{{> loremipsum-large }}{{!--
+                                --}}{{/if}}{{!--
+
+    --}}</div>
+</li>

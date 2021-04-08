@@ -1,0 +1,36 @@
+@-webkit-keyframes scaleUpCenter {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.7);
+    transform: scale(.7)
+  }
+}
+
+@keyframes scaleUpCenter {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(.7);
+    transform: scale(.7)
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.scaleUpAnimation{
+  -webkit-animation: scaleUpCenter .6s ease both;
+  animation: scaleUpCenter .6s ease both;
+  transform: none!important;
+}
+
+.fadeInAnimation {
+  -webkit-animation: fadeIn .6s ease both;
+  animation: fadeIn .6s ease both;
+  transform: none!important;
+}

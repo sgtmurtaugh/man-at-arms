@@ -1,0 +1,27 @@
+<div class="module module_navigation" id="modDocId_ModulNavigation">
+
+    {{#> elem_headline class="module-headline" vsize=1 }}
+        {{title}}
+    {{/elem_headline}}{{!--
+
+    --}}
+    <div class="module-container">
+        <div class="module-container-wrapper">
+            <ul class="row list-navigation">{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+
+                --}}{{> @partial-block offset=(addition offset 1) }}{{!--
+
+                                --}}{{else}}{{!--
+
+                                    --}}{{#each repeat.tenTimes}}{{!--
+                --}}{{> modSnip_NavigationItem link='#' linkText=(concat 'Thema' @index) isLastEntry=@last }}{{!--
+                                    --}}{{/each}}{{!--
+
+                                --}}{{/if}}{{!--
+
+            --}}</ul>
+        </div>
+    </div>
+</div>

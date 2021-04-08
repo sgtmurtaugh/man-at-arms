@@ -1,0 +1,239 @@
+.module_FormProgressBar {
+  @include -kbs-add-module-padding();
+
+  > .module-container {
+
+    > .module-container-wrapper {
+        padding: 0;
+
+        @include breakpoint(medium up){
+          background-color: $white;
+          padding: rem-calc(82px 0);
+          box-shadow: 0 0 30px $-kbs-color-medium-gray;
+          border-radius: 20px;
+        }
+
+        > .contentContainer{
+          padding: 0;
+
+          @include breakpoint(medium only){
+            padding: rem-calc(0 75px);
+          }
+          @include breakpoint(large only){
+            padding: rem-calc(0 150px);
+          }
+          @include breakpoint(xlarge up){
+            padding: rem-calc(0 200px);
+          }
+
+          .fpb_entry{
+            > .row{
+              position: relative;
+              padding-bottom: rem-calc($fpb_entry_row_padding_bottom);
+
+              @include breakpoint(medium only){
+                padding-bottom: rem-calc($fpb_entry_row_padding_bottom - 10px);
+              }
+
+              > .fpb_selectionmarker{
+                display: none;
+                position: absolute;
+                width: rem-calc($fpb_stripe_strength_large);
+                top: rem-calc(40px);
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                background-color: $color-dark;
+
+                @include breakpoint(medium only){
+                  width: rem-calc($fpb_stripe_strength_medium);
+                  top: rem-calc(45px);
+                }
+
+              }
+              > .fpb_heading{
+                padding-bottom: 45px;
+                font-family: $-kbs-font-family-kohinoor-medium;
+
+                > span {
+                  position: absolute;
+                  left: 50%;
+                  transform: translate(-50%, $fpb_heading_translationY);
+                  visibility: hidden;
+                  white-space: nowrap;
+                }
+              }
+              > .fpb_area{
+                position: relative;
+                margin-top: rem-calc(10px);
+                line-height: 0;
+
+                > .fpb_bubble {
+                  display: inline-block;
+                  position: relative;
+                  width: rem-calc($fpb_bubble_size);
+                  height: rem-calc($fpb_bubble_size);
+                  background-color: $color-gray;
+                  border-radius: 50%;
+                  box-shadow: $color-dark 0 0 rem-calc(18px);
+                  margin-top: rem-calc($fpb_bubble_marginTop);
+                  z-index: 1;
+
+                  > button {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+
+                    &:hover {
+                      cursor: pointer;
+                    }
+                  }
+
+                  @include breakpoint(medium down) {
+                    margin-top: rem-calc($fpb_bubble_marginTop_medium);
+                    width: rem-calc($fpb_bubble_size_medium);
+                    height: rem-calc($fpb_bubble_size_medium);
+                  }
+                  @include breakpoint(small only) {
+                    margin-top: rem-calc($fpb_bubble_marginTop_small);
+                    width: rem-calc($fpb_bubble_size_small);
+                    height: rem-calc($fpb_bubble_size_small);
+                  }
+                }
+                > .fpb_stripe{
+                  position: absolute;
+                  left: 0;
+                  right: 0;
+                  height: rem-calc($fpb_stripe_strength_large);
+                  top: 50%;
+                  background-color: $color-dark;
+                  transform: translateY(-50%);
+                  margin-top: rem-calc($fpb_stripe_marginTop);
+
+                  @include breakpoint(medium only){
+                    height: rem-calc($fpb_stripe_strength_medium);
+                    margin-top: rem-calc($fpb_stripe_marginTop_medium);
+                  }
+                  @include breakpoint(small only){
+                    height: rem-calc($fpb_stripe_strength_small);
+                    margin-top: rem-calc($fpb_stripe_marginTop_small);
+                  }
+                }
+              }
+            }
+
+            &.fpb_active{
+              > .row {
+                > .fpb_heading {
+                  > span {
+                    visibility: visible;
+                    font-size: rem-calc(16px);
+
+                    @include breakpoint(medium only) {
+                      font-size: rem-calc(14px);
+                    }
+                    @include breakpoint(small only) {
+                      font-size: rem-calc(12px);
+                    }
+                  }
+                }
+                > .fpb_area {
+                  > .fpb_bubble{
+                    background-color: $color-hjb-orange;
+                  }
+                }
+              }
+            }
+            &.fpb_selected{
+              > .row {
+                > .fpb_selectionmarker{
+                  display: inline-block;
+
+                  @include breakpoint(small only){
+                    display: none;
+                  }
+                }
+                > .fpb_heading {
+                  margin-top: 0;
+
+                  > span {
+                    visibility: visible;
+                    font-size: rem-calc(22px);
+                    transform: translate(-50%, $fpb_heading_translationY_selected_large);
+
+                    @include breakpoint(medium only){
+                      font-size: rem-calc(20px);
+                      transform: translate(-50%, $fpb_heading_translationY_selected_medium);
+                    }
+                    @include breakpoint(small only){
+                      font-size: rem-calc(18px);
+                      transform: translate(-50%, $fpb_heading_translationY_selected_small);
+                    }
+                  }
+                }
+                > .fpb_area {
+                  > .fpb_bubble{
+                    width: rem-calc($fpb_bubble_size_selected);
+                    height: rem-calc($fpb_bubble_size_selected);
+                    background-color: $color-hjb-orange;
+                    margin-top: 0;
+
+                    @keyframes pulsate {
+                      0% {
+                        transform: scale(1);
+                      }
+                      50% {
+                        transform: scale(1.1);
+                      }
+                      100% {
+                        transform: scale(1);
+                      }
+                    }
+                    &.pulsate {
+                      animation: pulsate 1.5s ease-in-out infinite both;
+                    }
+
+                    @include breakpoint(medium down) {
+                      width: rem-calc($fpb_bubble_size_medium_selected);
+                      height: rem-calc($fpb_bubble_size_medium_selected);
+                    }
+                    @include breakpoint(small only){
+                      //margin-top: 0;
+                      width: rem-calc($fpb_bubble_size_small_selected);
+                      height: rem-calc($fpb_bubble_size_small_selected);
+                    }
+                  }
+                  > .fpb_stripe{
+                    margin-top: 0;
+                  }
+                }
+              }
+            }
+
+          }
+        }
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

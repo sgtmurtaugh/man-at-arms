@@ -1,0 +1,15 @@
+<body class="noJS">
+    {{!-- ACHTUNG:
+        Inkludierung der ClickdummyTopBar ist fuer den GSB NICHT notwendig!
+    --}}
+    {{> clickdummyTopBar}}
+
+    <div class="row">
+        <div class="small-12 columns">
+            {{> body}}
+        </div>
+    </div>
+
+	{{!-- additional Scripts --}}
+    {{> script_body-default }}
+</body>

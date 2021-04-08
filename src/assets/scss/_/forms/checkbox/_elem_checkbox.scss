@@ -1,0 +1,38 @@
+form {
+  input[type="checkbox"] {
+    display:none;
+  }
+
+  input[type="checkbox"] + label::before {
+    width: rem-calc(25px);
+    height: rem-calc(25px);
+    border: 1px solid $black;
+    background-color: transparent;
+    display: block;
+    content: "";
+    float: left;
+    margin-right: rem-calc(5px);
+    margin-bottom: rem-calc(5px);
+    margin-left: 0;
+  }
+
+  input[type="checkbox"]:checked+label::before {
+    background-color: $color-hjb-lila;
+    border: 1px solid $black;
+  }
+
+  //invalid
+  input[type="checkbox"] + .is-invalid-label {
+    width: rem-calc(25px);
+    height: rem-calc(25px);
+    border: rem-calc(1px) solid  $color-kbs-rot;
+    background-color: transparent;
+    display: block;
+    content: "";
+    float: left;
+    margin-right: rem-calc(5px);
+    margin-bottom: rem-calc(5px);
+    margin-left: 0;
+  }
+}
+

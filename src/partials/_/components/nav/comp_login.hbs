@@ -1,0 +1,5 @@
+                                {{#unless isLoggedIn}}
+<a class="signIn" href="{{renderPageLink 'site/login/login' this}}">Anmelden</a>
+                                {{else}}
+<a class="signIn isLoggedIn" href="{{renderPageLink 'site/meinPortal/dashboard' this}}">Mein Dashboard</a>
+                                {{/unless}}

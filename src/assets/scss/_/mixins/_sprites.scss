@@ -1,0 +1,119 @@
+/* ------------------------------
+    ### Private Helper Mixins
+    Base Config for Background images
+    Weiterer Content kann an das Mixin uebergeben werden..
+   ------------------------------ */
+@mixin --base-background-image-settings($image-height) {
+  content: '';
+  position: absolute;
+  top: calc(50% - (#{$image-height} / 2));
+
+  @content;
+}
+
+/* ------------------------------
+    ### Base Config for Element with Background-Image
+    @param add-padding: Wenn der Parameter fuer $add-padding true ist, dann wird noch fuer alle breakpoints das in
+                        $button-sizes definierte Padding gesetzt.
+    Weiterer Content kann an das Mixin uebergeben werden.
+   ------------------------------ */
+@mixin --add-settings-for-element-with-background-image($add-padding: false) {
+  position: relative;
+
+  @if $add-padding {
+    @each $size, $value in map-remove($button-sizes, default) {
+      &.#{$size} {
+        padding: $value;
+      }
+    }
+  }
+  @content;
+}
+
+
+/* ------------------------------
+    ### Mixin fuer Elemente, deren after Pseudo-Element ein Hintergrundbild darstellen soll.
+    @param indent: // TODO
+    @param add-padding: // TODO
+    @param is-button: // TODO
+    Weiterer Content kann an das Mixin uebergeben werden. Dieser wird innerhalb des after Pseudoelements ausgegeben.
+   ------------------------------ */
+@mixin -kbs-add-after-image($image-height: 0, $width: 0, $indent: true, $add-padding: false, $is-button: false) {
+  @include --add-settings-for-element-with-background-image($add-padding) {
+    @if $indent {
+      @if $is-button {
+        padding-right: rem-calc($width + $-kbs-button-background-image-indent);
+      }
+      @else {
+        padding-right: rem-calc($width + $-kbs-link-background-image-indent);
+      }
+    }
+
+    &::after {
+      @include --base-background-image-settings($image-height) {
+        // TODO: falls Button Logik notwendig wird, diesen Teil anpassen
+        //@if $is-button {
+        //  right: map-get($button-sizes, default);
+        //
+        //  @each $size, $value in map-remove($button-sizes, default) {
+        //    &.#{$size} {
+        //      right: $value;
+        //    }
+        //  }
+        //}
+        //@else {
+          right: 0;
+        //}
+      }
+      z-index: -1;
+
+      @content;
+    }
+  }
+}
+
+
+/* ------------------------------
+    ### Mixin fuer Elemente, deren before Pseudo-Element ein Hintergrundbild darstellen soll.
+    @param image-height: Der Parameter wird fuer die vertikale Zentrierung des Bildes verwendet.
+    @param indent: boolsche Variable, die steuert, ob das Icon eingerueckt werden soll.
+    @param add-padding: boolsche Variable, die steuert, ob der Link rundum ein Padding erhalten soll. Es wird dann das
+                        Button-Padding aus der Konfiguration verwendet.
+    @param is-button: boolsche Variable, die steuert, ob der Link normale Link Formatierungen oder spezielle
+                      Button-Style Formatierungen verwenden soll.
+    Weiterer Content kann an das Mixin uebergeben werden. Dieser wird innerhalb des before Pseudoelements ausgegeben.
+   ------------------------------ */
+@mixin -kbs-add-before-image($image-height, $width: 0, $indent: true, $add-padding: false, $is-button: false) {
+  @include --add-settings-for-element-with-background-image($add-padding) {
+    @if $indent {
+      @if $is-button {
+        padding-left: rem-calc($width + $-kbs-button-background-image-indent);
+      }
+      @else {
+        padding-left: rem-calc($width + $-kbs-link-background-image-indent);
+      }
+    }
+
+    &::before {
+      @include --base-background-image-settings($image-height) {
+        // TODO: falls Button Logik notwendig wird, diesen Teil anpassen
+        //@if $is-button {
+        //  left: map-get($button-sizes, default);
+        //
+        //  @each $size, $value in map-remove($button-sizes, default) {
+        //    &.#{$size} {
+        //      left: $value;
+        //    }
+        //  }
+        //}
+        //@else {
+          left: 0;
+        //}
+      }
+      z-index: -1;
+
+      @content;
+    }
+  }
+}
+

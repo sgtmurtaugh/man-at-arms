@@ -1,0 +1,13 @@
+<div class="component form-element">{{!--
+
+                                Field
+    --}}{{> _elem_input type="file" class=class id=id isError=isError name=name value=value placeholder=placeholder onfocus=onfocus onblur=onblur }}{{!--
+
+                                Label
+    --}}{{> elem_label id=id isError=isError placeholder=placeholder }}{{!--
+
+                                Errortext, wenn Error flag 'true'
+                                --}}{{#ifEquals isError "true"}}{{!--
+    --}}{{> elem_error_text value=errorMsg }}{{!--
+                                --}}{{/ifEquals}}
+</div>

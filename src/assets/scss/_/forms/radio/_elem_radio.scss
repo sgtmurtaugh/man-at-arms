@@ -1,0 +1,22 @@
+input[type="radio"] {
+  display:none;
+}
+
+input[type="radio"] + label::before {
+  width: rem-calc(25px);
+  height: rem-calc(25px);
+  border: 1px solid $black;
+  background-color: transparent;
+  display: block;
+  content: "";
+  float: left;
+  margin-right: rem-calc(5px);
+  margin-bottom: rem-calc(2px);
+  margin-left: 0;
+
+}
+
+input[type="radio"]:checked+label::before {
+  background-color: $color-hjb-lila;
+  border: rem-calc(1px) solid $black;
+}

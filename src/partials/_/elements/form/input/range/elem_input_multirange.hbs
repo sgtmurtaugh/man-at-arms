@@ -1,0 +1,25 @@
+<div class="component form-element">{{!--
+
+                                Field
+    --}}<div class="slider" data-slider data-step="{{step}}" data-start="{{min}}" data-initial-start="{{start}}" data-initial-end="{{end}}" data-end="{{max}}">
+
+        <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+        <span class="slider-fill" data-slider-fill></span>
+        <span class="slider-handle" data-slider-handle role="slider" tabindex="1"></span>
+
+        {{!-- Slider Min --}}
+        {{> _elemPartial_input_multirange fieldSuffix="_min" isError=isError value=start placeholder=placeholder onfocus=onfocus onblur=onblur min=min max=max list=list step=step }}
+
+        {{!-- Slider Max --}}
+        {{> _elemPartial_input_multirange fieldSuffix="_max" isError=isError value=start placeholder=placeholder onfocus=onfocus onblur=onblur min=min max=max list=list step=step }}
+
+    </div>{{!--
+
+                                Label
+    --}}{{> elem_label_multirange id=id isError=isError placeholder=placeholder }}{{!--
+
+                                Errortext, wenn Error flag 'true'
+                                --}}{{#ifEquals isError "true"}}{{!--
+    --}}{{> elem_error_text value=errorMsg }}{{!--
+                                --}}{{/ifEquals}}
+</div>

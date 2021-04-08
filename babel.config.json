@@ -1,0 +1,10 @@
+{
+  "env": {
+    "production": {
+      "compact": false
+    }
+  },
+  "presets": [
+    "@babel/env"
+  ]
+}

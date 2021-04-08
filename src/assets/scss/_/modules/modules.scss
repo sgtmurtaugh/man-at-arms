@@ -1,0 +1,81 @@
+.module {
+  @include -kbs-add-module-padding();
+
+  .module-headline {
+    font-family: $-kbs-font-family-kohinoor-semibold;
+    text-align: center;
+
+    &.large {
+      @include breakpoint(xlarge up) {
+        font-size: $global-module-header-large-font-size;
+      }
+    }
+
+    &.xlarge {
+      @include breakpoint(xlarge up) {
+        font-size: $global-module-header-xlarge-font-size;
+      }
+    }
+
+  }
+
+  .headline {
+  }
+
+  > .module-container{
+
+    > .module-container-wrapper{
+      margin: 0 auto;
+//      max-width: -zf-get-bp-val($breakpoints, xlarge);
+      @include breakpoint(xxlarge up) {
+        max-width: rem-calc(map-get($breakpoints, xxlarge)) - (2 * map-get(map_get($-kbs-module-paddings, xxlarge), horizontal));
+      }
+
+      padding: rem-calc(50px 0 0 0);
+
+      @include breakpoint(medium only){
+        padding: rem-calc(80px 0 0 0);
+      }
+
+      @include breakpoint(large up){
+        padding: rem-calc(100px 0 0 0);
+      }
+
+    }
+  }
+
+}
+
+.isRootPage {
+  > .module {
+    &:nth-of-type(even) {
+      background-color: $white;
+    }
+  }
+}
+
+/* ------------------------------
+    # include separate module files
+   ------------------------------ */
+
+@import "module_Accordion";
+@import "module_ArbeitnehmerUndGeber";
+@import "module_Artikel";
+@import "module_CallToAction";
+@import "module_Blitzanmeldung";  // Basierend auf CallToAction!
+@import "module_Carousel";
+@import "module_Fliesstext";
+@import "module_Zustellbericht";
+@import "module_Formbox";
+@import "module_FormProgressBar";
+@import "module_Infobox";
+@import "module_JobCategories";
+@import "module_JobSearch";
+@import "module_Navigation";
+@import "module_Zeitauswahl";
+
+
+/* ------------------------------
+    # print
+   ------------------------------ */
+@import 'src/assets/scss/_/modules/print/print';

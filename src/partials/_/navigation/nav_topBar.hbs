@@ -1,0 +1,24 @@
+{{!-- TODO: nav-Tags fuer die TopNav benutzen --}}
+
+<div class="aufklappMenue">
+    <input type="checkbox" id="menue" name="menue" class="checkbox">
+    <div class="aufklappMenuePlatzierung">
+        <div class="row">
+            <div class="small-12 medium-4 columns">
+                <div class="stellenanzeige-haushaltshilfe">
+                    {{> modul_part_header_menue obenKlasse="stellen" obenText="Stellenanzeige" unten="Haushaltshilfe werden" }}
+                </div>
+            </div>
+            <div class="small-12 medium-5 columns">
+                <div class="haushalt-online">
+                    {{> modul_part_header_menue obenKlasse="hjb" obenText="Was ist die Haushaltsjob-Börse" unten="Online-Anmeldung der Haushaltshilfe" }}
+                </div>
+            </div>
+            <div class="small-12 medium-2 columns">
+                <div class="info-kontakt">
+                    {{> modul_part_header_menue obenKlasse="information" obenText="Informationen" unten="Kontakt & Hilfe" ankerID="hjbInformation" }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

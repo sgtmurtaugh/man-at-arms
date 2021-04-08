@@ -1,0 +1,32 @@
+.module_artikel {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include breakpoint(medium up) {
+    @include -kbs-add-module-padding();
+  }
+
+  > .module-container {
+
+    > .module-container-wrapper {
+      padding: 0;
+
+
+
+      .module {
+        margin-top: 0;
+        padding: 0;
+
+        > .module-container {
+
+          > .module-container-wrapper {
+            padding: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

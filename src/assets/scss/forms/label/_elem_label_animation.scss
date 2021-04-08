@@ -1,0 +1,49 @@
+.form-label-animated {
+  padding-left: rem-calc(3.2px);
+  position:absolute;
+  top: rem-calc(-14.4px);
+  left: rem-calc(8px);
+  background-color: white;
+  visibility: hidden;
+  border: none !important;
+
+  &.is-invalid-label {
+    color: $alert-color;
+    background-color: white !important;
+    visibility: visible;
+  }
+}
+
+.text-invalid {
+  font-size: rem-calc(12px);
+  font-weight: bold;
+  left:rem-calc(8px);
+  padding-left: rem-calc(12px);
+  margin-top: rem-calc(-16px);
+  margin-bottom: rem-calc(15px);
+  color: $alert-color;
+}
+
+.invalid-gender {
+  padding-left: rem-calc(8px) !important;
+}
+
+.form-field {
+  &.is-invalid-input {
+    border: rem-calc(2px) solid $alert-color;
+    background-color: white !important;
+  }
+}
+
+// form valid
+.form-field:focus ~ .form-label-animated,
+.form-field:not(:placeholder-shown) ~ .form-label-animated {
+  visibility: visible;
+}
+
+.form-field:focus ~ .form-label-animated,
+.form-field:not(:-ms-input-placeholder) ~ .form-label-animated {
+  visibility: visible;
+}
+
+

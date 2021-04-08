@@ -1,0 +1,39 @@
+<div class="sectionRelated">
+    {{#> elem_headline vsize=2 }}
+        weitere Kontaktmöglichkeiten
+    {{/elem_headline}}
+
+    <ul>
+        <li>
+
+            {{!-- View renderRelatedEntEntry[FormBox] : --}}
+
+            {{!-- titleProperty --}}
+            {{#> elem_headline offset=(addition offset 1) vsize=3 }}
+                titleProperty
+            {{/elem_headline}}
+
+
+            {{!-- bodyProperty
+                In diesem Beispiel wurde im Editor eine Liste mit weiteren Kontaktmöglichkeiten erstellt.
+            --}}
+            {{#> elem_headline offset=(addition offset 2) vsize=4 }}
+                bodyProperty
+            {{/elem_headline}}
+
+            <ul>
+                <li>
+                    Per Brief an:<br>
+                    <b>Minijob-Zentrale<br>
+                    Haushaltsjob-Börse<br>
+                    45115 Essen</b>
+                </li>{{!--
+                --}}<li>
+                    Per Mail an:<br>
+                    <a href="mailto:haushaltsjob-boerse@minijob-zentrale.de">haushaltsjob-boerse@minijob-zentrale.de</a>
+                </li>
+            </ul>
+
+        </li>
+    </ul>
+</div>

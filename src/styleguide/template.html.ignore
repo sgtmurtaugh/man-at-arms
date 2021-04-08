@@ -1,0 +1,33 @@
+<!DOCTYPE html><!--[if lt IE 7]>
+<html lang="de" class="lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]>
+<html lang="de" class="lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]>
+<html lang="de" class="lt-ie9"> <![endif]--><!--[if gt IE 8]><!-->
+<html lang="de"><!--<![endif]-->
+
+{{> struc_head-default title="HJB 2020 - Styleguide"}}
+
+<body class="noJS">
+<div class="row">
+    <div class="large-3 medium-4 columns">
+        <dl class="vertical tabs" data-tab>
+                                {{#each pages}}
+            <dd{{#if @first}} class="active"{{/if}}>
+                <a href="#{{ anchor }}">{{ title }}</a>
+            </dd>
+                                {{/each}}
+        </dl>
+    </div>
+
+    <div class="large-9 medium-8 columns">
+        <div class="tabs-content">
+                                {{#each pages}}
+            <section class="content {{#if @first}}active{{/if}}" id="{{ anchor }}">
+                {{ body }}
+            </section>
+                                {{/each}}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

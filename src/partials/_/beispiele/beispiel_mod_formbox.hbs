@@ -1,0 +1,283 @@
+<form id="beispiel" name="beispiel" method="post" action="#">
+    <fieldset>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_text id="vorname" name="vorname" placeholder="Vorname" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_text id="error_vorname" isError="true" name="error_vorname" placeholder="Vorname" errorMsg="Vorname fehlt!" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_text id="nachname" name="nachname" placeholder="Nachname" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_text id="error_nachname" isError="true" name="error_nachname" placeholder="Nachname" errorMsg="Nachname fehlt!" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                <p><a href="#">At vero eos et accusam</a> et justo duo dolores et ea rebum.</p>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 large-8 columns distance-inside">
+                {{> elem_input_text id="strasse" name="strasse" placeholder="Strasse" }}
+            </div>
+            <div class="small-12 large-4 columns">
+                {{> elem_input_text id="hnr" name="haus-nr" placeholder="Haus-Nr." }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 large-8 columns distance-inside">
+                {{> elem_input_text id="error_strasse" isError="true" name="error_strasse" placeholder="Strasse" errorMsg="Strasse fehlt!" }}
+            </div>
+            <div class="small-12 large-4 columns">
+                {{> elem_input_text id="error_hnr" isError="true" name="error_haus-nr" placeholder="Haus-Nr." errorMsg="Haus-Nr. fehlt!" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 large-4 columns distance-inside">
+                {{> elem_input_text id="plz" name="plz" placeholder="PLZ" }}
+            </div>
+            <div class="small-12 large-8 columns">
+                {{> elem_input_text id="wohnort" name="wohnort" placeholder="Wohnort" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 large-4 columns distance-inside">
+                {{> elem_input_text id="error_plz" isError="true" name="error_plz" placeholder="PLZ" errorMsg="PLZ fehlt!" }}
+            </div>
+            <div class="small-12 large-8 columns">
+                {{> elem_input_text id="error_wohnort" isError="true" name="error_wohnort" placeholder="Wohnort" errorMsg="Wohnort fehlt!" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 medium-6 large-6 columns ">
+                {{> elem_input_datepicker id="datepicker" name="datepicker" placeholder="Datepicker" }}
+            </div>
+            <div class="small-12 medium-6 large-6 columns">
+                {{> elem_input_datepicker id="error_datepicker" isError="true" name="error_datepicker" placeholder="Datepicker" errorMsg="Datepicker fehlt!" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 medium-6 large-6 columns container-gender">
+                <fieldset class="component form-element">
+                    <legend class="special-label">Geschlecht</legend>
+                    <div class="form-field">
+                        {{> elem_radiobtn_gender id="male" name="gender" placeholder="male" value="m" gender="gender-male" }}
+                        {{> elem_radiobtn_gender id="female" name="gender" placeholder="female" value="f" gender="gender-female" }}
+                        {{> elem_radiobtn_gender id="diverse" name="gender" placeholder="diverse" value="d" gender="gender-diverse" }}
+                    </div>
+                </fieldset>
+            </div>
+            <div class="small-12 medium-6 large-6 columns container-gender">
+                <fieldset class="component form-element form-element-radiobutton">
+                    <legend class="special-label is-invalid-label">Geschlecht</legend>
+                    <div class="form-field">
+                        {{> elem_radiobtn_gender id="error_male" name="error_gender" placeholder="male" value="m" gender="gender-male" }}
+                        {{> elem_radiobtn_gender id="error_female" name="error_gender" placeholder="female" value="f" gender="gender-female" }}
+                        {{> elem_radiobtn_gender id="error_diverse" name="error_gender" placeholder="diverse" value="d" gender="gender-diverse" }}
+                    </div>
+                </fieldset>
+
+                {{> elem_error_text value="Angabe fehlt!" class="invalid-gender" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 medium-6 large-6 columns">
+                {{> elem_input_date id="date" name="date" placeholder="Datum" }}
+            </div>
+            <div class="small-12 medium-6 large-6 columns">
+                {{> elem_input_date id="error_date" isError="true" name="error_date" placeholder="Datum" errorMsg="Datum fehlt!" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_email id="email" name="email" placeholder="E-Mail-Adresse" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_email id="error_email" isError="true" name="error_email" placeholder="E-Mail-Adresse" errorMsg="Bitte geben Sie eine E-Mail-Adresse ein" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_password id="password" name="password" placeholder="Passwort" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_password id="error_password" isError="true" name="error_password" placeholder="Passwort" errorMsg="Bitte geben Sie ein Passwort ein" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_password id="password2" name="password2" placeholder="Passwort wiederholen" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_password  id="error_password2" isError="true" name="error_password2" placeholder="Passwort wiederholen" errorMsg="Bitte geben Sie das Passwort erneut ein" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_textarea id="textarea" name="textarea" cols="50" rows="5" placeholder="Eingabe Text" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_textarea id="error_textarea" isError="true" name="error_textarea" cols="50" rows="5" placeholder="Eingabe Text" errorMsg="Bitte geben Sie einen Text ein" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_select id="auswahl" name="auswahl" value="Auswahl" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_select id="error_auswahl" isError="true" name="error_auswahl" value="Auswahl" errorMsg="Bitte treffen Sie eine Auswahl" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                <fieldset class="component form-element form-element-radiobutton">
+                    {{> elem_label_checkboxgrp value="Checkboxen" isError="false" }}
+
+                    <div class="form-field">
+                        {{> elem_checkbox id="check1" name="check" value="valueCheckbox1" placeholder="Checkbox 1" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_checkbox id="check2" name="check" value="valueCheckbox2" placeholder="Checkbox 2" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_checkbox id="check3" name="check" value="valueCheckbox3" placeholder="Checkbox 3" }}
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <fieldset class="component form-element form-element-radiobutton">
+                    {{> elem_label_checkboxgrp value="Checkboxen" isError="true" }}
+
+                    <div class="form-field">
+                        {{> elem_checkbox id="error_check1" name="error_check" value="valueCheckbox1" placeholder="Checkbox 1" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_checkbox id="error_check2" name="error_check" value="valueCheckbox2" placeholder="Checkbox 2" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_checkbox id="error_check3" name="error_check" value="valueCheckbox3" placeholder="Checkbox 3" }}
+                    </div>
+                </fieldset>
+                {{> elem_error_text value="Bitte treffen Sie eine Auswahl" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                <fieldset class="component form-element form-element-radiobutton">
+                    {{> elem_label_radiobtngrp value="Radiobuttons" isError="false" }}
+
+                    <div class="form-field">
+                        {{> elem_radiobtn id="radio1" name="radio" value="valueRadio1" placeholder="Radiobutton 1" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_radiobtn id="radio2" name="radio" value="valueRadio2" placeholder="Radiobutton 2" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_radiobtn id="radio3" name="radio" value="valueRadio3" placeholder="Radiobutton 3" }}
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                <fieldset class="component form-element form-element-radiobutton">
+                    {{> elem_label_radiobtngrp value="Radiobuttons" isError="true" }}
+
+                    <div class="form-field">
+                        {{> elem_radiobtn id="error_radio1" name="error_radio" value="valueRadio1" placeholder="Radiobutton 1" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_radiobtn id="error_radio2" name="error_radio" value="valueRadio2" placeholder="Radiobutton 2" }}
+                    </div>
+                    <div class="form-field">
+                        {{> elem_radiobtn id="error_radio3" name="error_radio" value="valueRadio3" placeholder="Radiobutton 3" }}
+                    </div>
+                </fieldset>
+
+                {{> elem_error_text value="Bitte treffen Sie eine Auswahl" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_range id="singlerange" name="singlerange" min="0" max="100" value="30" step="1.5" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_range id="error_singlerange" isError="true" name="error_singlerange" min="0" max="100" value="30" step="1.5" errorMsg="Bitte wählen Sie einen Wert" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_multirange id="multirange" name="multirange" min="0" max="100" start="20" end="75" step="1.5" }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns">
+                {{> elem_input_multirange id="error_multirange" isError="true" name="error_multirange" min="0" max="100" start="20" end="75" step="1.5" errorMsg="Bitte wählen Sie Werte aus" }}
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="small-12 columns">
+                <div class="component form-handle">
+                    {{> elem_button type="submit" id="submit1" name="submit1" text="Absenden" isExpanded="true" }}
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>

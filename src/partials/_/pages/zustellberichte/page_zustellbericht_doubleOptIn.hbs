@@ -1,0 +1,18 @@
+{{#> mod_Zustellbericht title="Registrierungs-Bestätigung" }}
+    <p>Vielen Dank für Ihre Registrierung.
+    <p>Sie bekommen demnächst eine Mail mit einem Link, über den Sie die Registrierung bestätigen müssen.
+{{/mod_Zustellbericht}}
+
+{{!-- Clickdummy Sonderfall. Hier wird schon der E-Mail Text des DoubleOptIn gezeigt--}}
+{{#> mod_Fliesstext title="... E-Mail Auszug ..." }}
+    <p>Hallo Max Mustermann,
+    <p>Sie haben sich auf der Haushaltsjob-Börse registriert. Um die Registrierung abzuschließen, bestätigen Sie bitte folgenden Link
+
+    <p><a class="button expanded" href="{{renderPageLink 'site/zustellberichte/zustellbericht_registrierung' this}}">kryptischer Link</a>
+
+    <p>Falls die Seite nicht aufgerufen wird, kopieren Sie bitte den Link und fügen ihn in die Adresszeile Ihres Browsers ein.
+    <p>Ihr gewählter Benutzername lautet: aquaman@kbs.de
+    <p>Mit freundlichen Grüßen
+    <p>Ihre Haushaltsjob-Börse
+    <p>www.haushaltsjob-boerse.de
+{{/mod_Fliesstext}}

@@ -1,0 +1,70 @@
+{{> mod_JobSearch-Initial title="Zentrale Jobsuche" offset=1 }}
+
+{{#> mod_JobCategories title="Bei uns finden Haushaltshilfen und Arbeitgeber zusammen" offset=1 }}
+    <p>
+        Die Haushaltsjob-Börse ist eine Stellenbörse für typische Beschäftigungen in Privathaushalten und ein
+        kostenloser Service der Minijob-Zentrale. Wir geben Haushaltshilfen und Arbeitgebern die Möglichkeit,
+        unkompliziert Hilfe für die im Haushalt anfallenden Arbeiten anzubieten oder zu finden.
+    </p>
+{{/mod_JobCategories}}
+
+{{#> mod_ArbeitnehmerArbeitgeber title="Haushaltshilfe oder Stelle im Privasthaushalt finden" offset=1 }}
+    <div class="row">
+        <div class="small-12 medium-5 columns text-center">
+            {{#> modSnip_ItemTeaser offset=(addition offset 1) title="Für zukünftige Arbeitgeber" linkText="Kostenlose Stellenanzeige erstellen" link="site/beispiele/examplePopup"
+                                    image="hjb_logo.svg" }}
+            <p>Sie sind auf der Suche nach einer Haushaltshilfe im Privathaushalt? Hier können Sie ein Stellenangebot aufgeben, damit Sie von interessierten Haushaltshilfen gefunden werden.
+            {{/modSnip_ItemTeaser}}
+        </div>
+
+        <div class="small-12 medium-5 medium-offset-2 columns text-center">
+            {{#> modSnip_ItemTeaser offset=(addition offset 1) title="Für zukünftige Haushaltshilfen" linkText="Kostenlosen Steckbrief erstellen" link="site/beispiele/examplePopup"
+                                    image="hjb_logo.svg" }}
+            <p>Sie sind auf der Suche nach einer Beschäftigung im Privathaushalt? Hier können Sie sich einen Steckbrief erstellen, damit Sie von interessierten Haushalten gefunden werden.
+            {{/modSnip_ItemTeaser}}
+        </div>
+    </div>
+{{/mod_ArbeitnehmerArbeitgeber}}
+
+{{#> mod_Carousel title="Interessantes & Wissenswertes" offset=1 }}
+    {{#> modSnip_CarouselItem offset=(addition offset 1) link="site/beispiele/examplePopup" title="Thema 1" hasImage=true }}
+        {{> loremipsum-headlines }}
+    {{/modSnip_CarouselItem}}
+
+    {{#> modSnip_CarouselItem offset=(addition offset 1) link="site/beispiele/examplePopup" title="Thema 2" }}
+        <p>{{> loremipsum-medium }}</p>
+    {{/modSnip_CarouselItem}}
+
+    {{#> modSnip_CarouselItem offset=(addition offset 1) link="site/beispiele/examplePopup" title="Thema 3" hasImage=true }}
+        <p>{{> loremipsum-short }}</p>
+    {{/modSnip_CarouselItem}}
+
+    {{#> modSnip_CarouselItem offset=(addition offset 1) link="site/beispiele/examplePopup" title="Thema 4" }}
+        {{> loremipsum-headlines }}
+    {{/modSnip_CarouselItem}}
+
+    {{#> modSnip_CarouselItem offset=(addition offset 1) link="site/beispiele/examplePopup" title="Thema 5" hasImage=true }}
+        <p>{{> loremipsum-medium }}</p>
+    {{/modSnip_CarouselItem}}
+
+    {{#> modSnip_CarouselItem offset=(addition offset 1) title="Thema 6" }}
+        <p>{{> loremipsum-short }}</p>
+    {{/modSnip_CarouselItem}}
+{{/mod_Carousel}}
+
+{{#> mod_Blitzanmeldung title="Minijob schnell und einfach anmelden" offset=1 link="site/beispiele/examplePopup" }}
+    <p>Minijobber im Privathaushalt, die durchschnittlich maximal 450 Euro im Monat verdienen, müssen bei der Minijob-Zentrale angemeldet werden. Die Anmeldung ist kinderleicht und im Handumdrehen
+        erledigt.
+{{/mod_Blitzanmeldung}}
+
+{{#> mod_Infobox title="Bitte beachten Sie:" icon="hinweis_icon" offset=1 }}
+    <ul>
+        <li>Unsere Stellenbörse umfasst Haushaltsjobs in Privathaushalten - sowohl Minijobs (bis 450 Euro im Monat) als auch sozialversicherungspflichtige Beschäftigungen (über 450 Euro im Monat).</li>
+        <li>Haushaltsjobs sind Tätigkeiten, die gewöhnlich durch Familienangehörige erledigt werden. Dazu zählen beispielsweise Tätigkeiten wie Putzen, Wäsche machen oder die Gartenpflege. Aber auch
+            Tiersitting und die Betreuung von Kindern und Senioren fallen darunter.</li>
+        <li>Als Arbeitgeber und Haushaltsjobber kommen nur Privatpersonen und somit keine Dienstleistungsagenturen oder Unternehmen in Frage. Haushaltsjobber haben grundsätzlich Anspruch auf 9,35 Euro
+            brutto Mindestlohn je Stunde.</li>
+        <li>Haben Sie einen Haushaltsjob bzw. einen Haushaltsjobber gefunden, erhalten Sie per Post ein Anschreiben der Minijob-Zentrale. Darin informieren wir Sie, warum es wichtig ist, eine
+            Haushaltshilfe offiziell anzumelden und wie die Anmeldung funktioniert.</li>
+    </ul>
+{{/mod_Infobox}}

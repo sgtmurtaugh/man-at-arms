@@ -1,0 +1,33 @@
+<div class="timebox">
+    <input id="{{dayname}}-time" type="checkbox" class="timebox-toggle"/>
+    <label for="{{dayname}}-time">{{dayname}}</label>
+
+    <div class="timebox-list">
+
+        <div class="row small-uncollapse large-collapse">
+            <div class="small-12 medium-6 medium-offset-3 large-12 large-offset-0 columns timebox-list-elements">
+
+            </div>
+        </div>
+
+        <div class="row small-uncollapse large-collapse">
+            <div class="small-6 medium-6 medium-offset-3 large-12 large-offset-0 columns timebox-list-time-control">
+                {{> elem_input_time id=(concat dayname "-time-from") name="time-from" placeholder="Von" }}
+            </div>
+            <div class="small-6 medium-6 medium-offset-3 large-12 large-offset-0 columns timebox-list-time-control">
+                {{> elem_input_time id=(concat dayname "-time-till") name="time-till" placeholder="Bis" }}
+            </div>
+            <div class="small-12 medium-6 medium-offset-3 large-12 large-offset-0 end columns timebox-list-values">
+                {{> elem_textarea cols="50" rows="5" placeholder="Ihre Zeiten" id=(concat dayname "-times") name=dayname }}
+            </div>
+        </div>
+
+        <div class="row small-uncollapse large-collapse timebox-list-apply-control">
+            <div class="small-12 medium-6 medium-offset-3 large-12 large-offset-0 columns">
+                <a class="button timebox-list-apply">{{buttoncaption}}</a>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,44 @@
+{{#> mod_Formbox title="Kontakt" isRelatedEnts=true }}
+    <form id="mjzkontakt" name="mjzkontakt" method="post" action="#">
+        <fieldset>
+
+            <div class="row">
+                <div class="small-12 columns">
+                    {{> elem_input_text id="name" name="name" placeholder="Name" }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 columns">
+                    {{> elem_input_email id="email" name="email" placeholder="E-Mail-Adresse" }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 columns">
+                    {{> elem_textarea cols="50" rows="5" placeholder="Ihre Nachricht" }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 columns">
+                    {{> elem_checkbox id="zusage" name="zusage" value="valueZusage" placeholder="Ich stimme zu, dass..." }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-12 columns">
+                    <div class="component form-handle">
+                        <!-- nur fuer den Clickdummy auskommentiert. statt dessen wird ein dummy link auf das dashboard verlinkt
+                        {{> elem_button type="submit" id="submit1" name="submit1" text="Absenden" isExpanded="true" }}
+                        -->
+
+                        <a class="button expanded" href="{{renderPageLink 'site/zustellberichte/zustellbericht_mjz' this}}">Absenden</a>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+
+    </form>
+{{/mod_Formbox}}

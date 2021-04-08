@@ -1,0 +1,131 @@
+.component_popupWindow{
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $white;
+  z-index: 5000;
+  overflow-y: auto;
+
+  @include breakpoint(medium up){
+    background-color: rgba(227, 227, 227, 0.75);
+
+  }
+
+  &.popupWindow_opened{
+    display: block;
+  }
+
+  > .component-container{
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    @include breakpoint(medium up){
+      overflow-y: auto;
+    }
+
+    > .component-container-wrapper{
+      position: static;
+
+      background-color: $white;
+      height: 100%;
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      max-width: none;
+      transform: translate(0, 0);
+
+      @include breakpoint(medium up){
+        position: fixed;
+        width: 100%;
+        height: auto;
+        max-width: rem-calc(600px);
+        top: 50%;
+        left: 50%;
+        margin-top: rem-calc(15px);
+        margin-bottom: rem-calc(15px);
+        transform: translate(-50%, -50%);
+        border-radius: rem-calc(10px);
+        border: 1px solid #707070;
+        z-index: 5001;
+
+        &.popupWindow_unfixed{
+          position: static;
+          margin: 10px auto;
+          transform: translate(0, 0);
+        }
+      }
+
+      > .popupWindow_header{
+        font-size: 20px;
+
+        > .popupWindow_close{
+          display: block;
+          text-align: right;
+
+          > a {
+            display: inline-block;
+            color: $black;
+            padding-right: 16px;
+            margin: 5px 0;
+
+            &:hover{
+              cursor: pointer;
+              text-decoration: none;
+            }
+
+            &:visited{
+              color: $black;
+            }
+          }
+        }
+
+        > .popupWindow_title{
+          display: block;
+          color: $black;
+          background-color: $color-hjb-gray;
+          text-align: center;
+          padding: 5px 0;
+
+        }
+      }
+
+      > .popupWindow_content{
+        min-height: rem-calc(300px);
+        color: $black;
+
+        > .row {
+          > .columns {
+            padding: 0;
+          }
+        }
+
+        .module, .module-container, .module-container-wrapper {
+          padding: 0;
+          margin: 0;
+          border: none;
+          border-radius: 0;
+          background-color: transparent;
+
+          .headline {
+            margin-top: 0;
+          }
+
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          max-width: 300px;
+        }
+
+      }
+    }
+  }
+
+}

@@ -1,0 +1,46 @@
+.component_clickdummyTopBar {
+  @include -kbs-add-component-padding();
+
+  background: $dark-gray;
+  color: $light-gray;
+
+  > .component-container {
+//    @include -kbs-add-component-container-padding();
+
+    > .component-container-wrapper {
+
+      #navClickdummy {
+        color: $secondary-color;
+        margin-bottom: $global-padding;
+
+        li {
+          display: inline-block;
+
+          &:before {
+            content: none;
+          }
+
+          ~ li {
+            margin-left: rem-calc(30px);
+          }
+
+          a {
+            color: $secondary-color;
+          }
+        }
+      }
+
+
+      #debugContainer {
+        * {
+          font-family: $-kbs-font-family-monospace-fallback;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+}

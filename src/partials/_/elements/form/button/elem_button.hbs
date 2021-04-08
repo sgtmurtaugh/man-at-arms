@@ -1,0 +1,62 @@
+{{!--
+                                Clickdummy Besonderheit: Der type kann link sein, dann wird ein a-Tag gerendert
+                                --}}{{#ifEquals type "link" }}{{!--
+--}}<a{{!--
+                                    Attribute: href
+    --}} href="{{!--
+                                    --}}{{#if href }}{{!--
+        --}}{{href}}"{{!--
+                                    --}}{{else}}{{!--
+        --}}#{{!--
+                                    --}}{{/if}}{{!--
+    --}}"{{!--
+                                --}}{{/ifEquals}}{{!--
+                                --}}{{#ifUnequals type "link" }}{{!--
+--}}<button{{!--
+                                    --}}{{#if type }}{{!--
+    --}} type="{{type}}"{{!--
+                                    --}}{{/if}}{{!--
+                                --}}{{/ifUnequals}}{{!--
+
+                                Attribute: id
+                                --}}{{#if id }}{{!--
+    --}} id="{{id}}"{{!--
+                                --}}{{/if}}{{!--
+
+
+                                Attribute: name
+                                --}}{{#if name }}{{!--
+    --}} name="{{name}}"{{!--
+                                --}}{{/if}}{{!--
+
+
+    --}} class="button{{!--
+
+                                class flag: expanded
+                                --}}{{#if isExpanded }}{{!--
+        --}} expanded{{!--
+                                --}}{{/if}}{{!--
+
+                                Attribut: class
+                                --}}{{#if class }}{{!--
+        --}} {{class}}{{!--
+                                --}}{{/if}}{{!--
+    --}}"{{!--
+
+--}}>{{!--
+
+                                Text: text
+                                --}}{{#if text }}{{!--
+    --}}{{text}}{{!--
+                                --}}{{else}}{{!--
+    --}}button{{!--
+                                --}}{{/if}}{{!--
+
+
+                                Clickdummy Besonderheit: Der type kann link sein, dann wird ein a-Tag gerendert
+                                --}}{{#ifEquals type "link" }}{{!--
+--}}</a>{{!--
+                                --}}{{/ifEquals}}{{!--
+                                --}}{{#ifUnequals type "link" }}{{!--
+--}}</button>{{!--
+                                --}}{{/ifUnequals}}

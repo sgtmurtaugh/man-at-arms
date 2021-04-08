@@ -1,0 +1,30 @@
+.lib_LayoutUtils {
+  $el: &;
+
+  &-Toggle {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      @include -kbs-adjust-sprite-image(-svg-sprite-actualSprites--chevron, rem-calc(20px), rem-calc(20px), 1, false, false);
+      transition: transform 333ms ease;
+      transform: rotate(-180deg);
+      content: '';
+      position: unset;
+      margin: 0.25rem;
+    }
+
+    &[data-toggle=inactive]::after {
+      transform: rotate(0);
+    }
+
+    *:not(button) {
+      margin-right: 0.5rem;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}

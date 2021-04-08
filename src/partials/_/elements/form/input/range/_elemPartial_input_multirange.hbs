@@ -1,0 +1,9 @@
+{{> _elem_input type="range" class=(concat class "multirange" (append "slide" fieldSuffix)) id=(append id fieldSuffix) isError=isError name=(append name fieldSuffix) value=value
+        placeholder=placeholder onfocus=onfocus onblur=onblur min=min max=max list=list step=step }}{{!--
+
+   Das Element benoetigt zusatzliches JavaScript!
+   Alle Multirange Elemente werden bei aktivem Script von type range auf hidden veraendert. Dieses Script liegt in der app.js
+--}}
+<noscript>
+    {{> elem_label id=(append id fieldSuffix) isError=isError placeholder=(i18n (concat name fieldSuffix)) }}
+</noscript>

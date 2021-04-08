@@ -1,0 +1,23 @@
+<legend{{!--
+
+    --}} class="{{coreClasses}}{{!--
+
+                                Attribut class
+                                --}}{{#if class}}{{!--
+        --}} {{class}}{{!--
+                                --}}{{/if}}{{!--
+
+                                Error flag
+                                --}}{{#ifEquals isError "true"}}{{!--
+        --}} is-invalid-label{{!--
+                                --}}{{/ifEquals}}{{!--
+
+    --}}"{{!--
+--}}>
+    {{value}}
+</legend>
+{{!--
+                                Error flag
+                                --}}{{#ifEquals isError "true"}}{{!--
+--}}{{> elem_error_icon }}{{!--
+                                --}}{{/ifEquals}}

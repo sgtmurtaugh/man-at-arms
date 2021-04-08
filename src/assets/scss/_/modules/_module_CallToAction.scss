@@ -1,0 +1,36 @@
+.module_callToAction{
+  @include -kbs-add-module-padding();
+
+  /* Default der Font Groesse und Family aendern! */
+  font-size: rem-calc($global-larger-font-size);
+  font-family: $-kbs-font-family-kohinoor-regular;
+
+  > .module-container{
+
+    > .module-container-wrapper{
+      position: relative;
+      border: 5px solid #DBDBDB;
+      border-radius: 48px;
+      background-color: $white;
+      //padding: rem-calc(35px 0);
+      padding: rem-calc(35px 50px);
+
+      @include breakpoint(medium only){
+        padding: rem-calc(62px 100px);
+      }
+      @include breakpoint(large up){
+        padding: rem-calc(123px 150px);
+      }
+
+      > .contentContainer{
+        > .action {
+          margin-top: rem-calc(29px);
+          text-align: center;
+        }
+
+      }
+
+    }
+
+  }
+}

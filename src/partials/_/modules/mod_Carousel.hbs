@@ -1,0 +1,53 @@
+<div class="module module_carousel" id="modDocId_ModulCarousel">
+    {{#> elem_headline class="module-headline xlarge" vsize=1 }}
+        {{title}}
+    {{/elem_headline}}
+
+    <div class="module_container">
+        <div class="module_container_wrapper">
+
+            <ul class="carousel_itemContainer">{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+
+                --}}{{> @partial-block offset=(addition offset 1)}}{{!--
+
+                                --}}{{else}}{{!--
+
+                --}}{{#> modSnip_CarouselItem offset=(addition offset 1) title="Thema 1"
+                                              link="site/beispiele/examplePopup" hasImage=true }}
+                    {{> loremipsum-headlines }}
+                {{/modSnip_CarouselItem}}{{!--
+
+                --}}{{#> modSnip_CarouselItem offset=(addition offset 1) title="Thema 2"
+                                              link="site/beispiele/examplePopup" }}
+                    <p>{{> loremipsum-short }}</p>
+                {{/modSnip_CarouselItem}}{{!--
+
+                --}}{{#> modSnip_CarouselItem offset=(addition offset 1) title="Thema 3"
+                                              link="site/beispiele/examplePopup" hasImage=true }}
+                    <p>{{> loremipsum-medium }}</p>
+                {{/modSnip_CarouselItem}}{{!--
+
+                --}}{{#> modSnip_CarouselItem offset=(addition offset 1) title="Thema 4"
+                                              link="site/beispiele/examplePopup" }}
+                    {{> loremipsum-headlines }}
+                {{/modSnip_CarouselItem}}{{!--
+
+                --}}{{#> modSnip_CarouselItem offset=(addition offset 1) title="Thema 5"
+                                              link="site/beispiele/examplePopup" hasImage=true }}
+                    <p>{{> loremipsum-short }}</p>
+                {{/modSnip_CarouselItem}}{{!--
+
+                --}}{{#> modSnip_CarouselItem offset=(addition offset 1) title="Thema 6"
+                                              link="site/beispiele/examplePopup" }}
+                    <p>{{> loremipsum-medium }}</p>
+                {{/modSnip_CarouselItem}}{{!--
+
+                                --}}{{/if}}{{!--
+
+            --}}</ul>
+
+        </div>
+    </div>
+</div>

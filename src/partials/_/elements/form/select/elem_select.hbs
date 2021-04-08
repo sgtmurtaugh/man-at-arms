@@ -1,0 +1,27 @@
+<div class="component form-element">{{!--
+
+                                Field
+    --}}<select class="form-field selectbox {{class}}" id="{{id}}" name="{{name}}" size="{{size}}" value="{{value}}" required>
+        <option value="">Auswahl</option>
+        <option value="1">Hundeflüsterer</option>
+        <option value="2">Flusenballerina</option>
+        <option value="3">Heckenfriseur</option>
+        <option value="4">Babybesänftiger</option>
+        <option value="4">Seniortänzer</option>
+    </select>
+    {{!--> _elem_select type="text" class=class id=id isError=isError name=name value=value placeholder=placeholder onblur=onblur onfocus=onfocus --}}{{!--
+
+    {{!--
+                                Error flag
+                                --}}{{#ifEquals isError "true"}}{{!--
+    --}}{{> elem_error_icon }}{{!--
+                                --}}{{/ifEquals}}{{!--
+
+    Label
+    --}}{{> elem_label class=(concat class "sr-only") id=id isError=isError placeholder=placeholder }}{{!--
+
+                                Errortext, wenn Error flag 'true'
+                                --}}{{#ifEquals isError "true"}}{{!--
+    --}}{{> elem_error_text value=errorMsg }}{{!--
+                                --}}{{/ifEquals}}
+</div>

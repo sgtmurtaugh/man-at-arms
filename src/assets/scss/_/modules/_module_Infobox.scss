@@ -1,0 +1,115 @@
+.module_infobox{
+  @include -kbs-add-module-padding();
+
+  /* Default der Font Groesse und Family aendern! */
+  font-size: rem-calc($global-larger-font-size);
+  font-family: $-kbs-font-family-kohinoor-regular;
+
+  > .module-container{
+
+    > .module-container-wrapper{
+      position: relative;
+      background-color: $-kbs-color-bright-gray;
+      box-shadow: rem-calc(0 0 30px) $-kbs-color-smoke-gray;
+      border-radius: rem-calc(29px);
+      padding: rem-calc(35px 0);
+
+      @include breakpoint(medium up){
+        padding: rem-calc(42px 0);
+      }
+
+      > .headline{
+        padding-left: rem-calc(105px);
+        padding-right: rem-calc(100px);
+
+        @include breakpoint(medium only){
+          padding-left: rem-calc(162px);
+        }
+        @include breakpoint(large up){
+          padding-left: rem-calc(200px);
+          padding-right: rem-calc(100px);
+        }
+      }
+
+      > .contentContainer{
+        padding: rem-calc(0 15px);
+
+        @include breakpoint(medium only){
+          padding: rem-calc(0 15px 0 162px);
+        }
+
+        @include breakpoint(large up){
+          padding: rem-calc(0 100px 0 200px);
+        }
+
+        ul {
+
+          @include breakpoint(medium up){
+            margin-left: rem-calc(26px);
+            font-size: rem-calc(20px);
+
+            > li {
+              text-indent: rem-calc(-25px);
+
+              a {
+                font-size: rem-calc(20px)!important;
+              }
+
+              &::before {
+                width: 16px;
+                height: 16px;
+                transform: translateY(1px);
+              }
+
+            }
+
+          }
+
+        }
+
+      }
+
+      > .image_wrapper{
+        position: absolute;
+        top: rem-calc(35px);
+        left: rem-calc(35px);
+        width: rem-calc(44px);
+        max-width: rem-calc(44px);
+        height: rem-calc(44px);
+        max-height: rem-calc(44px);
+        text-align: center;
+
+        > .hint {
+          display: inline-block;
+          @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--infobox_hint, rem-calc(44px), rem-calc(44px));
+
+          @include breakpoint(medium up){
+            @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--infobox_hint, rem-calc(66px), rem-calc(66px));
+          }
+          @include breakpoint(large up){
+            @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--infobox_hint, rem-calc(88px), rem-calc(88px));
+          }
+        }
+
+        @include breakpoint(medium up){
+          width: rem-calc(66px);
+          max-width: rem-calc(66px);
+          height: rem-calc(66px);
+          max-height: rem-calc(66px);
+          left: rem-calc(70px);
+          top: rem-calc(42px);
+        }
+
+        @include breakpoint(large up){
+          width: rem-calc(88px);
+          max-width: rem-calc(88px);
+          height: rem-calc(88px);
+          max-height: rem-calc(88px);
+        }
+
+      }
+
+    }
+
+  }
+}

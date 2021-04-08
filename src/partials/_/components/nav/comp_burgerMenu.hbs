@@ -1,0 +1,26 @@
+<div class="component component_burgerMenu">
+    <div class="component-container">
+        <div class="component-container-wrapper">
+
+            <input id="header-submenu-toggle" aria-hidden="true" type="checkbox"/>
+            <label for="header-submenu-toggle" aria-hidden="true"></label>
+
+            <div class="header-submenu-list-container">
+                {{#if burgermenu}}
+                    <ul class="header-submenu-list row collapse">
+                        {{#each burgermenu.links as |link|}}
+
+                            {{#if @last}}
+                                {{> elem_header_sprungpunktLink link=link isLast=true context=../this}}
+                            {{else}}
+                                {{> elem_header_sprungpunktLink link=link isLast=false context=../this}}
+                            {{/if}}
+
+                        {{/each}}
+                    </ul>
+                {{/if}}
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.module_JobCategories {
+  padding-left: 0;
+  padding-right: 0;
+
+  /* Default der Font Groesse und Family aendern! */
+  font-size: rem-calc($global-larger-font-size);
+  font-family: $-kbs-font-family-kohinoor-regular;
+
+  > .module-container {
+
+    > .module-container-wrapper {
+      padding-top: 0;
+
+      > .text_teaser {
+        text-align: center;
+        padding: rem-calc(0 25px);
+        margin-top: 0;
+
+        @include breakpoint(medium up){
+          padding: 0;
+        }
+        @include breakpoint(large up){
+          margin: rem-calc(50px 0 34px 0);
+        }
+      }
+
+      .itemTeaser {
+        text-align: center;
+        margin-bottom: rem-calc(16px);
+
+        > .img-wrapper {
+          width: 100%;
+          height: rem-calc(206px);
+
+          > img {
+            width: auto;
+            height: rem-calc(206px);
+          }
+        }
+
+        > .action {
+          > a {
+            max-width: rem-calc(195px);
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+
+      }
+
+    }
+  }
+}

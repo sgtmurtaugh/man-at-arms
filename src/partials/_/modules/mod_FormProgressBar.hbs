@@ -1,0 +1,26 @@
+<div class="module module_FormProgressBar" id="modDocId_ModulFormProgressBar">
+    {{#> elem_headline class="module-headline" vsize=1 }}
+        {{title}}
+    {{/elem_headline}}
+
+    <div class="module-container">
+        <div class="module-container-wrapper">
+
+            <div class="contentContainer">
+
+                <div class="row collapse">
+                    {{> modSnip_FormProgressBar_BubbleItem size="4" css_class="fpb_selected" pulsate="true" large_text="Was suche ich?" small_text="Was?" }}
+                    {{> modSnip_FormProgressBar_BubbleItem size="4" large_text="Wo suche ich?" small_text="Wo?" }}
+                    {{> modSnip_FormProgressBar_BubbleItem size="4" large_text="Wofür suche ich?" small_text="Wofür?" }}
+                </div>
+
+                <div class="row collapse">
+                    {{> modSnip_FormProgressBar_Form size="4" offset=0 css_class="end" }}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

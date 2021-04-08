@@ -1,0 +1,22 @@
+{{#> mod_Fliesstext title="Häufige Fragen / FAQ" }}
+    <div class="module module_accordion">
+        <div class="module-container">
+            <div class="module-container-wrapper">
+                {{#> elem_headline offset=(addition offset 1) vsize=2}}
+                    Akkordeon
+                {{/elem_headline}}
+
+                <ul class="accordion" data-accordion>
+                    {{#each accordion_exampleContents.contents as |content|}}
+
+                        <li class="accordion-item {{#ifEquals @index '0'}}is-active{{/ifEquals}}" data-accordion-item>
+                            {{>  (lookup . 'target') title=content.displayText }}
+                        </li>
+
+                    {{/each}}
+                </ul>
+
+            </div>
+        </div>
+    </div>
+{{/mod_Fliesstext}}

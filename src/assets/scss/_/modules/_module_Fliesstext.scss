@@ -1,0 +1,107 @@
+.module_fliesstext{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include breakpoint(medium up){
+    @include -kbs-add-module-padding();
+  }
+
+  > .module-container{
+
+    > .module-container-wrapper{
+      background-color: $white;
+      padding: 0;
+      position: relative;
+
+      > .module-headline{
+        background-color: $color-hjb-gray;
+        padding: rem-calc(6px 10px);
+        margin: 0;
+
+        @include breakpoint(medium up){
+          margin: rem-calc(40px 0 0 0);
+          padding: rem-calc(6px 50px);
+        }
+        @include breakpoint(large up){
+          padding: rem-calc(6px 120px);
+        }
+      }
+
+      > .contentContainer{
+        margin-bottom: 0;
+        //font-size: rem-calc(13px);
+
+
+        .module{
+          padding: 0;
+        }
+
+        p:last-child{
+          margin-bottom: 0;
+        }
+
+        a {
+          &.button {
+            //font-size: rem-calc(13px);
+            border-radius: rem-calc(2px);
+
+            @include breakpoint(medium up){
+              //font-size: rem-calc(16px);
+            }
+
+          }
+        }
+
+        padding: rem-calc(16px 10px);
+        @include breakpoint(medium only){
+          padding: rem-calc(27px 50px);
+        }
+        @include breakpoint(medium up){
+          //font-size: rem-calc(18px);
+        }
+        @include breakpoint(large up){
+          padding: rem-calc(27px 100px);
+        }
+
+      }
+
+      @include breakpoint(medium up){
+        border: rem-calc(1px) solid $color-hjb-dark-gray;
+        border-radius: rem-calc(10px);
+      }
+
+    }
+
+    .icon_close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: rem-calc(0px);
+
+      a {
+        text-decoration: none;
+        height: 100%;
+        width: rem-calc(50px);
+        color: transparent;
+        overflow: hidden;
+
+        &:before {
+          display: block;
+          padding: rem-calc(8px 20px);
+          color: $color-gray;
+          content: 'X';
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium only){
+    margin: rem-calc(48px 0);
+  }
+  @include breakpoint(large up){
+    margin: rem-calc(97px 0);
+  }
+}

@@ -1,0 +1,123 @@
+/* ==============================
+    # font definitions
+   ============================== */
+
+// KohinoorKBS-Black
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-black;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Black.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Black.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Black.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Black.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Black.svg") format("svg");
+}
+
+// KohinoorKBS-BlackItalic
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-blackItalic;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BlackItalic.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BlackItalic.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BlackItalic.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BlackItalic.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BlackItalic.svg") format("svg");
+}
+
+// KohinoorKBS-Bold
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-bold;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Bold.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Bold.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Bold.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Bold.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Bold.svg") format("svg");
+}
+
+// KohinoorKBS-BoldItalic
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-boldItalic;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BoldItalic.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BoldItalic.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BoldItalic.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BoldItalic.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-BoldItalic.svg") format("svg");
+}
+
+// KohinoorKBS-Italic
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-italic;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Italic.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Italic.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Italic.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Italic.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Italic.svg") format("svg");
+}
+
+// KohinoorKBS-Light
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-light;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Light.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Light.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Light.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Light.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Light.svg") format("svg");
+}
+
+// KohinoorKBS-LightItalic
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-lightItalic;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-LightItalic.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-LightItalic.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-LightItalic.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-LightItalic.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-LightItalic.svg") format("svg");
+}
+
+// KohinoorKBS-Medium
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-medium;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Medium.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Medium.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Medium.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Medium.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Medium.svg") format("svg");
+}
+
+// KohinoorKBS-MediumItalic
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-mediumItalic;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-MediumItalic.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-MediumItalic.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-MediumItalic.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-MediumItalic.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-MediumItalic.svg") format("svg");
+}
+
+// KohinoorKBS-Regular
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-regular;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Regular.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Regular.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Regular.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Regular.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Regular.svg") format("svg");
+}
+
+// KohinoorKBS-Semibold
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-semibold;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Semibold.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Semibold.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Semibold.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Semibold.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-Semibold.svg") format("svg");
+}
+
+// KohinoorKBS-SemiboldItalic
+@font-face {
+  font-family: $-kbs-font-family-kohinoor-semiboldItalic;
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-SemiboldItalic.eot");
+  src: url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-SemiboldItalic.woff") format("woff"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-SemiboldItalic.woff2") format("woff2"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-SemiboldItalic.ttf") format("truetype"),
+  url("#{$-kbs-font-url-prefix}/fonts/Kohinoor/KohinoorKBS-SemiboldItalic.svg") format("svg");
+}

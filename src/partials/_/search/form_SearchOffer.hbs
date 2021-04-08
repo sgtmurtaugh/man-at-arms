@@ -1,0 +1,7 @@
+<form name="search-offer" class="mod_JobSearchQuery-form" action="{{renderPageLink 'site/suche/suchergebnisse-angebote' this }}">
+    {{> fieldset_Query preset=true}}
+    {{> fieldset_Sort}}
+    {{> fieldset_RangeFilter-Distances}}
+    {{> fieldset_RangeFilter-Wages}}
+    <button type="submit">Suchen</button>
+</form>

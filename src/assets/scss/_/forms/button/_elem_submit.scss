@@ -1,0 +1,11 @@
+input[type=submit] {
+  font-size: rem-calc(18px);
+  width: 100%;
+  max-width: rem-calc(150px);
+  border: rem-calc(1px) solid $color-hjb-gray;
+  border-radius: rem-calc(3px);
+  color: $white;
+  background-color: $color-hjb-lila;
+  padding: rem-calc(5px) 0;
+  cursor: pointer;
+}

@@ -1,0 +1,51 @@
+/*
+  Das Modul Blitzanmeldung basiert auf CallToAction., somit muessen hier nur alle Unterschiede umgesetzt werden!
+*/
+.module_blitzanmeldung{
+
+  > .module-container{
+
+    > .module-container-wrapper{
+      padding-left: rem-calc(67px);
+      @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--blitzanmeldung_blitz, rem-calc(37px), rem-calc(67px), null, true, true, false, false);
+
+      @include breakpoint(medium only){
+        padding-left: rem-calc(117px);
+        @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--blitzanmeldung_blitz, rem-calc(68px), rem-calc(123px), null, true, true, false, false);
+      }
+      @include breakpoint(large up){
+        padding-left: rem-calc(200px);
+        @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--blitzanmeldung_blitz, rem-calc(93px), rem-calc(167px), null, true, true, false, false);
+      }
+
+      &::before {
+        left: 34px;
+        top: 80px;
+
+        @include breakpoint(medium up) {
+          left: 60px;
+          top: 132px;
+        }
+
+        @include breakpoint(large up) {
+          left: 105px;
+          top: 200px;
+        }
+      }
+
+      > .contentContainer{
+        > .action {
+          > a {
+            > span {
+              padding: rem-calc(0 16px);
+              @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--blitzanmeldung_button_blitz, rem-calc(17px), rem-calc(28px), null, true, true, false, true);
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+}

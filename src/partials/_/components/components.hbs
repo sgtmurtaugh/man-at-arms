@@ -1,0 +1,43 @@
+<h1>Komponentensammlung</h1>
+
+<div class="row">
+    <h2 class="label primary">Meta Navigation</h2>
+    <div class="small-12 columns">
+        {{> comp_navmeta }}
+    </div>
+</div>
+
+<div class="row">
+    <h2 class="label primary">Header</h2>
+    <div class="small-12 columns">
+        {{> comp_header }}
+    </div>
+</div>
+
+<div class="row">
+    <h2 class="label primary">Header (Eingeloggt)</h2>
+    <div class="small-12 columns">
+        {{> comp_header isLoggedIn=true }}
+    </div>
+</div>
+
+<div class="row">
+    <h2 class="label primary">Footer</h2>
+    <div class="small-12 columns">
+        {{> comp_footer }}
+    </div>
+</div>
+
+<div class="row">
+    <h2 class="label primary">Recommendation</h2>
+    <div class="small-12 columns">
+        {{> comp_recommendation }}
+    </div>
+</div>
+
+<div class="row">
+    <h2 class="label primary">Readspeaker</h2>
+    <div class="small-12 columns">
+        {{> comp_readspeaker readspeakerUrl="#spezielleHjBReadspeakerUrl" isUseReadspeaker="true" }}
+    </div>
+</div>

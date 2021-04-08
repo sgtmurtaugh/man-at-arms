@@ -1,0 +1,50 @@
+<div class="module module_callToAction{{!--
+                                --}}{{#if additionalClasses}}{{!--
+--}} {{additionalClasses}}{{!--
+                                --}}{{/if}}{{!--
+
+--}}" id="{{!--
+
+                                    Clickdummy spezielle Pruefung
+                                --}}{{#if moduleDocId}}{{!--
+--}}{{moduleDocId}}{{!--
+                                --}}{{else}}{{!--
+--}}docId_ModulCallToAction{{!--
+                                --}}{{/if}}{{!--
+--}}">
+    <div class="module-container">
+        <div class="module-container-wrapper">
+
+                                {{!-- Clickdummy spezielle Pruefung --}}
+            {{#> elem_headline class="module-headline xlarge" vsize=1 }}
+                {{title}}
+            {{/elem_headline}}
+
+            <div class="contentContainer">{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+                --}}{{> @partial-block offset=(addition offset 1)}}{{!--
+                                --}}{{else}}{{!--
+                --}}{{> loremipsum-large offset=(addition offset 1)}}{{!--
+                                --}}{{/if}}{{!--
+
+                --}}
+                <div class="action">{{!--
+
+                                --}}{{#if linkText}}{{!--
+                    --}}{{> elem_link_cta link=link linkText=linkText cssClass="cta" }}{{!--
+                                --}}{{else}}{{!--
+                    --}}{{> elem_link_cta link=link linkText="CallToAction" cssClass="cta" }}{{!--
+                                --}}{{/if}}{{!--
+
+                --}}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+

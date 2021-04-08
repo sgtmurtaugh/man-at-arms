@@ -1,0 +1,52 @@
+.module_navigation {
+  color: $black;
+  padding: 0;
+
+  > .module-container {
+    @include -kbs-add-module-container-padding();
+
+    > .module-container-wrapper {
+      padding-top: 0;
+
+      .list-navigation {
+        margin: 0;
+        padding: rem-calc(20px 0);
+        list-style: none;
+        box-shadow: none;
+        border-radius: 0;
+
+        @include breakpoint(medium up){
+          box-shadow: 0 0 30px $-kbs-color-medium-gray;
+          border-radius: rem-calc(20px);
+        }
+
+        > li {
+          text-align: center;
+          text-indent: 0;
+
+          &::before {
+            display: none;
+          }
+
+          > a {
+
+            //Feste Höhe, maximal 2-Zeilig
+            margin: 0 auto;
+
+            @include breakpoint(medium) {
+              height: 50px !important;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              overflow: hidden;
+              margin: 0 auto;
+            }
+          }
+        }
+      }
+
+    }
+
+
+  }
+}

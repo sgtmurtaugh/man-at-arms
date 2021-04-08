@@ -1,0 +1,31 @@
+a {
+  display: inline-block;
+
+  &.textlogo{
+    font-family: $-kbs-font-family-kohinoor-semibold;
+    font-weight: bold;
+    font-size: rem-calc(20px);
+
+    > p{
+      margin-bottom: 0;
+    }
+
+    > p:first-child{
+      margin-left: rem-calc(120px);
+      line-height: rem-calc(3px);
+    }
+
+    > p:nth-child(2){
+      > span {
+        float: left;
+        color: $primary-color;
+
+        &:first-child{
+          color: $white;
+        }
+      }
+    }
+
+  }
+
+}

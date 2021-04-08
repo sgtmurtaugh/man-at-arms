@@ -1,0 +1,93 @@
+{{!--
+    param class - default null
+    param hsize - default 0
+    param vsize - default
+    param offset - default 0
+    param defaultHsize - default 0
+    param isInvisible - default false
+    param isOutlineHeadlines - default false
+
+--}}{{!--
+                                --}}{{#if (headlineSize offset)}}{{!--
+--}}<h{{headlineSize offset}}{{!--
+        --}} class="headline{{!--
+
+                                    Die vsize vor class ausgeben, damit diese ggf. die Eigenschaften ueberschreiben!
+
+                                    --}}{{#if (virtualSize vsize) }}{{!--
+                                        --}}{{#ifUnequals (headlineSize offset) (virtualSize vsize) }}{{!--
+        --}} font-h{{vsize}}-style{{!--
+                                        --}}{{/ifUnequals}}{{!--
+                                    --}}{{/if}}{{!--
+
+
+                                    --}}{{#if class }}{{!--
+        --}} {{class}}{{!--
+                                    --}}{{/if}}{{!--
+
+
+                                    --}}{{#if isInvisible}}{{!--
+        --}} show-for-sr{{!--
+                                    --}}{{/if}}{{!--
+    --}}"{{!--
+--}}>{{!––
+
+                                    Dieser Block hilft bei der Entwicklung
+                                    --}}{{#if isOutlineHeadlines }}{{!--
+
+    --}}[h{{headlineSize offset}}{{!--
+                                        --}}{{#if (virtualSize vsize) }}{{!--
+                                            --}}{{#ifUnequals (headlineSize offset) (virtualSize vsize) }}{{!--
+        --}}|v{{virtualSize vsize}}{{!--
+                                            --}}{{/ifUnequals}}{{!--
+                                        --}}{{/if}}{{!--
+    --}}] {{!--
+                                    --}}{{/if}}{{!--
+
+        --}}{{> @partial-block}}{{!--
+--}}</h{{headlineSize offset}}>{{!--
+
+
+
+                                --}}{{else}}{{!--
+
+
+
+--}}<p class="headline{{!––
+
+                                    Die vsize vor class ausgeben, damit diese ggf. die Eigenschaften ueberschreiben!
+
+                                    --}}{{#if (virtualSize vsize) }}{{!--
+                                        --}}{{#ifUnequals (headlineSize offset) (virtualSize vsize) }}{{!--
+        --}} font-h{{vsize}}-style{{!--
+                                        --}}{{/ifUnequals}}{{!--
+                                    --}}{{/if}}{{!--
+
+
+                                    --}}{{#if class }}{{!--
+        --}} {{class}}{{!--
+                                    --}}{{/if}}{{!--
+
+
+                                    --}}{{#if isInvisible}}{{!--
+        --}} show-for-sr{{!--
+                                    --}}{{/if}}{{!--
+    --}}"{{!--
+--}}>{{!--
+                                    Dieser Block hilft bei der Entwicklung
+                                    --}}{{#if isOutlineHeadlines }}{{!--
+
+    --}}[p{{!--
+                                        --}}{{#if (virtualSize vsize) }}{{!--
+                                            --}}{{#ifUnequals (headlineSize offset) (virtualSize vsize) }}{{!--
+        --}}|v{{virtualSize vsize}}{{!--
+                                            --}}{{/ifUnequals}}{{!--
+                                        --}}{{/if}}{{!--
+    --}}] {{!--
+                                    --}}{{/if}}{{!--
+
+        --}}{{> @partial-block}}{{!--
+--}}</p>{{!--
+
+                                --}}{{/if}}{{!--
+--}}

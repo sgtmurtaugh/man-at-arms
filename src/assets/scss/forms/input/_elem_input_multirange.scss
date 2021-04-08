@@ -1,0 +1,26 @@
+.slidecontainer {
+  width: 50%;
+  float:left;
+
+  //firefox
+  .slideleft::-moz-range-track {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .slideright::-moz-range-track {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  //chrome edge
+  .slideleft::-webkit-slider-runnable-track {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .slideright::-webkit-slider-runnable-track {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}

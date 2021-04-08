@@ -1,0 +1,53 @@
+//  Presets fuer 'Foundation for Sites Settings'
+//  -----------------------------------------------------
+//  Table of Contents:
+//
+//   1. Font Path
+//   2. Font Family
+//   3. ...
+
+
+// 1. Font Path
+// ------------------
+
+//$-kbs-font-url-prefix--clickdummy: '..';
+$-kbs-font-url-prefix--clickdummy: '/assets/';
+$-kbs-font-url-prefix--gsb: '/static';
+$-kbs-font-url-prefix: $-kbs-font-url-prefix--clickdummy;
+
+// 2. Font Family
+// ------------------
+
+
+$-kbs-font-family-fallback: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$-kbs-font-family-monospace-fallback: Consolas, 'Liberation Mono', Courier, monospace;
+$-kbs-font-family-kohinoor-black: 'Kohinoor KBS Black';
+$-kbs-font-family-kohinoor-blackItalic: 'Kohinoor KBS Black Italic';
+$-kbs-font-family-kohinoor-bold: 'Kohinoor KBS Bold';
+$-kbs-font-family-kohinoor-boldItalic: 'Kohinoor KBS Bold Italic';
+$-kbs-font-family-kohinoor-italic: 'Kohinoor KBS Italic';
+$-kbs-font-family-kohinoor-light: 'Kohinoor KBS Light';
+$-kbs-font-family-kohinoor-lightItalic: 'Kohinoor KBS Ligt Italic';
+$-kbs-font-family-kohinoor-medium: 'Kohinoor KBS Medium';
+$-kbs-font-family-kohinoor-mediumItalic: 'Kohinoor KBS Medium Italic';
+$-kbs-font-family-kohinoor-regular: 'Kohinoor KBS Regular';
+$-kbs-font-family-kohinoor-semibold: 'Kohinoor KBS Semibold';
+$-kbs-font-family-kohinoor-semiboldItalic: 'Kohinoor KBS Semibold Italic';
+
+// 3. Colors
+// ------------------
+
+$-kbs-color-hjb-purple: #75388D;
+$-kbs-color-hjb-orange: #EE7F00;
+$-kbs-color-kbs-red: #AE130F;
+$-kbs-color-lighter-gray: #EFEFEF;
+$-kbs-color-light-gray: #E3E3E3;
+$-kbs-color-medium-gray: #707070;
+$-kbs-color-gray: #414141;
+$-kbs-color-medium-dark-gray: #54575A;
+$-kbs-color-bright-gray: #F7F7F7;
+$-kbs-color-dark-gray: #131313;
+
+//ToDo: Richtige Farbbezeichner bzw. noch aktive Farben?
+
+$-kbs-color-smoke-gray: #41414126;

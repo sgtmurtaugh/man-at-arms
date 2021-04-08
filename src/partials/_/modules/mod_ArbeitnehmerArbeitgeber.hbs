@@ -1,0 +1,34 @@
+<div class="module module_arbeitnehmerUndGeber" id="modDocId_ModulArbeitnehmerArbeitgeber">
+    {{#> elem_headline class="module-headline xlarge" vsize=1 }}
+        {{title}}
+    {{/elem_headline}}
+
+    <div class="module-container">
+        <div class="module-container-wrapper">{{!--
+
+                                --}}{{#if @partial-block}}{{!--
+            --}}{{> @partial-block offset=(addition offset 1) }}{{!--
+                                --}}{{else}}{{!--
+            --}}
+            <div class="row">
+                <div class="small-12 medium-5 columns text-center">
+                    {{#> modSnip_ItemTeaser offset=(addition offset 1) title="Für zukünftige Arbeitgeber"
+                                            linkText="Kostenlose Stellenanzeige erstellen" link="site/beispiele/examplePopup"
+                                            image="hjb_logo.svg" }}
+                    {{/modSnip_ItemTeaser}}
+                </div>
+
+                <div class="small-12 medium-5 medium-offset-2  columns text-center">
+                    {{#> modSnip_ItemTeaser offset=(addition offset 1) title="Für zukünftige Haushaltshilfen"
+                                            linkText="Kostenlosen Steckbrief erstellen" link="site/beispiele/examplePopup"
+                                            image="hjb_logo.svg" }}
+                    {{/modSnip_ItemTeaser}}
+                </div>
+            </div>{{!--
+
+                                --}}{{/if}}{{!--
+
+        --}}
+        </div>
+    </div>
+</div>

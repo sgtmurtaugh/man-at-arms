@@ -1,0 +1,127 @@
+// 1. Base Typography
+//---------------------------------------------------------------------
+a {
+  color: $primary-color;
+  font-family: $-kbs-font-family-kohinoor-semibold;
+  font-size: inherit;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+//---------------------------------------------------------------------
+
+
+// 2. Accordion
+//---------------------------------------------------------------------
+
+ul{
+  &.accordion {
+    > li {
+      &.accordion-item {
+        margin: rem-calc(0 0 5px 0);
+        text-indent: 0;
+
+        &:first-child {
+          > .accordion-content {
+            display: block;
+          }
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+
+        > a {
+          &.accordion-title {
+            color: $-kbs-color-dark-gray;
+            background-color: $-kbs-color-light-gray;
+            padding: rem-calc(6px 45px 5px 15px);
+            border: 1px solid $-kbs-color-medium-gray;
+            border-radius: rem-calc(2px);
+            font-family: $-kbs-font-family-kohinoor-regular;
+
+            &:hover, &:focus {
+              text-decoration: none;
+            }
+          }
+        }
+
+        > .accordion-content {
+          color: $black;
+          font-family: $-kbs-font-family-kohinoor-light;
+          font-size: rem-calc(18px);
+          padding: rem-calc(15px);
+        }
+
+        &::before {
+          display: none;
+        }
+
+      }
+    }
+  }
+}
+
+.noJS{
+  ul{
+    &.accordion {
+      > li {
+        &.accordion-item {
+          > .accordion-content {
+            display: block;
+          }
+
+        }
+      }
+    }
+  }
+}
+
+//---------------------------------------------------------------------
+
+
+// 3. Button
+//---------------------------------------------------------------------
+a {
+  &.button{
+    width: 100%;
+    max-width: $-kbs-button-max-width;
+    font-size: map_get($button-sizes, $-kbs-button-size-key-tiny);
+
+    @include breakpoint(medium up){
+      font-size: map_get($button-sizes, $-kbs-button-size-key-small);
+    }
+    @include breakpoint(xlarge up){
+      font-size: map_get($button-sizes, $-kbs-button-size-key-large);
+    }
+  }
+}
+
+button {
+  &.button {
+    margin-bottom: 0;
+  }
+}
+
+//---------------------------------------------------------------------
+
+
+// 4. The Grid
+//---------------------------------------------------------------------
+
+.row {
+  &.box {
+    padding-top: rem-calc(15px);
+    padding-bottom: rem-calc(-10px);
+  }
+
+}
+
+.columns {
+  &.cbg-no-padding {
+    padding: 0;
+  }
+}
+

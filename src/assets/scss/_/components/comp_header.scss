@@ -1,0 +1,61 @@
+.component_header{
+  padding: 0;
+
+  > .component-container{
+    position: relative;
+    background-color: $secondary-color;
+
+    > .component-container-wrapper{
+
+      > .top-bar{
+
+        > .top-bar-left {
+          line-height: 0;
+          flex: 0 0 auto;
+
+          > .logo {
+            display: inline-block;
+            overflow: hidden;
+            color: transparent;
+            @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--header_logo, rem-calc(177px), rem-calc(38px));
+          }
+
+        }
+
+        > .top-bar-right{
+          line-height: 0;
+          flex: 0 0 auto;
+
+          > * {
+            &:not(:last-child){
+              margin-right: rem-calc(28px);
+            }
+          }
+
+          > .signIn {
+            display: inline-block;
+            overflow: hidden;
+            color: transparent;
+            transition: 0.25s;
+
+            @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--header_profile, rem-calc(38px), rem-calc(38px));
+
+            &:hover, &:focus {
+              transform: scale(1.2);
+              @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--header_profile, rem-calc(38px), rem-calc(38px));
+            }
+
+            &.isLoggedIn {
+              display: none;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

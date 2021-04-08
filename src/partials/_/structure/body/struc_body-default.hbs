@@ -1,0 +1,22 @@
+<body class="noJS">
+    {{!-- ACHTUNG:
+        Inkludierung der ClickdummyTopBar ist fuer den GSB NICHT notwendig!
+    --}}
+    {{> clickdummyTopBar}}
+
+    <div id="header">
+        {{> comp_navmeta }}
+        {{> comp_header }}
+    </div>
+
+    <div id="main" class="{{#if isRootPage}}isRootPage{{/if}}">
+        {{> struc_bodyMain-default}}
+    </div>
+
+    <div id="footer">
+        {{> comp_footer }}
+    </div>
+
+    {{!-- additional Scripts --}}
+    {{> script_body-default }}
+</body>

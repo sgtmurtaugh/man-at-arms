@@ -1,0 +1,61 @@
+
+/* ------------------------------
+    # font h1-6 size
+    Font-size der Elemente h1-h6
+   ------------------------------ */
+.font-h1-size {
+  @include -kbs-headline-size('h1');
+}
+.font-h2-size {
+  @include -kbs-headline-size('h2');
+}
+.font-h3-size {
+  @include -kbs-headline-size('h3');
+}
+.font-h4-size {
+  @include -kbs-headline-size('h4');
+}
+.font-h5-size {
+  @include -kbs-headline-size('h5');
+}
+.font-h6-size {
+  @include -kbs-headline-size('h6');
+}
+
+/* ------------------------------
+    # font h1-6 styles
+    Font-styles der Elemente h1-h6 nur mit der 'normalen' font-family
+   ------------------------------ */
+.font-h1-style {
+  @include -kbs-headline-style('h1');
+}
+.font-h2-style {
+  @include -kbs-headline-style('h2');
+}
+.font-h3-style {
+  @include -kbs-headline-style('h3');
+}
+.font-h4-style {
+  @include -kbs-headline-style('h4');
+}
+.font-h5-style {
+  @include -kbs-headline-style('h5');
+}
+.font-h6-style {
+  @include -kbs-headline-style('h6');
+}
+
+/*
+* # font inherit
+* Zuruecksetzen der Hx font
+*/
+
+.font-inherit {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+

@@ -1,0 +1,21 @@
+                                {{#unlesspage 'startseite' 'startseite_noscript'}}
+                                    %><c:if test="${fn:length(self.breadCrumbList) > 0}"><%
+
+<div class="module module_breadcrumb">
+    <div class="module-container">
+        <div class="module-container-wrapper">
+            <p class="show-for-sr">
+                Sie sind hier:
+            </p>
+
+            <ol class="breadcrumbs">
+                                    {{#repeat 4}}
+                <li></li>
+                                    {{/repeat}}
+            </ol>
+        </div>
+    </div>
+</div>
+
+                                    %></c:if><%
+                                {{/unlesspage}}

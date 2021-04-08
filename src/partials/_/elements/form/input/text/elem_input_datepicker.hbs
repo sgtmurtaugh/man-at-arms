@@ -1,0 +1,26 @@
+<div class="component form-element form-element-datepicker">{{!--
+
+                                Field
+--}}
+    <input type="text"
+           class="form-field {{class}}{{#ifEquals isError "true"}}is-invalid-input{{/ifEquals}}"
+           id="{{id}}"
+           name="{{name}}"
+           size="{{size}}"
+           value="{{value}}"
+           placeholder="{{placeholder}}"
+           required
+    >
+        <span class="icon-box">
+            <span class="icon{{#ifEquals isError "true"}}-error{{/ifEquals}}"></span>
+        </span>
+{{!--
+                                Label
+    --}}{{> elem_label id=id isError=isError placeholder=placeholder }}{{!--
+
+                                Errortext, wenn Error flag 'true'
+                                --}}{{#ifEquals isError "true"}}{{!--
+    --}}{{> elem_error_text value=errorMsg }}{{!--
+                                --}}{{/ifEquals}}
+</div>
+

@@ -1,0 +1,19 @@
+.module_accordion{
+  @include -kbs-add-module-padding();
+
+  > .module-container{
+
+    > .module-container-wrapper{
+      padding-top: 0;
+
+      > .headline{
+        font-family: $-kbs-font-family-kohinoor-medium;
+        font-size: rem-calc(18px);
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,205 @@
+{{#> mod_Fliesstext title="Elementsammlung"}}
+<div class="row">
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 columns">
+                <h2 class="label primary">Text Elemente</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="small-12 columns">
+                <h3 class="label primary">&Uuml;berschriften</h3>
+
+                {{#> elem_headline class="module-headline" }}Modul-Headline (offset=0){{/elem_headline}}
+                {{#> elem_headline class="module-headline" vsize=1 }}Modul-Headline (offset=0 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline class="module-headline large" }}Modul-Headline large (offset=0){{/elem_headline}}
+                {{#> elem_headline class="module-headline large" vsize=1 }}Modul-Headline large (offset=0 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline }}Headline (offset=0){{/elem_headline}}
+                {{#> elem_headline vsize=1 }}Headline (offset=0 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline offset=1 }}Headline (offset=1){{/elem_headline}}
+                {{#> elem_headline offset=1 vsize=1 }}Headline (offset=1 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline offset=2 }}Headline (offset=2){{/elem_headline}}
+                {{#> elem_headline offset=2 vsize=1 }}Headline (offset=2 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline offset=3 }}Headline (offset=3){{/elem_headline}}
+                {{#> elem_headline offset=3 vsize=1 }}Headline (offset=3 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline offset=4 }}Headline (offset=4 / vsize=1){{/elem_headline}}
+                {{#> elem_headline offset=4 vsize=1 }}Headline (offset=4 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline offset=5 }}Headline (offset=5 / vsize=1){{/elem_headline}}
+                {{#> elem_headline offset=5 vsize=1 }}Headline (offset=5 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline offset=-1 }}Versuch Headline (offset=-1){{/elem_headline}}
+                {{#> elem_headline offset=-1 vsize=1 }}Versuch Headline (offset=-1 / vsize=1){{/elem_headline}}
+                <hr>
+                {{#> elem_headline offset=6 }}Versuch Headline (offset=6){{/elem_headline}}
+                {{#> elem_headline offset=6 vsize=1 }}Versuch Headline (offset=6 / vsize=1){{/elem_headline}}
+                <hr>
+                <p class="font-h1-style">Absatz mit h1 Style</p>
+                <p class="font-h2-style">Absatz mit h2 Style</p>
+                <p class="font-h3-style">Absatz mit h3 Style</p>
+                <p class="font-h4-style">Absatz mit h4 Style</p>
+                <p class="font-h5-style">Absatz mit h5 Style</p>
+                <p class="font-h6-style">Absatz mit h6 Style</p>
+                <hr>
+                <p class="font-h1-size">Absatz mit h1 Size</p>
+                <p class="font-h2-size">Absatz mit h2 Size</p>
+                <p class="font-h3-size">Absatz mit h3 Size</p>
+                <p class="font-h4-size">Absatz mit h4 Size</p>
+                <p class="font-h5-size">Absatz mit h5 Size</p>
+                <p class="font-h6-size">Absatz mit h6 Size</p>
+            </div>
+
+            <div class="small-12 columns">
+                <h3 class="label primary">Abs&auml;tze</h3>
+
+                <p>Langer Text mit einem Zeilenumbruch<br>und schon geht es in der n&auml;chsten Zeile weiter</p>
+                {{> loremipsum-large}}
+            </div>
+
+            <div class="small-12 columns">
+                <h3 class="label primary">Formatierte Texte</h3>
+
+                <p><i>optisch hervorgehobener Text</i></p>
+                <p><em>betonter Text</em></p>
+                <p><strong>optisch abgehobener Text</strong></p>
+                <p><strong>stark Betonterer Text</strong></p>
+                <p><mark>referenzbezogen hervorgehobener Text</mark></p>
+                <p><s>falscher Text</s></p>
+                <p><small>Wenig bedeutender Text</small></p>
+                <p><kbd>Benutzer Eingabe</kbd></p>
+                <p><sub>Tiefgestellter</sub> Text</p>
+                <p><sup>Hochgestellter</sup> Text</p>
+                <p><u>stilistisch hervorgehobener Text</u></p>
+                <p><cite>Name des Titels oder Autors eines Werkes</cite></p>
+                <p><q>Zitat im Flie&szlig;text</q></p>
+                <p><dfn>Definition</dfn></p>
+                <p><abbr>Abk&uuml;rzung</abbr></p>
+                <p><code>Codebeispiel</code></p>
+                <p><var>Variable, Konstante, Gr&ouml;&szlig;e</var></p>
+                <p><samp>Beispielhafte Ausgabe eines Programms</samp></p>
+                <p>Zeitangabe <time datetime="2014-12-19 10:00">19. Dezember</time></p>
+                <p><wbr>Implizierter Zeilen<wbr>umbruch</p>
+                <p><del>Nicht l&auml;nger g&uuml;ltiger Text</del></p>
+                <p><ins>Neu hinzugeg&uuml;gter Text</ins></p>
+                <p><span>Text ohne semantische Bedeutung</span></p>
+            </div>
+
+            <div class="small-12 columns">
+                <h2 class="label primary">Strukturelle Elemente</h2>
+            </div>
+
+            <div class="small-12 columns">
+                <h3 class="label primary">Trennlinien</h3>
+                <hr>
+            </div>
+
+            <div class="small-12 columns">
+                <h3 class="label primary">Listen</h3>
+
+                <h4 class="label primary">Geordnete Listen</h4>
+                <ol>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                </ol>
+
+                <h4 class="label primary">Ungeordnete Listen</h4>
+                <ul>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                </ul>
+
+                <h4 class="label primary">Definitions Listen</h4>
+                <dl>
+                    <dt>Begriff 1</dt>
+                    <dd>
+                        kurze Erkl&auml;rung
+                    </dd>
+
+                    <dt>Begriff 2</dt>
+                    <dd>
+                        Ausf&uuml;hliche Erkl&auml;rung
+                    </dd>
+                </dl>
+
+                <h4 class="label primary">Verschachtelte Listen</h4>
+                <ol>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt mit geordneten Unterpunkten
+                        <ol>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt mit ungeordneten Unterpunkten
+                                <ul>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                </ul>
+                            </li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                        </ol>
+                    </li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt mit ungeordneten Unterpunkten
+                        <ul>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <ul>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt mit geordneten Unterpunkten
+                        <ol>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt mit ungeordneten Unterpunkten
+                                <ul>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                    <li>Aufz&auml;hlungspunkt</li>
+                                </ul>
+                            </li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                        </ol>
+                    </li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt</li>
+                    <li>Aufz&auml;hlungspunkt mit ungeordneten Unterpunkten
+                        <ul>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                            <li>Aufz&auml;hlungspunkt</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{/mod_Fliesstext}}

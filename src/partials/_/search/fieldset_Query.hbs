@@ -1,0 +1,21 @@
+<fieldset>
+    <legend>Suchanfrage</legend>
+    <label for="what">Was</label>
+    <select id="what" name="what">
+        <option value="">Was suche ich ...</option>
+        <option value="Job" {{#if preset}}selected="selected"{{/if}}>Job</option>
+        <option value="Haushaltshilfe">Haushaltshilfe</option>
+    </select>
+    <label for="where">Wo</label>
+    <input type="text" id="where" name="where" autocomplete="address-level-2" required="true" placeholder="Wo suche ich ... (PLZ oder Ort eingeben)"{{#if preset}} value="Bochum"{{/if}}>
+    <label for="wherefore">Was</label>
+    <select id="wherefore" name="wherefore">
+        <option value="">Wofür suche ich ...</option>
+        <option value="alle Bereiche">alle Bereiche</option>
+        <option value="Haushalt">Haushalt</option>
+        <option value="Senioren">Senioren</option>
+        <option value="Kinder">Kinder</option>
+        <option value="Garten">Garten</option>
+        <option value="Tiere" {{#if preset}}selected="selected"{{/if}}>Tiere</option>
+    </select>
+</fieldset>

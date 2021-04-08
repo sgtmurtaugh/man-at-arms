@@ -1,0 +1,39 @@
+<label class="{{coreClasses}}{{!--
+
+                                Attribut class
+                                --}}{{#if class}}{{!--
+        --}} {{class}}{{!--
+                                --}}{{/if}}{{!--
+
+                                Error flag
+                                --}}{{#ifEquals isError "true"}}{{!--
+        --}} is-invalid-label{{!--
+                                --}}{{/ifEquals}}{{!--
+
+    --}}"{{!--
+
+
+                                Attribut id
+                                --}}{{#if id}}{{!--
+    --}} for="{{id}}"{{!--
+                                --}}{{/if}}{{!--
+
+--}}>{{!--
+
+    --}}{{placeholder}}{{!--
+
+                                Attribut isRequired
+                                --}}{{#if isRequired}}{{!--
+    --}}<dnf{{!--
+
+                                    Attribut isShowForSr
+                                    --}}{{#ifEquals isShowForSr "true"}}{{!--
+        --}} class="show-for-sr"{{!--
+                                    --}}{{/ifEquals}}{{!--
+
+        --}} title="{{i18n pflichtfeld}}"{{!--
+
+    --}}>*</dnf>{{!--
+                                --}}{{/if}}{{!--
+
+--}}</label>
