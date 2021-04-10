@@ -1,0 +1,222 @@
+$icons: (
+sprite: (width: 2412px, height: 2406px, svgPath: "../../assets/img/svg-sprites/svg-sprite.view.svg"),
+    -svg-sprite-actualSprites--Info-kreis: (width: 26px, height: 26px, backgroundX: 0px, backgroundY: 0px),
+    -svg-sprite-actualSprites--blitzanmeldung_blitz: (width: 94.56px, height: 169px, backgroundX: -26px, backgroundY: -26px),
+    -svg-sprite-actualSprites--blitzanmeldung_button_blitz: (width: 18.84px, height: 29.82px, backgroundX: -121px, backgroundY: -195px),
+    -svg-sprite-actualSprites--chevron: (width: 26px, height: 26px, backgroundX: -140px, backgroundY: -225px),
+    -svg-sprite-actualSprites--close: (width: 26px, height: 26px, backgroundX: -166px, backgroundY: -251px),
+    -svg-sprite-actualSprites--footer_logo: (width: 219px, height: 219.76px, backgroundX: -192px, backgroundY: -277px),
+    -svg-sprite-actualSprites--footer_socialmedia-blog: (width: 31.39px, height: 31.41px, backgroundX: -411px, backgroundY: -497px),
+    -svg-sprite-actualSprites--footer_socialmedia-facebook: (width: 32.19px, height: 32.19px, backgroundX: -443px, backgroundY: -529px),
+    -svg-sprite-actualSprites--footer_socialmedia-twitter: (width: 402px, height: 402px, backgroundX: -476px, backgroundY: -562px),
+    -svg-sprite-actualSprites--footer_socialmedia-youtube: (width: 35.67px, height: 25.72px, backgroundX: -878px, backgroundY: -964px),
+    -svg-sprite-actualSprites--header_burgermenue: (width: 22.88px, height: 20.79px, backgroundX: -914px, backgroundY: -990px),
+    -svg-sprite-actualSprites--header_logo: (width: 178.53px, height: 40.06px, backgroundX: -937px, backgroundY: -1011px),
+    -svg-sprite-actualSprites--header_profile: (width: 35.45px, height: 35.45px, backgroundX: -1116px, backgroundY: -1052px),
+    -svg-sprite-actualSprites--header_profile_logged-in: (width: 35.45px, height: 35.45px, backgroundX: -1152px, backgroundY: -1088px),
+    -svg-sprite-actualSprites--icon_arrow_left: (width: 19.89px, height: 32.63px, backgroundX: -1188px, backgroundY: -1124px),
+    -svg-sprite-actualSprites--icon_arrow_right: (width: 19.93px, height: 32.76px, backgroundX: -1208px, backgroundY: -1157px),
+    -svg-sprite-actualSprites--icon_calendar: (width: 32.04px, height: 34.04px, backgroundX: -1228px, backgroundY: -1190px),
+    -svg-sprite-actualSprites--icon_calendar_red: (width: 290px, height: 290px, backgroundX: -1261px, backgroundY: -1225px),
+    -svg-sprite-actualSprites--infobox_hint: (width: 252px, height: 252px, backgroundX: -1551px, backgroundY: -1515px),
+    -svg-sprite-actualSprites--navmeta_gebaerdensprache: (width: 252px, height: 252px, backgroundX: -1803px, backgroundY: -1767px),
+    -svg-sprite-actualSprites--navmeta_leichtesprache: (width: 252px, height: 252px, backgroundX: -2055px, backgroundY: -2019px),
+    -svg-sprite-actualSprites--zustellbericht: (width: 62.16px, height: 62.1px, backgroundX: -2307px, backgroundY: -2271px),
+    -svg-sprite-bookmark--add: (width: 20.74px, height: 35.32px, backgroundX: -2370px, backgroundY: -2334px),
+    -svg-sprite-bookmark--remove: (width: 20.74px, height: 35.32px, backgroundX: -2391px, backgroundY: -2370px),
+);
+@mixin sprite {
+background: url("../../assets/img/svg-sprites/svg-sprite.view.svg") no-repeat;
+}
+.svg-actualSprites--Info-kreis {
+    @include sprite;
+background-position: 0 0;
+}
+    .svg-actualSprites--Info-kreis-dims {
+    width: 26px;
+    height: 26px;
+    }
+.svg-actualSprites--blitzanmeldung_blitz {
+    @include sprite;
+background-position: 1.1219276442971555% 1.16227089852481%;
+}
+    .svg-actualSprites--blitzanmeldung_blitz-dims {
+    width: 94.56px;
+    height: 169px;
+    }
+.svg-actualSprites--blitzanmeldung_button_blitz {
+    @include sprite;
+background-position: 5.056076484647914% 8.206449006388405%;
+}
+    .svg-actualSprites--blitzanmeldung_button_blitz-dims {
+    width: 18.84px;
+    height: 29.82px;
+    }
+.svg-actualSprites--chevron {
+    @include sprite;
+background-position: 5.86756077116513% 9.453781512605042%;
+}
+    .svg-actualSprites--chevron-dims {
+    width: 26px;
+    height: 26px;
+    }
+.svg-actualSprites--close {
+    @include sprite;
+background-position: 6.957250628667225% 10.546218487394958%;
+}
+    .svg-actualSprites--close-dims {
+    width: 26px;
+    height: 26px;
+    }
+.svg-actualSprites--footer_logo {
+    @include sprite;
+background-position: 8.755129958960328% 12.670155152224826%;
+}
+    .svg-actualSprites--footer_logo-dims {
+    width: 219px;
+    height: 219.76px;
+    }
+.svg-actualSprites--footer_socialmedia-blog {
+    @include sprite;
+background-position: 17.26448263260257% 20.92992895615664%;
+}
+    .svg-actualSprites--footer_socialmedia-blog-dims {
+    width: 31.39px;
+    height: 31.41px;
+    }
+.svg-actualSprites--footer_socialmedia-facebook {
+    @include sprite;
+background-position: 18.614931444106883% 22.284850093309913%;
+}
+    .svg-actualSprites--footer_socialmedia-facebook-dims {
+    width: 32.19px;
+    height: 32.19px;
+    }
+.svg-actualSprites--footer_socialmedia-twitter {
+    @include sprite;
+background-position: 23.681592039800996% 28.043912175648703%;
+}
+    .svg-actualSprites--footer_socialmedia-twitter-dims {
+    width: 402px;
+    height: 402px;
+    }
+.svg-actualSprites--footer_socialmedia-youtube {
+    @include sprite;
+background-position: 36.94773032365033% 40.49943704102038%;
+}
+    .svg-actualSprites--footer_socialmedia-youtube-dims {
+    width: 35.67px;
+    height: 25.72px;
+    }
+.svg-actualSprites--header_burgermenue {
+    @include sprite;
+background-position: 38.25676399678543% 41.5057793653389%;
+}
+    .svg-actualSprites--header_burgermenue-dims {
+    width: 22.88px;
+    height: 20.79px;
+    }
+.svg-actualSprites--header_logo {
+    @include sprite;
+background-position: 41.952656628474976% 42.73143021378395%;
+}
+    .svg-actualSprites--header_logo-dims {
+    width: 178.53px;
+    height: 40.06px;
+    }
+.svg-actualSprites--header_profile {
+    @include sprite;
+background-position: 46.95882687088426% 44.37788698825167%;
+}
+    .svg-actualSprites--header_profile-dims {
+    width: 35.45px;
+    height: 35.45px;
+    }
+.svg-actualSprites--header_profile_logged-in {
+    @include sprite;
+background-position: 48.47362773768698% 45.896521904199446%;
+}
+    .svg-actualSprites--header_profile_logged-in-dims {
+    width: 35.45px;
+    height: 35.45px;
+    }
+.svg-actualSprites--icon_arrow_left {
+    @include sprite;
+background-position: 49.66326799352872% 47.35881889465191%;
+}
+    .svg-actualSprites--icon_arrow_left-dims {
+    width: 19.89px;
+    height: 32.63px;
+    }
+.svg-actualSprites--icon_arrow_right {
+    @include sprite;
+background-position: 50.50019439230457% 48.751917210227376%;
+}
+    .svg-actualSprites--icon_arrow_right-dims {
+    width: 19.93px;
+    height: 32.76px;
+    }
+.svg-actualSprites--icon_calendar {
+    @include sprite;
+background-position: 51.597505840434295% 50.169480092413025%;
+}
+    .svg-actualSprites--icon_calendar-dims {
+    width: 32.04px;
+    height: 34.04px;
+    }
+.svg-actualSprites--icon_calendar_red {
+    @include sprite;
+background-position: 59.42507068803016% 57.89224952741021%;
+}
+    .svg-actualSprites--icon_calendar_red-dims {
+    width: 290px;
+    height: 290px;
+    }
+.svg-actualSprites--infobox_hint {
+    @include sprite;
+background-position: 71.80555555555556% 70.33426183844011%;
+}
+    .svg-actualSprites--infobox_hint-dims {
+    width: 252px;
+    height: 252px;
+    }
+.svg-actualSprites--navmeta_gebaerdensprache {
+    @include sprite;
+background-position: 83.47222222222223% 82.03342618384401%;
+}
+    .svg-actualSprites--navmeta_gebaerdensprache-dims {
+    width: 252px;
+    height: 252px;
+    }
+.svg-actualSprites--navmeta_leichtesprache {
+    @include sprite;
+background-position: 95.13888888888889% 93.73259052924791%;
+}
+    .svg-actualSprites--navmeta_leichtesprache-dims {
+    width: 252px;
+    height: 252px;
+    }
+.svg-actualSprites--zustellbericht {
+    @include sprite;
+background-position: 98.17689715044428% 96.88979905286061%;
+}
+    .svg-actualSprites--zustellbericht-dims {
+    width: 62.16px;
+    height: 62.1px;
+    }
+.svg-bookmark--add {
+    @include sprite;
+background-position: 99.11092896631901% 98.45276460762314%;
+}
+    .svg-bookmark--add-dims {
+    width: 20.74px;
+    height: 35.32px;
+    }
+.svg-bookmark--remove {
+    @include sprite;
+background-position: 99.98912707108386% 99.97131624681526%;
+}
+    .svg-bookmark--remove-dims {
+    width: 20.74px;
+    height: 35.32px;
+    }
