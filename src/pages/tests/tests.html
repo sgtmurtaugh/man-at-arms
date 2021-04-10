@@ -1,25 +1,6 @@
 ---
 layout: default
-noscript: false
-isOutlineHeadlines: true
+title: Tests
 ---
-{{#> mod_Fliesstext title="Platzhalter" }}
-    Hier könnte Dein Mist stehen!
-{{/mod_Fliesstext}}
 
-{{#> mod_Formbox title="CropperJS mit Caman" }}
-    <div class="comp_imageCrop">
-        <p id="upload">
-            {{> elem_input_file id="file" placeholder="Foto" }}
-        </p>
-
-        <p id="cropStage" style="display:none">
-            <canvas id="canvas" style="max-width:100%;"></canvas>
-        </p>
-
-        <p id="cropHandle" style="display:none">
-            {{> elem_button id="brightness" text="brightness" }}
-            {{> elem_button id="contrast" text="contrast" }}
-        </p>
-    </div>
-{{/mod_Formbox}}
+{{ title }}

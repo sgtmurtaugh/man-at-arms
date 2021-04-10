@@ -10,11 +10,12 @@ import yargs    from 'yargs';
 // import yaml     from 'js-yaml';
 import nsg      from 'node-sprite-generator';
 import promise  from 'es6-promise';
+import browser  from 'browser-sync';
+import rimraf   from 'rimraf';
 import panini   from 'panini';
 import sherpa   from 'style-sherpa';
 import typechecks from 'typechecks/app';
 import glob     from 'glob';
-// import parcel     from 'parcel-bundler';
 // import svgSpritesheet from '@mariusgundersen/gulp-svg-spritesheet';
 
 const resizeImage   = require('resize-img');
@@ -74,6 +75,29 @@ function getFolders(dir) {
 }
 
 
+/* ------------------------------
+ *  ## Browser Functions
+ * ------------------------------ */
+
+/**
+ * Start a server with BrowserSync to preview the site in
+ * @param done
+ */
+function startServer(done) {
+    browser.init({
+        server: config.paths.dist.path,
+        port: config.development.server.port
+    });
+    done();
+}
+
+/**
+ * Reload the browser with BrowserSync
+ */
+function reloadServer(done) {
+    browser.reload();
+    done();
+}
 
 /**
  * Watch for changes to static assets, pages, Sass, and JavaScript
@@ -81,12 +105,12 @@ function getFolders(dir) {
  */
 function watch(done) {
     gulp.watch(config.paths.src.assets, copyAssets);
-    gulp.watch('src/pages/**/*.html').on('change', gulp.series(generatePages));
-    gulp.watch('src/{layouts,partials}/**/{*.html,*.hbs}').on('change', gulp.series(resetPages, generatePages));
+    gulp.watch('src/pages/**/*.html').on('change', gulp.series(generatePages, browser.reload));
+    gulp.watch('src/{layouts,partials}/**/{*.html,*.hbs}').on('change', gulp.series(resetPages, generatePages, browser.reload));
     gulp.watch('src/assets/scss/**/*.scss', generateSASS);
-    gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(generateJS, copyInitJs));
-    gulp.watch('src/assets/img/**/*').on('change', gulp.series(copyImages));
-    gulp.watch('src/styleguide/**').on('change', gulp.series(generateStyleGuide));
+    gulp.watch('src/assets/js/**/*.js').on('change', gulp.series(generateJS, copyInitJs, browser.reload));
+    gulp.watch('src/assets/img/**/*').on('change', gulp.series(copyImages, browser.reload));
+    gulp.watch('src/styleguide/**').on('change', gulp.series(generateStyleGuide, browser.reload));
     done();
 }
 
@@ -94,6 +118,17 @@ function watch(done) {
 /* ------------------------------
  *  ## Build Functions
  * ------------------------------ */
+
+/**
+ * clean
+ * @param done
+ * Delete the "dist" folder
+ * This happens every time a build starts
+ */
+function clean(done) {
+    rimraf(config.paths.dist.path, done);
+    rimraf(config.paths.build.path, done);
+}
 
 /**
  * copyAssets
@@ -351,7 +386,8 @@ function generateSASS() {
         // .pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
         .pipe($.if(PRODUCTION, $.cssnano()))
         .pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-        .pipe(gulp.dest(config.paths.dist.css));
+        .pipe(gulp.dest(config.paths.dist.css))
+        .pipe(browser.reload({ stream: true }));
 }
 
 
@@ -497,27 +533,17 @@ function generateSvgSprite() {
         .pipe(gulp.dest('build/assets'));
 }
 
-/**
- * TODO
- * parcelWatch
- */
-function parcelWatch() {
-    gulp.src('dist/**/*.html', {
-        read:false
-    })
-    .pipe($.parcel({
-        outDir: 'dist2',
-        publicURL: './'
-    }, {
-        source: 'build'
-    }))
-    .pipe(gulp.dest('dist2'));
-}
 
 
 /* ==================================================================================================================
  *  # Tasks
  * ================================================================================================================== */
+
+/**
+ * Task: clean-dist
+ * runs: clean function
+ */
+gulp.task('clean-dist', clean );
 
 /**
  * Task: copy-assets
@@ -590,11 +616,24 @@ gulp.task('generate-styleguide', generateStyleGuide );
 gulp.task('generate-svg-sprite', generateSvgSprite );
 
 /**
+ * Task: run-server
+ * runs: startServer function, watch function
+ */
+gulp.task('run-server',
+    gulp.series(
+        startServer,
+        watch
+    )
+);
+
+
+/**
  * Task: built
  * runs: generate-sass task, generate-js task, copy-images task
  */
 gulp.task('built',
     gulp.series(
+        'clean-dist',
         'generate-svg-sprite',
         gulp.parallel(
             'generate-js',
@@ -609,20 +648,14 @@ gulp.task('built',
     )
 );
 
-/**
- * Task: generate-svg-sprite
- * runs: generateSvgSprite function
- */
-gulp.task('parcel-watch', parcelWatch );
-
 
 /**
  * Task: default
- * runs: built task task
+ * runs: built task, run-server task
  */
 gulp.task('default',
     gulp.series(
-        'generate-pages',
-        'parcel-watch'
+        'built',
+        'run-server'
     )
 );
