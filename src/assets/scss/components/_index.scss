@@ -1,0 +1,25 @@
+.component {
+
+  /* ------------------------------
+      # Component Container
+      Eigentlicher Container der Komponente
+     ------------------------------ */
+  > .component-container {
+
+    /* ------------------------------
+        # Component Container Wrapper
+        Zusaetzlicher Container fuer die farblich hinterlegten Componenten
+       ------------------------------ */
+    > .component-container-wrapper {
+    }
+  }
+}
+
+
+/* ------------------------------
+    # include separate components files
+   ------------------------------ */
+
+@use "clickdummy/comp_clickdummyTopBar";
+@use "src/assets/scss/layout/navigation/comp_menu";
+@use "src/assets/scss/layout/header/comp_menubar";

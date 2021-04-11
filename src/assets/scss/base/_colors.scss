@@ -1,0 +1,5 @@
+@use "../abstracts/utils/colors";
+
+:root {
+  @include colors.maa-add-color-definitions();
+}

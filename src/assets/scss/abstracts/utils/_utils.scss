@@ -1,0 +1,8 @@
+@use "sass:meta";
+
+///
+/// @param {var}
+/// @return
+@function maa-is-map($var) {
+  @return (meta.type-of($var) == "map");
+}

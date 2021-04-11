@@ -22,6 +22,7 @@
     "parcel-bundler": "^1.12.5",
     "resize-img": "^2.0.0",
     "sass": "^1.32.8",
+    "sassdoc": "^2.7.3",
     "style-sherpa": "^1.0.2",
     "typechecks": "file:../node-utils/typechecks"
   }

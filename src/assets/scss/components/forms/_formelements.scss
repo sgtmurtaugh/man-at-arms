@@ -1,0 +1,153 @@
+@import "src/assets/scss/components/formsnents/forms/checkbox/elem_checkbox";
+@import "src/assets/scss/components/formsnents/forms/input/elem_input_text_datepicker";
+@import "src/assets/scss/_/forms/input/elem_input_range";
+@import "src/assets/scss/_/forms/input/elem_input_multirange";
+@import "src/assets/scss/_/forms/placeholder/elem_placeholder";
+@import "src/assets/scss/components/formsnents/forms/radio/elem_radio_gender";
+@import "src/assets/scss/components/formsnents/forms/radio/elem_radio";
+@import "src/assets/scss/components/formsnents/forms/button/elem_submit";
+@import "src/assets/scss/components/formsnents/forms/label/elem_label_animation";
+
+form {
+
+  margin-top: rem-calc(50px);
+  margin-bottom: rem-calc(25px);
+
+  legend {
+    display: block;
+    font-size: rem-calc(20px);
+    background-color: $medium-gray;
+    width: 100%;
+    padding-left: rem-calc(15px);
+
+    @include breakpoint(small only) {
+      padding-left: rem-calc(15px);
+    }
+
+    &.special-label {
+      position: absolute;
+      top: rem-calc(-13px);
+      font-size: rem-calc(16px);
+      background-color: transparent;
+      padding:  rem-calc(0px);
+      text-align: center;
+    }
+  }
+
+  input:not([type=submit]),
+  select, textarea  {
+    padding: rem-calc(8px);
+    font-size: $forms_standard_font_size;
+    color: $color-dark-gray;
+    border: 1px solid $color-dark-gray;
+    border-radius: 3px;
+  }
+
+  input[type=range] {
+    border: none;
+    padding: 0!important;
+  }
+
+  .form-element{
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+
+  .label-checkbox,
+  .label-radio {
+    font-size: rem-calc(14px);
+    margin: 0;
+
+    > p {
+      display: inline;
+      line-height: 1rem;
+
+      a {
+        font-size: inherit;
+      }
+    }
+  }
+
+  .text-checkbox {
+    font-size: rem-calc(14px);
+    display: block;
+    a {
+      font-size: rem-calc(14px);
+    }
+    .invalid-icon-box {
+      top: rem-calc(-5px);
+    }
+    .invalid-box {
+      margin: 0!important;
+      padding: 0!important;
+    }
+  }
+
+  select {
+    height: auto;
+    padding-right: rem-calc(24px);
+  }
+
+  .selectbox {
+    padding: rem-calc(5px);
+  }
+
+  textarea{
+    resize: none;
+  }
+
+  .distance-inside {
+    @include breakpoint(xlarge) {
+      padding-right: 0;
+    }
+  }
+
+  .distance-outside {
+    margin-top: rem-calc(10px);
+  }
+
+  .box {
+    //margin-top: rem-calc(15px);
+    //margin-bottom: rem-calc(-10px);
+  }
+
+  .text-center {
+    margin-top: rem-calc(8px);
+    margin-bottom: rem-calc(0px);
+  }
+
+  .invalid-icon-box {
+    width: rem-calc(40px);
+    height: rem-calc(40px);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .icon {
+      top: rem-calc(7px);
+      @include -kbs-svg-sprite-image(-svg-sprite-actualSprites--Info-kreis, rem-calc(30px), rem-calc(30px));
+    }
+  }
+}
+
+input[name=first_page], input[name=token]{
+  font-size: 0;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.invalid-icon-checkbox {
+  padding-left: 5%;
+}
+
+// Beispiel Clickdummy Popup Kontakt auf Submit
+.submit-link {
+  color: white;
+  &:hover, &:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
