@@ -3,7 +3,19 @@
 <html lang="de" class="lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]>
 <html lang="de" class="lt-ie9"> <![endif]--><!--[if gt IE 8]><!-->
 <html lang="de"><!--<![endif]-->
-{{> struc-head--default }}
+<head>
+    <title>
+                                {{#if title}}
+        {{title}}
+                                {{else}}
+        {{page}}
+                                {{/if}}
+    </title>
+
+    {{> meta-head--default }}
+    {{> script-head--default }}
+    {{> style-head--default }}
+</head>
 
 {{> struc-body--simple }}
 </html>

@@ -1,6 +1,6 @@
 // TODO: Das Plugin JSONPath funktioniert nicht ohne npm install aufgerufen zu haben....
 // var JSONPath = require('jsonpath-plus');
-import typechecks from "typechecks/app";
+import typechecks from "@sgtmurtaugh/typechecks";
 
 /**
  * jsonValue

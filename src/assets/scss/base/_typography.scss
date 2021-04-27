@@ -1,0 +1,28 @@
+@use "sass:map";
+@use "sass:list";
+@use "../abstracts/variables";
+
+/// TODO
+///
+@mixin -maa-add-typo-definitions() {
+  @if variables.$type-scale and list.length(map.keys(variables.$type-scale)) > 0 {
+    @each $screen-size, $font-size in variables.$type-scale {
+
+      @if $font-size and list.length(map.keys($font-size)) > 0 {
+        @each $size-key, $font-size-value in $font-size {
+          --font-size-#{$size-key}: #{$font-size-value};
+        }
+      }
+      @else {
+        @error "The $font-size map for $screen-size #{$screen-size} is not defined.";
+      }
+    }
+  }
+  @else {
+    @error "The $color-$type-scale map is not defined.";
+  }
+}
+
+:root {
+  @include -maa-add-typo-definitions();
+}

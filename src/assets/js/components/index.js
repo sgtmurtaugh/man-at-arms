@@ -1,0 +1,1 @@
+require('./comp_recommendation');

@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "HJB-clickdummy",
+    "name": "man-at-arms",
     "version": "0.1.0"
   },
 
@@ -25,8 +25,6 @@
         "sprites": "src/assets/img/sprites"
       },
       "javascript": [
-        "node_modules/modernizr-dist/sticky.js",
-        "src/assets/js/app.js"
       ],
       "sass": [
         "src/assets/scss/app.scss"
@@ -45,47 +43,6 @@
       "path": "build"
     },
     "frameworks": {
-      "foundation_sites": {
-        "sass": "bower_components/foundation-sites/scss",
-        "javascript": {
-          "dependencies": [
-            "bower_components/jquery/dist/jquery.js",
-            "bower_components/what-input/what-input.js"
-          ],
-          "all": [
-            "bower_components/foundation-sites/dist/foundation.min.js",
-            "bower_components/foundation-sites/dist/plugins/foundation.util.*.js"
-          ],
-          "core": [
-            "bower_components/foundation-sites/dist/plugins/foundation.core.js",
-            "bower_components/foundation-sites/dist/plugins/foundation.util.*.js"
-          ],
-          "components": {
-            "abide": "bower_components/foundation-sites/dist/plugins/foundation.abide.js",
-            "accordion": "bower_components/foundation-sites/dist/plugins/foundation.accordion.js",
-            "accordion-menu": "bower_components/foundation-sites/dist/plugins/foundation.accordionMenu.js",
-            "drilldown": "bower_components/foundation-sites/dist/plugins/foundation.drilldown.js",
-            "dropdown": "bower_components/foundation-sites/dist/plugins/foundation.dropdown.js",
-            "dropdown-menu": "bower_components/foundation-sites/dist/plugins/foundation.dropdownMenu.js",
-            "equalizer": "bower_components/foundation-sites/dist/plugins/foundation.equalizer.js",
-            "interchange": "bower_components/foundation-sites/dist/plugins/foundation.interchange.js",
-            "magellan": "bower_components/foundation-sites/dist/plugins/foundation.magellan.js",
-            "offcanvas": "bower_components/foundation-sites/dist/plugins/foundation.offcanvas.js",
-            "orbit": "bower_components/foundation-sites/dist/plugins/foundation.orbit.js",
-            "responsive-menu": "bower_components/foundation-sites/dist/plugins/foundation.responsiveMenu.js",
-            "responsive-toggle": "bower_components/foundation-sites/dist/plugins/foundation.responsiveToggle.js",
-            "reveal": "bower_components/foundation-sites/dist/plugins/foundation.reveal.js",
-            "slider": "bower_components/foundation-sites/dist/plugins/foundation.slider.js",
-            "sticky": "bower_components/foundation-sites/dist/plugins/foundation.sticky.js",
-            "tabs": "bower_components/foundation-sites/dist/plugins/foundation.tabs.js",
-            "toggler": "bower_components/foundation-sites/dist/plugins/foundation.toggler.js",
-            "tooltip": "bower_components/foundation-sites/dist/plugins/foundation.tooltip.js"
-          }
-        }
-      },
-      "motion_ui": {
-        "sass": "bower_components/motion-ui/src"
-      }
     }
   },
 

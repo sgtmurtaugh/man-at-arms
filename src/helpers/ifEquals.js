@@ -1,4 +1,4 @@
-import typechecks from "typechecks/app";
+import typechecks from "@sgtmurtaugh/typechecks";
 
 /**
  * ifEquals

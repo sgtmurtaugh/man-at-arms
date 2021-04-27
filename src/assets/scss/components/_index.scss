@@ -1,3 +1,7 @@
+@use "clickdummy/comp_clickdummyTopBar";
+//@use "forms";
+@use "modules";
+
 .component {
 
   /* ------------------------------
@@ -14,12 +18,3 @@
     }
   }
 }
-
-
-/* ------------------------------
-    # include separate components files
-   ------------------------------ */
-
-@use "clickdummy/comp_clickdummyTopBar";
-@use "src/assets/scss/layout/navigation/comp_menu";
-@use "src/assets/scss/layout/header/comp_menubar";

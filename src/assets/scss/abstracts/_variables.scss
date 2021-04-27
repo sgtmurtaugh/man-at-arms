@@ -1,13 +1,65 @@
 $color-palette: (
-  primary: #100f0f,
-  secondary: #cf8800,
-  alert: #b50101,
-  warning: #ffab11,
-  info: #ffff00,
-  success: #01ba01,
-  black: #000,
-  white: #fff,
-  dark-gray: #444,
-  medium-gray: #888,
-  light-gray: #aaa,
+        "primary": #100f0f,
+        "secondary": #cf8800,
+        "alert": #b50101,
+        "warning": #ffab11,
+        "info": #ffff00,
+        "success": #01ba01,
+        "black": #000,
+        "white": #fff,
+        "dark-gray": #444,
+        "medium-gray": #888,
+        "light-gray": #aaa,
 ) !default;
+
+$type-scale: (
+        "xsmall": (
+                300: 1rem,
+                400: 1.125rem,
+                500: 1.563rem,
+                600: 1.953rem,
+                700: 2.441rem,
+                800: 3.052rem
+        ),
+        "small": (
+                300: 1rem,
+                400: 1.125rem,
+                500: 1.563rem,
+                600: 1.953rem,
+                700: 2.441rem,
+                800: 3.052rem
+        ),
+        "medium": (
+                300: 1rem,
+                400: 1.125rem,
+                500: 1.563rem,
+                600: 1.953rem,
+                700: 2.441rem,
+                800: 3.052rem
+        ),
+        "large": (
+                300: 1rem,
+                400: 1.425rem,
+                500: 2rem,
+                600: 2.827rem,
+                700: 4rem,
+                800: 5.653rem
+        ),
+        "xlarge": (
+                300: 1rem,
+                400: 1.425rem,
+                500: 2rem,
+                600: 2.827rem,
+                700: 4rem,
+                800: 5.653rem
+        ),
+        "xxlarge": (
+                300: 1rem,
+                400: 1.425rem,
+                500: 2rem,
+                600: 2.827rem,
+                700: 4rem,
+                800: 5.653rem
+        ),
+) !default;
+

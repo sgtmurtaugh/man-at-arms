@@ -1,17 +1,15 @@
-.component_clickdummyTopBar {
-  @include -kbs-add-component-padding();
+@use "../../abstracts/variables";
 
-  background: $dark-gray;
-  color: $light-gray;
+.component_clickdummyTopBar {
+  background: var(--color-dark-gray);
+  color: var(--color-light-gray);
 
   > .component-container {
-//    @include -kbs-add-component-container-padding();
 
     > .component-container-wrapper {
 
       #navClickdummy {
-        color: $secondary-color;
-        margin-bottom: $global-padding;
+        color: var(--color-secondary);
 
         li {
           display: inline-block;
@@ -21,11 +19,11 @@
           }
 
           ~ li {
-            margin-left: rem-calc(30px);
+            margin-left: 30px;
           }
 
           a {
-            color: $secondary-color;
+            color: var(--color-secondary);
           }
         }
       }
@@ -33,7 +31,6 @@
 
       #debugContainer {
         * {
-          font-family: $-kbs-font-family-monospace-fallback;
 
           &:last-of-type {
             margin-bottom: 0;

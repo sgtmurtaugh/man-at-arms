@@ -1,5 +1,4 @@
 @use "sass:map";
-@use "sass:list";
 @use "../variables";
 
 /// color lookup from the global color-palette
@@ -12,19 +11,6 @@
     }
     @else {
       @error "The $color-palette map does not contain the given $color-key.";
-    }
-  }
-  @else {
-    @error "The $color-palette map is not defined.";
-  }
-}
-
-/// TODO
-///
-@mixin maa-add-color-definitions() {
-  @if variables.$color-palette and list.length(map.keys(variables.$color-palette)) > 0 {
-    @each $key, $color in variables.$color-palette {
-      --color-#{$key}: #{$color};
     }
   }
   @else {

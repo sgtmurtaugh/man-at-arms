@@ -1,5 +1,4 @@
 .module {
-  @include -kbs-add-module-padding();
 
   .module-headline {
   }
@@ -7,15 +6,3 @@
   > .module-container {
   }
 }
-
-
-/* ------------------------------
-    # include separate module files
-   ------------------------------ */
-
-
-
-/* ------------------------------
-    # print
-   ------------------------------ */
-@import 'src/assets/scss/components/modulesnts/modules/print/print';

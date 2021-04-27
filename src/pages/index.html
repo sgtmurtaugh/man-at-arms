@@ -1,6 +1,21 @@
----
-layout: simple
-title: Index
----
+<!DOCTYPE html><!--[if lt IE 7]>
+<html lang="de" class="lt-ie9 lt-ie8 lt-ie7"><![endif]--><!--[if IE 7]>
+<html lang="de" class="lt-ie9 lt-ie8"><![endif]--><!--[if IE 8]>
+<html lang="de" class="lt-ie9"> <![endif]--><!--[if gt IE 8]><!-->
+<html lang="de"><!--<![endif]-->
+<head>
+    <title>
+        Titel
+    </title>
+    <include src="src/partials/meta/meta-head--default.hbs" locals='{
+       "text": "Bla",
+       "val": "lorem ipsum 123"
+    }'></include>
+    Nicht die Mama!
+</head>
 
-{{ title }}
+<body>
+<!-- Dies ist ein Kommentar, der entfernt werden sollte!!! -->
+    <lorem size="3"/>
+</body>
+</html>

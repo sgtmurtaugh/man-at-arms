@@ -1,5 +1,34 @@
-@use "../abstracts/utils/colors";
+@use "sass:map";
+@use "sass:list";
+@use "../abstracts/variables";
+
+/// TODO
+///
+@mixin -maa-add-color-definitions() {
+  @if variables.$color-palette and list.length(map.keys(variables.$color-palette)) > 0 {
+    @each $key, $color in variables.$color-palette {
+      --color-#{$key}: #{$color};
+    }
+  }
+  @else {
+    @error "The $color-palette map is not defined.";
+  }
+}
+
+/// TODO
+///
+@mixin -maa-add-bgcolor-definitions() {
+  @if variables.$color-palette and list.length(map.keys(variables.$color-palette)) > 0 {
+    @each $key, $color in variables.$color-palette {
+      --bgcolor-#{$key}: #{$color};
+    }
+  }
+  @else {
+    @error "The $color-palette map is not defined.";
+  }
+}
 
 :root {
-  @include colors.maa-add-color-definitions();
+  @include -maa-add-color-definitions();
+  @include -maa-add-bgcolor-definitions();
 }
